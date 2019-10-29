@@ -1,0 +1,20 @@
+INFO  | 2019-10-29 09:32:59 | [main] test.TraceLog4j (TraceLog4j.java:99) - ________________Début du Jeu!
+WARN  | 2019-10-29 09:32:59 | [main] test.TraceLog4j (TraceLog4j.java:85) - Attention:  Le fichier config.properties n'a pas été trouvé.
+INFO  | 2019-10-29 09:34:28 | [main] test.TraceLog4j (TraceLog4j.java:99) - ________________Début du Jeu!
+INFO  | 2019-10-29 09:34:36 | [main] test.TraceLog4j (TraceLog4j.java:23) - 
+ Début du jeu -> Récapitulatif des entrées du jeu:
+ Mode de la partie : 1
+ Nombre de coups maximums: 5
+ Nombre de pions maximums: 5
+INFO  | 2019-10-29 09:34:51 | [main] test.TraceLog4j (TraceLog4j.java:99) - ________________Début du Jeu!
+INFO  | 2019-10-29 09:34:54 | [main] test.TraceLog4j (TraceLog4j.java:23) - 
+ Début du jeu -> Récapitulatif des entrées du jeu:
+ Mode de la partie : 1
+ Nombre de coups maximums: 5
+ Nombre de pions maximums: 5
+INFO  | 2019-10-29 09:35:10 | [main] test.TraceLog4j (TraceLog4j.java:38) - Fin de la manche. Verdict:LE JOUEUR A GAGNE!
+INFO  | 2019-10-29 09:35:10 | [main] test.TraceLog4j (TraceLog4j.java:54) - Selon les combinaisons :
+TRACE | 2019-10-29 09:35:10 | [main] test.TraceLog4j (TraceLog4j.java:56) - 12469
+TRACE | 2019-10-29 09:35:10 | [main] test.TraceLog4j (TraceLog4j.java:56) - 42838
+INFO  | 2019-10-29 09:35:10 | [main] test.TraceLog4j (TraceLog4j.java:51) - ________________________________________
+INFO  | 2019-10-29 09:35:13 | [main] test.TraceLog4j (TraceLog4j.java:102) - ________________Fin du Jeu!

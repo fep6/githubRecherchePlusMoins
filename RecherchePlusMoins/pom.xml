@@ -4,31 +4,31 @@
   <artifactId>RecherchePlusMoins</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
     <!-- declaration de versions -->
 	<properties>
-	<maven.compiler.source>1.8</maven.compiler.source>
-	<maven.compiler.target>1.8</maven.compiler.target>
-	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
-  
-  
-  
-  
-  
+
+
+
+
+
   <dependencies>
+  
+  
+  	
+<!--       <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency> -->
+    
+    
+    <!-- gestion import log4j -->
   	<dependency>
   		<groupId>org.apache.logging.log4j</groupId>
   		<artifactId>log4j-api</artifactId>

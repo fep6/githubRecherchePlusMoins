@@ -18,3 +18,8 @@ TRACE | 2019-10-29 09:35:10 | [main] test.TraceLog4j (TraceLog4j.java:56) - 1246
 TRACE | 2019-10-29 09:35:10 | [main] test.TraceLog4j (TraceLog4j.java:56) - 42838
 INFO  | 2019-10-29 09:35:10 | [main] test.TraceLog4j (TraceLog4j.java:51) - ________________________________________
 INFO  | 2019-10-29 09:35:13 | [main] test.TraceLog4j (TraceLog4j.java:102) - ________________Fin du Jeu!
+INFO  | 2019-10-30 12:39:51 | [main] test.TraceLog4j (TraceLog4j.java:99) - ________________Début du Jeu!
+INFO  | 2019-10-30 12:44:48 | [main] test.TraceLog4j (TraceLog4j.java:99) - ________________Début du Jeu!
+INFO  | 2019-10-30 13:03:29 | [main] test.TraceLog4j (TraceLog4j.java:99) - ________________Début du Jeu!
+INFO  | 2019-10-30 13:04:06 | [main] test.TraceLog4j (TraceLog4j.java:99) - ________________Début du Jeu!
+INFO  | 2019-10-30 13:04:55 | [main] test.TraceLog4j (TraceLog4j.java:99) - ________________Début du Jeu!

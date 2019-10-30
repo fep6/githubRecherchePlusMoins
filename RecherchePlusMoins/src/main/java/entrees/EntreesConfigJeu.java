@@ -42,11 +42,13 @@ public class EntreesConfigJeu {
 	}
 	
 	// Pour lecture fichier externe
-	public void entreesFichierConfigJeu() {		
+	public void entreesFichierConfigJeu(boolean commAdmin) {		
 		gcEcj.gestionExeptionFichierConfig (fis , p);
 		nCoups=gcEcj.getNCoups();
-		nPions=gcEcj.getNPions();	
-		admin=gcEcj.getAdmin();
+		nPions=gcEcj.getNPions();
+		//Gestion du mode administrateur: par gcEcj.getConfAdmin() 
+		// (fichier de config ou par admin existant (ecj instantié ordonne ou non admin en ligne de commande)
+		admin=gcEcj.getConfAdmin()||admin;
 	}
 
 	public void setModeJeu(){	

@@ -8,8 +8,11 @@ import recherche.RechercheMode3;
 import test.TraceLog4j;
 
 public class Jeu {
+	//Entrees du jeu
 	private EntreesConfigJeu ecj;
-	private static TraceLog4j tl4j = new TraceLog4j();
+	// Tracabilite
+	private static TraceLog4j tl4j;
+	// Gestion mode admin
 
 	// Déroulé normal
 	private RechercheMode1 rm1;
@@ -26,21 +29,21 @@ public class Jeu {
 	private boolean jeuEnCours;
 	// Manche du jeu
 	private static int manche=0;
+	// prise en compte admin via commande en ligne
+	private boolean extAdmin;
 	
 	public Jeu() {
+		tl4j = new TraceLog4j();
 		ecj = new EntreesConfigJeu();
 	}
 	
-	public Jeu(boolean b) {
-		ecj = new EntreesConfigJeu();
-		ecj.setAdmin(b); 
-	}
 	 void setJeu() {
 			manche++;
 			System.out.println("_________________________________________________________________________________");
 			System.out.println("Début de la manche: "+ manche);
-			ecj.entreesFichierConfigJeu();
+			ecj.entreesFichierConfigJeu(extAdmin);
 			ecj.setModeJeu();
+			
 			// gestion tracabilite par log4j
 			tl4j.recapTracageDebutDeJeu(ecj);
 			
@@ -86,7 +89,12 @@ public class Jeu {
 			}
 		}
 	}
-	
+	/**
+	 * Validation de l'entree d'admin en ligne de commande
+	 */
+	void setExtAdmin(){
+		extAdmin=true;
+	}
 	
 	
 	/**

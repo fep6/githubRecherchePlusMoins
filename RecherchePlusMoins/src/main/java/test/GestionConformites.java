@@ -16,7 +16,8 @@ public class GestionConformites {
 	private int resultat;
 	private int nCoups;
 	private int nPions;
-	private boolean admin;
+	//Lecture sur le fichier de config di l'on est en admin (triche)
+	private boolean confAdmin;
 	
 	public GestionConformites(){
 		sc = new Scanner(System.in);
@@ -50,7 +51,7 @@ public class GestionConformites {
 			// On charge les valeurs dans les variables
 			nCoups=Integer.parseInt(p.getProperty("nCoups"));
 			nPions=Integer.parseInt(p.getProperty("nPions"));
-			admin =Boolean.parseBoolean(p.getProperty("admin"));
+			confAdmin =Boolean.parseBoolean(p.getProperty("confAdmin"));
 		} catch (NumberFormatException e){
 			Jeu.getTl4j().setMessageWarning(" La valeur entrée dans le fichier config.properties n'est pas valide.");
 		} catch (FileNotFoundException e) {
@@ -91,8 +92,8 @@ public class GestionConformites {
 	public int getNPions() {
 		return nPions;
 	}
-	public boolean getAdmin() {
-		return admin;
+	public boolean getConfAdmin() {
+		return confAdmin;
 	}
 	public int getResultatTestEntreeSiEntier() {
 		return resultat;

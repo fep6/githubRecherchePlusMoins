@@ -20,7 +20,7 @@ public class Main {
 					j.setExtAdmin();
 				}
 			}	
-		
+	 	
 		j.getTl4j().debutJeu();
 		j.setJeu();
 		j.doJeu();

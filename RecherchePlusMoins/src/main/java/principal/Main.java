@@ -1,5 +1,6 @@
 package principal;
 
+import test.GestionConformites;
 
 /**
  * 
@@ -10,13 +11,17 @@ package principal;
 public class Main {
 	public static void main(String[] args) {
 		
-//		System.out.println("args= "+ args[0] );
+
 		Jeu j = new Jeu();
-		
-		// Prise en compte de l'argument de commande en ligne en admin (triche)
-//		if (args[0].contentEquals("admin")) {
-//			j.setExtAdmin();
-//		}
+		int nbreArg = args.length;
+		// Prise en compte de l'argument de commande en ligne en admin (triche) (nbreArg est le nombre d'arguments dans la ligne de commande)
+		for (nbreArg=0; nbreArg<args.length; nbreArg++) {
+			System.out.print("argument"+nbreArg);
+				System.out.println("args= "+ args[0] );
+				if (args[0].contentEquals("admin")) {
+					j.setExtAdmin();
+				}
+			}	
 		
 		j.getTl4j().debutJeu();
 		j.setJeu();

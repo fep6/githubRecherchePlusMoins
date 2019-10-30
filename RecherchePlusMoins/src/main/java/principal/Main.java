@@ -9,7 +9,7 @@ package principal;
 public class Main {
 	public static void main(String[] args) {
 		
- 
+  
 		Jeu j = new Jeu();
 		int nbreArg = args.length;
 		// Prise en compte de l'argument de commande en ligne en admin (triche) (nbreArg est le nombre d'arguments dans la ligne de commande)

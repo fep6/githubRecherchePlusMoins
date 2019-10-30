@@ -1,7 +1,5 @@
 package principal;
 
-import test.GestionConformites;
-
 /**
  * 
  * @author fep
@@ -18,7 +16,7 @@ public class Main {
 		for (nbreArg=0; nbreArg<args.length; nbreArg++) {
 			System.out.print("argument"+nbreArg);
 				System.out.println("args= "+ args[0] );
-				if (args[0].contentEquals("admin")) {
+				if (args[nbreArg].contentEquals("admin")) {
 					j.setExtAdmin();
 				}
 			}	

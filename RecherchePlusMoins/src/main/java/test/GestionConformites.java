@@ -51,7 +51,7 @@ public class GestionConformites {
 			// On charge les valeurs dans les variables
 			nCoups=Integer.parseInt(p.getProperty("nCoups"));
 			nPions=Integer.parseInt(p.getProperty("nPions"));
-			confAdmin =Boolean.parseBoolean(p.getProperty("confAdmin"));
+			confAdmin =Boolean.parseBoolean(p.getProperty("admin"));
 		} catch (NumberFormatException e){
 			Jeu.getTl4j().setMessageWarning(" La valeur entrée dans le fichier config.properties n'est pas valide.");
 		} catch (FileNotFoundException e) {

@@ -32,6 +32,7 @@ public class RechercheMode1 extends RechercheMode{
  * Acces administrateur	 (triche)
  */
 	public void doRechercheMode(int modeJeu, int coups, int pions, boolean admin) {
+
 		cs.doCombinaisonSecrete(modeJeu, pions, admin);
 		combinaisonOrdi= cs.getCombinaisonSecreteOrdi();
 		while (jeuEnCours) {

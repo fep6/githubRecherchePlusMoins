@@ -79,3 +79,29 @@ INFO  | 2019-10-30 14:37:22 | [main] test.TraceLog4j (TraceLog4j.java:23) -
  Mode de la partie : 1
  Nombre de coups maximums: 5
  Nombre de pions maximums: 5
+INFO  | 2019-10-30 15:10:01 | [main] test.TraceLog4j (TraceLog4j.java:99) - ________________Début du Jeu!
+INFO  | 2019-10-30 15:17:24 | [main] test.TraceLog4j (TraceLog4j.java:99) - ________________Début du Jeu!
+INFO  | 2019-10-30 15:18:08 | [main] test.TraceLog4j (TraceLog4j.java:99) - ________________Début du Jeu!
+INFO  | 2019-10-30 15:18:17 | [main] test.TraceLog4j (TraceLog4j.java:23) - 
+ Début du jeu -> Récapitulatif des entrées du jeu:
+ Mode de la partie : 1
+ Nombre de coups maximums: 5
+ Nombre de pions maximums: 5
+INFO  | 2019-10-30 15:19:11 | [main] test.TraceLog4j (TraceLog4j.java:38) - Fin de la manche. Verdict:LE JOUEUR A GAGNE!
+INFO  | 2019-10-30 15:19:11 | [main] test.TraceLog4j (TraceLog4j.java:54) - Selon les combinaisons :
+TRACE | 2019-10-30 15:19:11 | [main] test.TraceLog4j (TraceLog4j.java:56) - 19971
+INFO  | 2019-10-30 15:19:11 | [main] test.TraceLog4j (TraceLog4j.java:51) - ________________________________________
+INFO  | 2019-10-30 15:19:13 | [main] test.TraceLog4j (TraceLog4j.java:102) - ________________Fin du Jeu!
+INFO  | 2019-10-30 15:28:14 | [main] test.TraceLog4j (TraceLog4j.java:99) - ________________Début du Jeu!
+INFO  | 2019-10-30 15:30:56 | [main] test.TraceLog4j (TraceLog4j.java:99) - ________________Début du Jeu!
+INFO  | 2019-10-30 15:31:02 | [main] test.TraceLog4j (TraceLog4j.java:23) - 
+ Début du jeu -> Récapitulatif des entrées du jeu:
+ Mode de la partie : 1
+ Nombre de coups maximums: 5
+ Nombre de pions maximums: 5
+INFO  | 2019-10-30 15:31:47 | [main] test.TraceLog4j (TraceLog4j.java:99) - ________________Début du Jeu!
+INFO  | 2019-10-30 15:31:52 | [main] test.TraceLog4j (TraceLog4j.java:23) - 
+ Début du jeu -> Récapitulatif des entrées du jeu:
+ Mode de la partie : 1
+ Nombre de coups maximums: 5
+ Nombre de pions maximums: 5

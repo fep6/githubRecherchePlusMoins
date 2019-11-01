@@ -15,11 +15,11 @@ public class Main {
 		// Prise en compte de l'argument de commande en ligne en admin (triche) (nbreArg est le nombre d'arguments dans la ligne de commande)
 		for (nbreArg=0; nbreArg<args.length; nbreArg++) {
 			System.out.print("argument :"+nbreArg);
-				System.out.println("args= "+ args[nbreArg] );
-				if (args[nbreArg].contentEquals("admin")) {
-					j.setExtAdmin();
-				}
-			}	
+			System.out.println("args= "+ args[nbreArg] );
+			if (args[nbreArg].contentEquals("admin")) {
+				j.setExtAdmin();
+			}
+		}	
 	 	
 		j.getTl4j().debutJeu();
 		j.setJeu();

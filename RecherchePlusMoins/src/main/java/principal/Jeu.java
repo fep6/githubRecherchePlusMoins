@@ -59,15 +59,15 @@ public class Jeu {
 		while (jeuEnCours==true) {
 			ecj.affichageRecapitulatifConfigJeu();
 			if (ecj.getModeJeu()==1) {
-				rm1.doRechercheMode(ecj.getModeJeu(),ecj.getNCoups(),ecj.getNPions(),ecj.getAdmin());
+				rm1.doRechercheMode(ecj.getModeJeu(),ecj.getNCoups(),ecj.getNPions(),ecj.getAdmin()||extAdmin);
 				coupMaxPartie=rm1.getCoupMaxPartie();
 			}
 			else if ( ecj.getModeJeu()==2) {
-				rm2.doRechercheMode(ecj.getModeJeu(),ecj.getNCoups(),ecj.getNPions(),ecj.getAdmin());
+				rm2.doRechercheMode(ecj.getModeJeu(),ecj.getNCoups(),ecj.getNPions(),ecj.getAdmin()||extAdmin);
 				coupMaxPartie=rm2.getCoupMaxPartie();
 			}
 			else {
-				rm3.doRechercheMode(ecj.getModeJeu(),ecj.getNCoups(),ecj.getNPions(),ecj.getAdmin());
+				rm3.doRechercheMode(ecj.getModeJeu(),ecj.getNCoups(),ecj.getNPions(),ecj.getAdmin()||extAdmin);
 				coupMaxPartie=rm3.getCoupMaxPartie();
 			}
 			//Traitement traçabilité	

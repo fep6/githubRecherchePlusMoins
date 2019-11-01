@@ -1,8 +1,8 @@
 package recherche;
 
+import divers.ComparatifAffichageTest;
 import entrees.CombinaisonSecrete;
 import principal.Jeu;
-import test.ComparatifAffichageTest;
 
 public abstract class RechercheMode {
 	

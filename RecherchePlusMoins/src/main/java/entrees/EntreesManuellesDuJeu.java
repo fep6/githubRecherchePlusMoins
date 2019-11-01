@@ -4,8 +4,8 @@ package entrees;
 
 import java.util.Scanner;
 
+import divers.GestionConformites;
 import recherche.RechercheMode1;
-import test.GestionConformites;
 
 /**
  * Entrées (int) du joueur, soit de la combinaison secrète (Mode1) ou de l'attaque (Mode2)

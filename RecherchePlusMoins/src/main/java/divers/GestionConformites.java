@@ -1,4 +1,4 @@
-package test;
+package divers;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -69,7 +69,7 @@ public class GestionConformites {
 		}
 	}
 	/**
-	 * @param test
+	 * @param divers
 	 * @see EntreeConfigJeu
 	 */
 	public void testEntreeSiEntier (int test) {

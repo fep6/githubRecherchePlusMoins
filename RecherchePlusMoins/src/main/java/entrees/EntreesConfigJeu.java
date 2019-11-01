@@ -5,7 +5,7 @@ package entrees;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-import test.GestionConformites;
+import divers.GestionConformites;
 
 
 
@@ -90,6 +90,7 @@ public class EntreesConfigJeu {
 		return nPions;
 	}
 	/**
+	 * Revoi booleen du niveau admin dans le fichier config.properties
 	 * @see
 	 * Jeu
 	 */

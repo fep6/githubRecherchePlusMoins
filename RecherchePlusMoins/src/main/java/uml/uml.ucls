@@ -83,8 +83,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="test.GestionConformites" project="projet3RecherchePlusMoins" 
-    file="/projet3RecherchePlusMoins/src/main/java/test/GestionConformites.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="10" language="java" name="divers.GestionConformites" project="projet3RecherchePlusMoins" 
+    file="/projet3RecherchePlusMoins/src/main/java/divers/GestionConformites.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1558" y="960"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -92,8 +92,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="test.ComparatifAffichageTest" project="projet3RecherchePlusMoins" 
-    file="/projet3RecherchePlusMoins/src/main/java/test/ComparatifAffichageTest.java" binary="false" 
+  <class id="11" language="java" name="divers.ComparatifAffichageTest" project="projet3RecherchePlusMoins" 
+    file="/projet3RecherchePlusMoins/src/main/java/divers/ComparatifAffichageTest.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1108" y="826"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -102,8 +102,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="12" language="java" name="test.TraceLog4j" project="projet3RecherchePlusMoins" 
-    file="/projet3RecherchePlusMoins/src/main/java/test/TraceLog4j.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="12" language="java" name="divers.TraceLog4j" project="projet3RecherchePlusMoins" 
+    file="/projet3RecherchePlusMoins/src/main/java/divers/TraceLog4j.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="334" y="169"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      

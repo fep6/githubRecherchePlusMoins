@@ -1,11 +1,11 @@
 package principal;
 
+import divers.TraceLog4j;
 import entrees.EntreesConfigJeu;
 import entrees.EntreesManuellesDuJeu;
 import recherche.RechercheMode1;
 import recherche.RechercheMode2;
 import recherche.RechercheMode3;
-import test.TraceLog4j;
 
 public class Jeu {
 	//Entrees du jeu

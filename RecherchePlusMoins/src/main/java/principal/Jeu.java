@@ -30,14 +30,14 @@ public class Jeu {
 	// Manche du jeu
 	private static int manche=0;
 	// prise en compte admin via commande en ligne
-	 private boolean extAdmin;
+	private boolean extAdmin;
 	
 	public Jeu() {
 		tl4j = new TraceLog4j();
 		ecj = new EntreesConfigJeu();
 	}
 	
-	 void setJeu(boolean extAdmin) {
+	 void setJeu() {
 			manche++;
 			System.out.println("_________________________________________________________________________________");
 			System.out.println("Début de la manche: "+ manche);
@@ -55,7 +55,7 @@ public class Jeu {
 			jeuEnCours=true;
 			emjJeuEnCours = new EntreesManuellesDuJeu();
 	 }
-	void doJeu(boolean extAdmin){
+	void doJeu(){
 		while (jeuEnCours==true) {
 			ecj.affichageRecapitulatifConfigJeu();
 			if (ecj.getModeJeu()==1) {
@@ -83,8 +83,8 @@ public class Jeu {
 			else {
 				tl4j = new TraceLog4j();
 				Jeu j = new Jeu();
-				j.setJeu(extAdmin);
-				j.doJeu(extAdmin);
+				j.setJeu();
+				j.doJeu();
 				jeuEnCours=false;
 			}
 		}

@@ -15,14 +15,9 @@ public class RechercheMode1 extends RechercheMode{
  * @param pions	
  */
 	private EntreesManuellesDuJeu emjMode1;
-	/**
-	 * commande en ligne administrateur;
-	 */
-	private boolean extAdmin;
 
 	public RechercheMode1(int coups, int pions){
 		super(coups, pions);
-		extAdmin = false;
 		emjMode1 = new EntreesManuellesDuJeu (pions);
 	}
 /**
@@ -86,9 +81,6 @@ public class RechercheMode1 extends RechercheMode{
 		for ( int pion=0;pion<pions;pion++) {				
 			tableauJeuMode1[coup][pion]=emjMode1.getEntree(pion);	
 		}
-	}
-	void setAdmin() {
-		extAdmin=true;
 	}
 }
 

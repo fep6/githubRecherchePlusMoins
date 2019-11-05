@@ -1,27 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>Principal</groupId>
+  <groupId>Projet3OC</groupId>
   <artifactId>RecherchePlusMoins</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  
     <!-- declaration de versions -->
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-api</artifactId>
-			<version>2.12.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>2.12.1</version>
-		</dependency>
-	</dependencies>
 
 	<!-- include below build tag to your existing pom.xml  --> 
 	<build>
@@ -78,7 +66,7 @@
 		                        </manifestEntries>
 		                    </transformer>
 		
- 		                    <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+		                    <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
 		                        <resource>META-INF/cxf/bus-extensions.txt</resource>
 		                    </transformer>
 		
@@ -107,4 +95,21 @@
 		</plugin>
 	 </plugins>
 	</build>
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.12.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.12.1</version>
+		</dependency>
+<!-- 		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.12</version>
+		</dependency> -->
+	</dependencies>
 </project>

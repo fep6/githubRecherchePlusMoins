@@ -30,7 +30,7 @@ public class Jeu {
 	// Manche du jeu
 	private static int manche=0;
 	// prise en compte admin via commande en ligne
-	private boolean extAdmin;
+	private static boolean extAdmin;
 	
 	public Jeu() {
 		tl4j = new TraceLog4j();

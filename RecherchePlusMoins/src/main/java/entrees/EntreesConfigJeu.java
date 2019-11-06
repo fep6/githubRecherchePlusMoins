@@ -63,9 +63,6 @@ public class EntreesConfigJeu {
 			modeJeu = gcEcj.getResultatTestEntreeSiEntier();			
 		} while ( modeJeu < 1 || modeJeu > 3 );
 	}
-	public void setAdmin(boolean b) {
-		admin = b; 
-	}
 	
 	//Getters
 	/**

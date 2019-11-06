@@ -16,7 +16,7 @@ public class Main {
 			System.out.print("L'argument 'admin' est le "+nbreArg+1+" argument de la commande en ligne!");
 				System.out.println("args= "+ args[nbreArg] );
 				if (args[nbreArg].contentEquals("admin")) {
-					j.setExtAdmin();
+					j.setAdminCommande();
 				}
 			}	
 		

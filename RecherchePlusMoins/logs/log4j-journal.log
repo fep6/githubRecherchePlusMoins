@@ -1,32 +1,14 @@
-INFO  | 2019-11-05 11:24:30 | [main] divers.TraceLog4j (TraceLog4j.java:99) - ________________Début du Jeu!
-INFO  | 2019-11-05 11:25:27 | [main] divers.TraceLog4j (TraceLog4j.java:99) - ________________Début du Jeu!
-INFO  | 2019-11-05 11:27:51 | [main] divers.TraceLog4j (TraceLog4j.java:99) - ________________Début du Jeu!
-INFO  | 2019-11-05 11:27:58 | [main] divers.TraceLog4j (TraceLog4j.java:23) - 
+
+INFO  | 2019-11-06 16:26:49 | [main] divers.TraceLog4j (TraceLog4j.java:123) - ________________Début du Jeu!
+INFO  | 2019-11-06 16:26:54 | [main] divers.TraceLog4j (TraceLog4j.java:34) - 
  Début du jeu -> Récapitulatif des entrées du jeu:
  Mode de la partie : 1
  Nombre de coups maximums: 5
  Nombre de pions maximums: 5
-INFO  | 2019-11-05 11:28:02 | [main] divers.TraceLog4j (TraceLog4j.java:38) - Fin de la manche. Verdict:LE JOUEUR A GAGNE!
-INFO  | 2019-11-05 11:28:02 | [main] divers.TraceLog4j (TraceLog4j.java:54) - Selon les combinaisons :
-TRACE | 2019-11-05 11:28:02 | [main] divers.TraceLog4j (TraceLog4j.java:56) - 35518
-INFO  | 2019-11-05 11:28:02 | [main] divers.TraceLog4j (TraceLog4j.java:51) - ________________________________________
-INFO  | 2019-11-05 11:28:09 | [main] divers.TraceLog4j (TraceLog4j.java:23) - 
- Début du jeu -> Récapitulatif des entrées du jeu:
- Mode de la partie : 1
- Nombre de coups maximums: 5
- Nombre de pions maximums: 5
-INFO  | 2019-11-05 11:33:08 | [main] divers.TraceLog4j (TraceLog4j.java:99) - ________________Début du Jeu!
-INFO  | 2019-11-05 11:33:15 | [main] divers.TraceLog4j (TraceLog4j.java:23) - 
- Début du jeu -> Récapitulatif des entrées du jeu:
- Mode de la partie : 1
- Nombre de coups maximums: 5
- Nombre de pions maximums: 5
-INFO  | 2019-11-05 11:33:30 | [main] divers.TraceLog4j (TraceLog4j.java:38) - Fin de la manche. Verdict:LE JOUEUR A GAGNE!
-INFO  | 2019-11-05 11:33:30 | [main] divers.TraceLog4j (TraceLog4j.java:54) - Selon les combinaisons :
-TRACE | 2019-11-05 11:33:30 | [main] divers.TraceLog4j (TraceLog4j.java:56) - 96436
-INFO  | 2019-11-05 11:33:30 | [main] divers.TraceLog4j (TraceLog4j.java:51) - ________________________________________
-INFO  | 2019-11-05 11:33:36 | [main] divers.TraceLog4j (TraceLog4j.java:23) - 
- Début du jeu -> Récapitulatif des entrées du jeu:
- Mode de la partie : 1
- Nombre de coups maximums: 5
- Nombre de pions maximums: 5
+ Le fichier de configuration du jeu indique :normal!
+Le mode administrateur a été demandé en ligne se commande
+INFO  | 2019-11-06 16:27:29 | [main] divers.TraceLog4j (TraceLog4j.java:52) - Fin de la manche. Verdict:LE JOUEUR A GAGNE!
+INFO  | 2019-11-06 16:27:29 | [main] divers.TraceLog4j (TraceLog4j.java:78) - Selon les combinaisons :
+TRACE | 2019-11-06 16:27:29 | [main] divers.TraceLog4j (TraceLog4j.java:80) - 80908
+INFO  | 2019-11-06 16:27:29 | [main] divers.TraceLog4j (TraceLog4j.java:65) - ________________________________________
+INFO  | 2019-11-06 16:27:31 | [main] divers.TraceLog4j (TraceLog4j.java:126) - ________________Fin du Jeu!

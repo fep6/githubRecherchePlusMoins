@@ -12,7 +12,6 @@ public class Jeu {
 	private EntreesConfigJeu ecj;
 	// Tracabilite
 	private static TraceLog4j tl4j;
-	// Gestion mode admin
 
 	// Déroulé normal
 	private RechercheMode1 rm1;
@@ -59,7 +58,13 @@ public class Jeu {
 		while (jeuEnCours==true) {
 			ecj.affichageRecapitulatifConfigJeu();
 			if (ecj.getModeJeu()==1) {
+				
+				
 				rm1.doRechercheMode(ecj.getModeJeu(),ecj.getNCoups(),ecj.getNPions(),ecj.getAdmin()||extAdmin);
+				System.out.println("TEST: ecj.getAdmin()=" +ecj.getAdmin());
+				if (ecj.getAdmin()==true){
+					setAdminConfig();
+				}
 				coupMaxPartie=rm1.getCoupMaxPartie();
 			}
 			else if ( ecj.getModeJeu()==2) {
@@ -90,13 +95,17 @@ public class Jeu {
 		}
 	}
 	/**
-	 * Validation de l'entree d'admin en ligne de commande
+	 * Validation de l'entree d'admin du fichier de configuration
+	 * @see config.properties
 	 */
-	void setExtAdmin(){
+	void setAdminConfig(){
 		extAdmin=true;
+		tl4j.setAdminConfig();
 	}
-	
-	
+	void setAdminCommande() {
+		// commandeAdmin=true;
+		tl4j.setAdminCommande();
+	}
 	/**
 	 * @return l'instance de TraceLog4j
 	 * @see EntreeConfigJeu

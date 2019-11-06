@@ -11,7 +11,7 @@ public class Jeu {
 	//Entrees du jeu
 	private EntreesConfigJeu ecj;
 	// Tracabilite
-	private static TraceLog4j tl4j;
+	static TraceLog4j tl4j;
 
 	// Déroulé normal
 	private RechercheMode1 rm1;
@@ -30,13 +30,19 @@ public class Jeu {
 	private static int manche=0;
 	// prise en compte admin via commande en ligne
 	private static boolean extAdmin;
+	// Prise en compte du nombre d'argument de la commande
+	private int nbreArg;
 	
 	public Jeu() {
 		tl4j = new TraceLog4j();
 		ecj = new EntreesConfigJeu();
 	}
+
 	
 	 void setJeu() {
+		 
+
+			
 			manche++;
 			System.out.println("_________________________________________________________________________________");
 			System.out.println("Début de la manche: "+ manche);
@@ -58,8 +64,6 @@ public class Jeu {
 		while (jeuEnCours==true) {
 			ecj.affichageRecapitulatifConfigJeu();
 			if (ecj.getModeJeu()==1) {
-				
-				
 				rm1.doRechercheMode(ecj.getModeJeu(),ecj.getNCoups(),ecj.getNPions(),ecj.getAdmin()||extAdmin);
 				System.out.println("TEST: ecj.getAdmin()=" +ecj.getAdmin());
 				if (ecj.getAdmin()==true){
@@ -94,6 +98,14 @@ public class Jeu {
 			}
 		}
 	}
+	void gestionCommandeAdmin(String[] args) {
+		for (nbreArg=0; nbreArg<args.length; nbreArg++) {
+			System.out.print("L'argument 'admin' est l'argument " + nbreArg+ 1 + " de la commande en ligne!");
+				if (args[nbreArg].contentEquals("admin")) {
+					tl4j.setAdminCommande();
+				}
+			}
+	}
 	/**
 	 * Validation de l'entree d'admin du fichier de configuration
 	 * @see config.properties
@@ -102,14 +114,8 @@ public class Jeu {
 		extAdmin=true;
 		tl4j.setAdminConfig();
 	}
-	void setAdminCommande() {
-		// commandeAdmin=true;
-		tl4j.setAdminCommande();
-	}
 	/**
-	 * @return l'instance de TraceLog4j
-	 * @see EntreeConfigJeu
-	 * @see GestionExceptionEntreesGlobales
+	 * @see GestionConformites
 	 */
 	public static TraceLog4j getTl4j() {
 		return tl4j;

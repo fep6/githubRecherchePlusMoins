@@ -8,7 +8,7 @@ import divers.ComparatifAffichageTest;
  */
 public class RechercheMode2 extends RechercheMode{
 
-	String stringTableauJeuMode2="";
+	private String stringTableauJeuMode2="";
 	
 	public RechercheMode2(int coups, int pions){
 		super(coups, pions);		

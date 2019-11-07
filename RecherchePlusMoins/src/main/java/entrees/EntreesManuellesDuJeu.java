@@ -29,8 +29,8 @@ public class EntreesManuellesDuJeu {
 	 */
 	private GestionConformites gcRecommenceJeu;
 	private boolean testSiPionEntier;
-	String entreeString;
-	Scanner sc = new Scanner(System.in);
+	private String entreeString;
+	private Scanner sc = new Scanner(System.in);
 	
 	public EntreesManuellesDuJeu(){
 		gcRecommenceJeu = new GestionConformites();

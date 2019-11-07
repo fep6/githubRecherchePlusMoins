@@ -37,7 +37,15 @@ public class Jeu {
 		tl4j = new TraceLog4j();
 		ecj = new EntreesConfigJeu();
 	}
-
+	void debutJeu(String[] args) {
+		for (nbreArg=0; nbreArg<args.length; nbreArg++) {
+			System.out.print("L'argument 'admin' est l'argument " + nbreArg+ 1 + " de la commande en ligne!");
+				if (args[nbreArg].contentEquals("admin")) {
+					tl4j.setAdminCommande();
+				}
+			}
+		tl4j.debutJeu();
+	}
 	
 	 void setJeu() {
 		 
@@ -98,14 +106,12 @@ public class Jeu {
 			}
 		}
 	}
-	void gestionCommandeAdmin(String[] args) {
-		for (nbreArg=0; nbreArg<args.length; nbreArg++) {
-			System.out.print("L'argument 'admin' est l'argument " + nbreArg+ 1 + " de la commande en ligne!");
-				if (args[nbreArg].contentEquals("admin")) {
-					tl4j.setAdminCommande();
-				}
-			}
+	void finJeu(){
+		System.out.println("Fin définitive du jeu!");
+		System.out.println("_________________________");
+		tl4j.finJeu();
 	}
+
 	/**
 	 * Validation de l'entree d'admin du fichier de configuration
 	 * @see config.properties

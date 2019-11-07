@@ -34,7 +34,7 @@ public class Jeu {
 	private int nbreArg;
 	
 	public Jeu() {
-		tl4j = new TraceLog4j();
+
 		ecj = new EntreesConfigJeu();
 	}
 	void debutJeu(String[] args) {

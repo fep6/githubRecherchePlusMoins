@@ -15,24 +15,6 @@
 	<build>
 	
 	 <plugins>
-<!--	     <plugin> 
-	
-	                Building an executable jar
-	
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <version>3.1.0</version>
-	        <configuration>
-	          <archive>
-	            <manifest>
-	
-	            give full qualified name of your main class
-	              <mainClass>principal.Main</mainClass>
-	
-	            </manifest>
-	          </archive>
-	        </configuration>
-	    </plugin> -->
 		<plugin>
 		    <groupId>org.apache.maven.plugins</groupId>
 		    <artifactId>maven-shade-plugin</artifactId>
@@ -106,10 +88,6 @@
 			<artifactId>log4j-core</artifactId>
 			<version>2.12.1</version>
 		</dependency>
-<!-- 		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.12</version>
-		</dependency> -->
+
 	</dependencies>
 </project>

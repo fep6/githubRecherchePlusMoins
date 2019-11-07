@@ -31,9 +31,23 @@ public class Jeu {
 	// prise en compte admin via commande en ligne
 	private static boolean extAdmin;
 	
+	private int nbreArg;
+	
 	public Jeu() {
 		tl4j = new TraceLog4j();
 		ecj = new EntreesConfigJeu();
+	}
+	void debutJeu(String[] args) {
+		int nbreArg = args.length;
+		// Prise en compte de l'argument de commande en ligne en admin (triche) (nbreArg est le nombre d'arguments dans la ligne de commande)
+		for (nbreArg=0; nbreArg<args.length; nbreArg++) {
+			System.out.print("L'argument 'admin' est le "+nbreArg+1+" argument de la commande en ligne!");
+				System.out.println("args= "+ args[nbreArg] );
+				if (args[nbreArg].contentEquals("admin")) {
+					setAdminCommande();
+				}
+			}	
+		getTl4j().debutJeu();
 	}
 	
 	 void setJeu() {
@@ -93,6 +107,11 @@ public class Jeu {
 				jeuEnCours=false;
 			}
 		}
+	}
+	void finJeu() {
+		System.out.println("Fin définitive du jeu!");
+		System.out.println("_________________________");
+		getTl4j().finJeu();
 	}
 	/**
 	 * Validation de l'entree d'admin du fichier de configuration

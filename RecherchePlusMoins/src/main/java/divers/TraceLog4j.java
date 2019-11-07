@@ -12,7 +12,7 @@ import recherche.RechercheMode3;
 
 public class TraceLog4j {
 	
-	private final Logger logger = LogManager.getLogger();
+	private static final Logger logger = LogManager.getLogger();
 	/**
 	 * variables admin du fichier config.properties
 	 */

@@ -18,6 +18,8 @@ public class GestionConformites {
 	private int nPions;
 	//Lecture sur le fichier de config di l'on est en admin (triche)
 	private boolean confAdmin;
+	// Commande en ligne du traçage log4j
+	private static boolean trace=false; 
 	
 	public GestionConformites(){
 		sc = new Scanner(System.in);
@@ -84,7 +86,6 @@ public class GestionConformites {
 			}
 		} while(entreeJeu.equals(""));
 	}
-	
 	//getters
 	public int getNCoups() {
 		return nCoups;

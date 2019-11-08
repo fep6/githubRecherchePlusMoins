@@ -11,16 +11,17 @@ import divers.GestionConformites;
 
 public class EntreesConfigJeu {
 
-	private int modeJeu=0;
-	private int nCoups=0;
-	private int nPions=0;
-	private boolean admin=false;
-	private GestionConformites gcEcj = new GestionConformites();
+	private GestionConformites gcEcj ;
 	private  FileInputStream fis = null;
 	// Classe Properties permet de gérer les propriétés du fichier
 	private Properties p = new Properties();
+	private int modeJeu=0;
+	private int nCoups=0;
+	private int nPions=0;
+	private boolean admin=false; 
 
 	public EntreesConfigJeu () {
+		gcEcj = new GestionConformites();
 	}
 	public void affichageRecapitulatifConfigJeu() {
 		System.out.println("\n _____________________________________________ \n ");	
@@ -88,8 +89,7 @@ public class EntreesConfigJeu {
 	}
 	/**
 	 * Revoi booleen du niveau admin dans le fichier config.properties
-	 * @see
-	 * Jeu
+	 * @see Jeu
 	 */
 	public boolean getAdmin () {
 		return admin;

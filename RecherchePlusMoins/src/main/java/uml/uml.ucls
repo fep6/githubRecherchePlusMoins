@@ -31,7 +31,7 @@
   <class id="4" language="java" name="entrees.EntreesManuellesDuJeu" project="projet3RecherchePlusMoins" 
     file="/projet3RecherchePlusMoins/src/main/java/entrees/EntreesManuellesDuJeu.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="375" y="967"/>    
+    <position height="-1" width="-1" x="364" y="898"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -170,12 +170,13 @@
   <association id="27">    
     <bendpoint x="650" y="429"/>    
     <bendpoint x="581" y="618"/>    
+    <bendpoint x="504" y="659"/>    
     <end type="SOURCE" refId="2" navigable="false">      
       <attribute id="28" name="emjJeuEnCours">        
-        <position height="0" width="0" x="3" y="-115"/>      
+        <position height="0" width="0" x="-8" y="-184"/>      
       </attribute>      
       <multiplicity id="29" minimum="0" maximum="1">        
-        <position height="0" width="0" x="3" y="-115"/>      
+        <position height="0" width="0" x="-8" y="-184"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
@@ -211,13 +212,13 @@
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="37">    
-    <bendpoint x="292" y="800"/>    
+    <bendpoint x="314" y="692"/>    
     <end type="SOURCE" refId="7" navigable="false">      
       <attribute id="38" name="emjMode1">        
-        <position height="0" width="0" x="3" y="-115"/>      
+        <position height="0" width="0" x="-8" y="-184"/>      
       </attribute>      
       <multiplicity id="39" minimum="0" maximum="1">        
-        <position height="0" width="0" x="3" y="-115"/>      
+        <position height="0" width="0" x="-8" y="-184"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
@@ -283,7 +284,7 @@
     <end type="TARGET" refId="2"/>  
   </dependency>  
   <association id="54">    
-    <bendpoint x="577" y="1150"/>    
+    <bendpoint x="578" y="1138"/>    
     <bendpoint x="1611" y="1143"/>    
     <end type="SOURCE" refId="4" navigable="false">      
       <attribute id="55" name="gcEntreePions">        
@@ -324,13 +325,13 @@
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="63">    
-    <bendpoint x="114" y="901"/>    
+    <bendpoint x="162" y="717"/>    
     <end type="SOURCE" refId="5" navigable="false">      
       <attribute id="64" name="emjMode2">        
-        <position height="0" width="0" x="3" y="-115"/>      
+        <position height="0" width="0" x="-8" y="-184"/>      
       </attribute>      
       <multiplicity id="65" minimum="0" maximum="1">        
-        <position height="0" width="0" x="3" y="-115"/>      
+        <position height="0" width="0" x="-8" y="-184"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    

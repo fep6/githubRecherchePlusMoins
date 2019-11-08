@@ -30,8 +30,6 @@ public class Jeu {
 	private static int manche=0;
 	// prise en compte admin via commande en ligne
 	private static boolean extAdmin;
-	// Nombre d'arguments dans la ligne de commande (sert juste à l'affichage)
-	private int nbreArg;
 	// Commande en ligne du traçage log4j
 	private static boolean trace;  
 	
@@ -40,6 +38,7 @@ public class Jeu {
 		ecj = new EntreesConfigJeu();
 	}
 	void debutJeu(String[] args) {
+		// Nombre d'arguments dans la ligne de commande (sert juste à l'affichage)
 		int nbreArg = args.length;
 		tl4j = new TraceLog4j();
 		

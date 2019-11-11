@@ -15,23 +15,29 @@
 	<build>
 	
 		<!-- Gestion des pes plugins (version) -->
-		<pluginManagement>
+<!-- 		<pluginManagement>
 			<plugins>
 				<plugin>
+
 					<groupId>org.apache.maven.plugins</groupId>
   					<artifactId>maven-jar-plugin</artifactId>
-					<configuration>
-						<archive>
-						<!-- creation du MAnifest pour la classe Main -->
-							<manifest>
-								<mainclass>org.principal.Main</mainclass>
-							</manifest>
-						</archive>
-					</configuration>
+  					<version>3.0.2</version>
+					<configuration>				
 				</plugin>
-			
 			</plugins>
-		</pluginManagement>
+		</pluginManagement> -->
+		
+		<plugins>
+			<plugin>
+					<archive>
+					<!-- creation du MAnifest pour la classe Main -->
+						<manifest>
+							<mainclass>org.principal.Main</mainclass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
 	
 	 <plugins>
 		<plugin>

@@ -5,4 +5,4 @@
  * @author fep
  *
  */
-package uml;
+package org.uml;

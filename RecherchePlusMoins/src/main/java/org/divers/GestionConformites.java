@@ -1,4 +1,4 @@
-package divers;
+package org.divers;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.Scanner;
 
-import principal.Jeu;
+import org.principal.Jeu;
 
 public class GestionConformites {
 	
@@ -71,7 +71,7 @@ public class GestionConformites {
 		}
 	}
 	/**
-	 * @param divers
+	 * @param org.divers
 	 * @see EntreeConfigJeu
 	 */
 	public void testEntreeSiEntier (int test) {

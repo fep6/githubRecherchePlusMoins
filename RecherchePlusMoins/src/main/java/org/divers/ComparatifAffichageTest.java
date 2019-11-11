@@ -1,4 +1,4 @@
-package divers;
+package org.divers;
 
 public class ComparatifAffichageTest {
 	

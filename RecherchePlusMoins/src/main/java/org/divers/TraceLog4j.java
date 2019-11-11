@@ -1,12 +1,11 @@
-package divers;
+package org.divers;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import entrees.EntreesConfigJeu;
-import recherche.RechercheMode1;
-import recherche.RechercheMode2;
-import recherche.RechercheMode3;
+import org.entrees.EntreesConfigJeu;
+import org.recherche.RechercheMode1;
+import org.recherche.RechercheMode2;
+import org.recherche.RechercheMode3;
 
 
 
@@ -26,7 +25,7 @@ public class TraceLog4j {
 	/**
 	 * Traçage TraceLog4j
 	 * @param ecj
-	 * parametres des entrees du jeu
+	 * parametres des org.entrees du jeu
 	 */
 	public void recapTracageDebutDeJeu(EntreesConfigJeu ecj) {
 

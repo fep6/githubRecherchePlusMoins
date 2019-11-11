@@ -1,11 +1,11 @@
-package entrees;
+package org.entrees;
 
 
 
 import java.util.Scanner;
 
-import divers.GestionConformites;
-import recherche.RechercheMode1;
+import org.divers.GestionConformites;
+import org.recherche.RechercheMode1;
 
 /**
  * Entrées (int) du joueur, soit de la combinaison secrète (Mode1) ou de l'attaque (Mode2)

@@ -14,6 +14,25 @@
 	<!-- include below build tag to your existing pom.xml  --> 
 	<build>
 	
+		<!-- Gestion des pes plugins (version) -->
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+  					<artifactId>maven-jar-plugin</artifactId>
+					<configuration>
+						<archive>
+						<!-- creation du MAnifest pour la classe Main -->
+							<manifest>
+								<mainclass>org.principal.Main</mainclass>
+							</manifest>
+						</archive>
+					</configuration>
+				</plugin>
+			
+			</plugins>
+		</pluginManagement>
+	
 	 <plugins>
 		<plugin>
 		    <groupId>org.apache.maven.plugins</groupId>
@@ -42,7 +61,7 @@
 		                <transformers>
 		                    <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
 		                    <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-		                        <mainClass>principal/Main</mainClass>
+		                        <mainClass>org.principal/Main</mainClass>
 		                        <manifestEntries>
 		                            <Class-Path>..</Class-Path>
 		                        </manifestEntries>

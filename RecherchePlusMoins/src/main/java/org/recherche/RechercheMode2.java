@@ -1,6 +1,6 @@
-package recherche;
+package org.recherche;
 
-import divers.ComparatifAffichageTest;
+import org.divers.ComparatifAffichageTest;
 
 /**
  * Mode 2 "Défenseur": L'ordinateur a le rôle d’attaquant et doit faire une proposition d’une combinaison de X chiffres.
@@ -92,7 +92,7 @@ public class RechercheMode2 extends RechercheMode{
 			stringTableauJeuMode2 = stringTableauJeuMode2 + Integer.toString(tableauJeuMode2[0][pion]);
 			}
 		} else {
-			//Ensuite, l'ordinateur fait une recherche dichotomique selon la comparaison de la valeur d'avant
+			//Ensuite, l'ordinateur fait une org.recherche dichotomique selon la comparaison de la valeur d'avant
 			for (int pion=0;pion<pions;pion++) {
 				tableauReponseJoueur[coup-1][pion]= cat2.getTableauReponse(coup-1,pion);
 				if (tableauReponseJoueur[coup-1][pion].equals("=")) {
@@ -112,7 +112,7 @@ public class RechercheMode2 extends RechercheMode{
 		System.out.println("----------------------------");
 	}
 /**
- * initialisation des parametres pour la recherche dichotomique
+ * initialisation des parametres pour la org.recherche dichotomique
  * @see RechercheMode2(int coups, int pions)
  * @param dichoPlus
  * Recherche dichotomique vers le haut

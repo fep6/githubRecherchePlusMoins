@@ -5,4 +5,4 @@
  * @author fep
  *
  */
-package principal;
+package org.principal;

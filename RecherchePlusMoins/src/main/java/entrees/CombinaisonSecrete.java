@@ -1,4 +1,4 @@
-package org.entrees;
+package entrees;
 
 /**
 

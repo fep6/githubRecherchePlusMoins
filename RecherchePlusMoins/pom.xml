@@ -75,25 +75,8 @@
 		        </execution>
 		     </executions>
 		</plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <configuration>
-                    <archive>
-                        <!-- Création du Manifest pour la définition de la classe Main -->
-                        <manifest>
-                            <mainClass>principal.Main</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-
-       	</plugins>
-	 
-	 
+	 </plugins>
 	</build>
-	
 	<dependencies>
  		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>

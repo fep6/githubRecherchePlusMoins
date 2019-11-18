@@ -1,11 +1,11 @@
-package org.entrees;
+package entrees;
 
 
 
 import java.io.FileInputStream;
 import java.util.Properties;
 
-import org.divers.GestionConformites;
+import divers.GestionConformites;
 
 
 
@@ -42,11 +42,7 @@ public class EntreesConfigJeu {
 		System.out.println("\n _____________________________________________ \n ");	
 	}
 	
-	/**
-	 * Pour lecture fichier externe
-	 * @param commAdmin
-	 * @see Jeu
-	 */
+	// Pour lecture fichier externe
 	public void entreesFichierConfigJeu(boolean commAdmin) {		
 		gcEcj.gestionExeptionFichierConfig (fis , p);
 		nCoups=gcEcj.getNCoups();
@@ -71,19 +67,22 @@ public class EntreesConfigJeu {
 	
 	//Getters
 	/**
-	 * @see Jeu
+	 * @see
+	 * Jeu
 	 */
 	public int getModeJeu() {
 		return modeJeu;
 	}
 	/**
-	 * @see Jeu
+	 * @see
+	 * Jeu
 	 */
 	public int getNCoups() {
 		return nCoups;
 	}
 	/**
-	 * @see Jeu
+	 * @see
+	 * Jeu
 	 */
 	public int getNPions() {
 		return nPions;

@@ -1,8 +1,8 @@
-package recherche;
+package org.recherche;
 
-import divers.ComparatifAffichageTest;
-import entrees.CombinaisonSecrete;
-import principal.Jeu;
+import org.divers.ComparatifAffichageTest;
+import org.entrees.CombinaisonSecrete;
+import org.principal.Jeu;
 
 public abstract class RechercheMode {
 	
@@ -54,15 +54,15 @@ public abstract class RechercheMode {
  */
 	protected boolean jeuEnCours;
 /**
- * Sert à la recherche dichotomique
+ * Sert à la org.recherche dichotomique
  */
 	protected int[] dichoPlus;
 /**
- * Sert à la recherche dichotomique
+ * Sert à la org.recherche dichotomique
  */ 
 	protected int[] dichoMoins;
 /**
- * Sert à la recherche dichotomique
+ * Sert à la org.recherche dichotomique
  */ 
 	protected int dichoMax;
 /**

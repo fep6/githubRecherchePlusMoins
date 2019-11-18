@@ -12,7 +12,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>principal.Main</mainClass>
+              <mainClass>org.principal.Main</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -29,7 +29,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>principal.Main</mainClass>
+                  <mainClass>org.principal.Main</mainClass>
                 </transformer>
               </transformers>
             </configuration>

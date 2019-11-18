@@ -13,7 +13,7 @@ public class EntreesConfigJeu {
 
 	private GestionConformites gcEcj ;
 	private  FileInputStream fis = null;
-	// Classe Properties permet de gérer les propriétés du fichier
+	// Classe Properties permet de gérer les propriétés du fichier config.properties
 	private Properties p = new Properties();
 	private int modeJeu=0;
 	private int nCoups=0;
@@ -42,13 +42,10 @@ public class EntreesConfigJeu {
 		System.out.println("\n _____________________________________________ \n ");	
 	}
 	
-	// Pour lecture fichier externe
 	public void entreesFichierConfigJeu(boolean commAdmin) {		
 		gcEcj.gestionExeptionFichierConfig (fis , p);
 		nCoups=gcEcj.getNCoups();
 		nPions=gcEcj.getNPions();
-		//Gestion du mode administrateur: par gcEcj.getConfAdmin() 
-		// (fichier de config ou par admin existant (ecj instantié ordonne ou non admin en ligne de commande)
 		admin=gcEcj.getConfAdmin()||admin;
 	}
 
@@ -67,28 +64,25 @@ public class EntreesConfigJeu {
 	
 	//Getters
 	/**
-	 * @see
-	 * Jeu
+	 * @see Jeu
 	 */
 	public int getModeJeu() {
 		return modeJeu;
 	}
 	/**
-	 * @see
-	 * Jeu
+	 * @see Jeu
 	 */
 	public int getNCoups() {
 		return nCoups;
 	}
 	/**
-	 * @see
-	 * Jeu
+	 * @see Jeu
 	 */
 	public int getNPions() {
 		return nPions;
 	}
 	/**
-	 * Revoi booleen du niveau admin dans le fichier config.properties
+	 * Renvoi booleen du niveau admin dans le fichier config.properties
 	 * @see Jeu
 	 */
 	public boolean getAdmin () {

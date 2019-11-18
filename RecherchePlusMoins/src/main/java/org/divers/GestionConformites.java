@@ -68,7 +68,7 @@ public class GestionConformites {
 		} catch (FileNotFoundException e) {
 			Jeu.getTl4j().setMessageWarning(" Le fichier config.properties n'a pas été trouvé: "+e);
 		} catch (IOException e) {
-			Jeu.getTl4j().setMessageWarning(" Une erreur d'eception a été générée: "+e);
+			Jeu.getTl4j().setMessageWarning(" Une erreur d'exception a été générée: "+e);
 		} finally {
            try {
                if (fis != null) 

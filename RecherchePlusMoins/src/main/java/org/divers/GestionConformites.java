@@ -41,7 +41,7 @@ public class GestionConformites {
 	/** Recherche des erreurs entrées clavier sur l'entrée de la configuration du jeu
 	 * @param fis
 	 * entrée du fichier de configuration
-	 * @param p
+	 * @param p 
 	 * chargement de fis en plusieurs lignes (p)
 	 */
 	public void gestionExeptionFichierConfig(FileInputStream fis,Properties p) {

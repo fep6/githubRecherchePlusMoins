@@ -1,11 +1,11 @@
-package org.entrees;
+package entrees;
 
 
 
 import java.io.FileInputStream;
 import java.util.Properties;
 
-import org.divers.GestionConformites;
+import divers.GestionConformites;
 
 
 

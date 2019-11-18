@@ -1,11 +1,11 @@
-package org.principal;
+package principal;
 
-import org.divers.TraceLog4j;
-import org.entrees.EntreesConfigJeu;
-import org.entrees.EntreesManuellesDuJeu;
-import org.recherche.RechercheMode1;
-import org.recherche.RechercheMode2;
-import org.recherche.RechercheMode3;
+import divers.TraceLog4j;
+import entrees.EntreesConfigJeu;
+import entrees.EntreesManuellesDuJeu;
+import recherche.RechercheMode1;
+import recherche.RechercheMode2;
+import recherche.RechercheMode3;
 
 public class Jeu {
 	//Entrees du jeu

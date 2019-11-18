@@ -1,7 +1,7 @@
-package org.recherche;
+package recherche;
 
-import org.entrees.CombinaisonSecrete;
-import org.principal.Jeu;
+import entrees.CombinaisonSecrete;
+import principal.Jeu;
 
 /**
  * Le joueur et l’ordinateur jouent tour à tour. 

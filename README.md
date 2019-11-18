@@ -51,7 +51,7 @@ Mode 3  : A tour de rôle, l'ordinateur ou le joueur attaquent, et défend sa c
 
    Vous avez la possibilité d'enregistrer le jeu dans logs\myLogs.log 
    Pour ce faire, tapez dans la console, dans la racine du dossier
-   java -jar RecherchePlusMoins-0.0.1-SNAPSHOT.jar -trace
+   	java -jar RecherchePlusMoins-0.0.1-SNAPSHOT.jar -trace
    Il est aussi ouvrable via le bloc note de Windows (click droit, 'ouvrir avec', bloc note).
 
 4/ Prérequis

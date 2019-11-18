@@ -37,13 +37,13 @@ Mode 3  : A tour de rôle, l'ordinateur ou le joueur attaquent, et défend sa c
 
    3.1 Mode simple
    tapez dans la console, dans la racine du dossier
-	java -jar RecherchePlusMoins-0.0.1-SNAPSHOT.jar
+		java -jar RecherchePlusMoins-0.0.1-SNAPSHOT.jar
 
 
    3.2 Mode triche
    'Admin' autorise un mode 'triche' où est affiché la combinaison de l'ordinateur, pendant le jeu.
    tapez dans la console, dans la racine du dossier
-	java -jar RecherchePlusMoins-0.0.1-SNAPSHOT.jar -admin
+		java -jar RecherchePlusMoins-0.0.1-SNAPSHOT.jar -admin
 
 
 
@@ -51,7 +51,8 @@ Mode 3  : A tour de rôle, l'ordinateur ou le joueur attaquent, et défend sa c
 
    Vous avez la possibilité d'enregistrer le jeu dans logs\myLogs.log 
    Pour ce faire, tapez dans la console, dans la racine du dossier
-   	java -jar RecherchePlusMoins-0.0.1-SNAPSHOT.jar -trace
+		java -jar RecherchePlusMoins-0.0.1-SNAPSHOT.jar -trace
+   
    Il est aussi ouvrable via le bloc note de Windows (click droit, 'ouvrir avec', bloc note).
 
 4/ Prérequis
@@ -61,7 +62,7 @@ Mode 3  : A tour de rôle, l'ordinateur ou le joueur attaquent, et défend sa c
    Ensuite, tapez 'java'. Une liste d'options doit apparaître.
 
    Si ce n'est pas le cas, rendez-vous sur le site, et téléchargez la JRE  :
-	https://www.java.com/fr/download/
+		https://www.java.com/fr/download/
 
 
 

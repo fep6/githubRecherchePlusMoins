@@ -67,22 +67,19 @@ public class EntreesConfigJeu {
 	
 	//Getters
 	/**
-	 * @see
-	 * Jeu
+	 * @see Jeu
 	 */
 	public int getModeJeu() {
 		return modeJeu;
 	}
 	/**
-	 * @see
-	 * Jeu
+	 * @see Jeu
 	 */
 	public int getNCoups() {
 		return nCoups;
 	}
 	/**
-	 * @see
-	 * Jeu
+	 * @see Jeu
 	 */
 	public int getNPions() {
 		return nPions;

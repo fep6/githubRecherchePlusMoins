@@ -24,6 +24,12 @@ public class GestionConformites {
 		entreeJeu="";
 		resultat=0;
 	}
+	/**  Test si les entrees sont chacune un chiffre de 0 a 9
+	 * @param pion Valeur du pion entré par le joueur
+	 * @param entreeStringDuJoueur 
+	 * @return Renvoi un booleen si condition remplie
+	 * @see EntreesManuellesDuJeu : testSiPionsEntiers(String entreeString,int[] entreeIntDuJoueur,int pions)
+	 */
 	public boolean testEntreeSiEntierRegEx(int pion, String[] entreeStringDuJoueur) {
 		String regExp="^[0-9]$";
 		return entreeStringDuJoueur[pion].matches(regExp);
@@ -41,6 +47,7 @@ public class GestionConformites {
 	 * entrée du fichier de configuration
 	 * @param p
 	 * chargement de fis en plusieurs lignes (p)
+	 * @see EntreesConfigJeu : entreesFichierConfigJeu(boolean commAdmin)
 	 */
 	public void gestionExeptionFichierConfig(FileInputStream fis,Properties p) {
 		try {
@@ -57,7 +64,7 @@ public class GestionConformites {
 		} catch (FileNotFoundException e) {
 			Jeu.getTl4j().setMessageWarning(" Le fichier config.properties n'a pas été trouvé : "+ e);
 		} catch (IOException e) {
-			Jeu.getTl4j().setMessageWarning(" Une erreur d'xeception a été générée : "+ e);
+			Jeu.getTl4j().setMessageWarning(" Une erreur d'exeception a été générée : "+ e);
 		} finally {
            try {
                if (fis != null) 
@@ -68,8 +75,8 @@ public class GestionConformites {
 		}
 	}
 	/**
-	 * @param org.divers
-	 * @see EntreeConfigJeu
+	 * @param entier
+	 * @see EntreeConfigJeu : setModeJeu()
 	 */
 	public void testEntreeSiEntier (int test) {
 		do {

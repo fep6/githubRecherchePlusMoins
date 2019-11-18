@@ -26,10 +26,19 @@ public class GestionConformites {
 		entreeJeu="";
 		resultat=0;
 	}
+	/**
+	 * @see EntreesManuellesDuJeu -> testSiPionsEntiers(String entreeString,int[] entreeIntDuJoueur,int pions)
+	 * @param pion : pion en cours
+	 * @param entreeStringDuJoueur : combinaison attaque du joueur
+	 * @return retourne booleen si ok
+	 */
 	public boolean testEntreeSiEntierRegEx(int pion, String[] entreeStringDuJoueur) {
 		String regExp="^[0-9]$";
 		return entreeStringDuJoueur[pion].matches(regExp);
 	}
+	/**
+	 * 
+	 */
 	public void gestionEntreeSiRecommence() {
 		do {
 			jeuEnCours = sc.nextLine();
@@ -65,7 +74,7 @@ public class GestionConformites {
                if (fis != null) 
                    fis.close();
 			} catch (IOException e) {
-				Jeu.getTl4j().setMessageWarning(" Impossible de fermer le fichier du Stream "+e);
+				Jeu.getTl4j().setMessageWarning(" Impossible de fermer le fichier du Stream! "+e);
 			}
 		}
 	}

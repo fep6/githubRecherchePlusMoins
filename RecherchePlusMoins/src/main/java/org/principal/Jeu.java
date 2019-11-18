@@ -57,7 +57,7 @@ public class Jeu {
 			if (args[nbreArg].contentEquals("-trace")) {
 				System.out.println("\\n L'argument 'admin' est l'argument "+(int)(nbreArg+1)+" de la commande en ligne!");
 				trace=true;	
-				getTl4j().debutJeu();
+				tl4j.debutJeu();
 			}
 		}
 	}

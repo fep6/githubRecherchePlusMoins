@@ -42,7 +42,11 @@ public class EntreesConfigJeu {
 		System.out.println("\n _____________________________________________ \n ");	
 	}
 	
-	// Pour lecture fichier externe
+	/**
+	 * Pour lecture fichier externe
+	 * @param commAdmin
+	 * @see Jeu
+	 */
 	public void entreesFichierConfigJeu(boolean commAdmin) {		
 		gcEcj.gestionExeptionFichierConfig (fis , p);
 		nCoups=gcEcj.getNCoups();

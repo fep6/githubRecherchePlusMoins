@@ -36,20 +36,20 @@ public class Jeu {
 	public Jeu() {
 		trace=false;
 		ecj = new EntreesConfigJeu();
+		tl4j = new TraceLog4j();
 	}
 	void debutJeu(String[] args) {
 		// Nombre d'arguments dans la ligne de commande (sert juste à l'affichage)
 		int nbreArg = args.length;
-		tl4j = new TraceLog4j();
 		
 		// Prise en compte de l'argument de commande en ligne en admin (triche) (nbreArg est le nombre d'arguments dans la ligne de commande)
 		for (nbreArg=0; nbreArg<args.length; nbreArg++) {
 			if (args[nbreArg].contentEquals("-admin")) {
-				System.out.println("/n L'argument 'admin' est le "+nbreArg+1+" argument de la commande en ligne!");
+				System.out.println("\n L'argument 'admin' est le "+nbreArg+1+" argument de la commande en ligne!");
 				setAdminCommande();
 			}
 			if (args[nbreArg].contentEquals("-trace")) {
-				System.out.println("/n L'argument 'trace' est le "+nbreArg+1+" argument de la commande en ligne!");
+				System.out.println("\n L'argument 'trace' est le "+nbreArg+1+" argument de la commande en ligne!");
 				trace=true;	
 				getTl4j().debutJeu();
 			}

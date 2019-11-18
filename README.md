@@ -19,11 +19,11 @@ Mode 3  : A tour de rôle, l'ordinateur ou le joueur attaquent, et défend sa c
 2/ Compilation
 
    Dans la console, dans le repertoire du projet:
-   mvn package
+   	mvn package
 
    ou sous Eclipse avec Maven d'installé:
    -> click droit sur le projet
-   -> Run as / build... : Ajouter package dans 'Goals'
+   -> Run as / build... : Ajouter 'package' dans 'Goals'
 
 	Le fichier RecherchePlusMoins-0.0.1-SNAPSHOT.jar doit apparaitre dans le sous dossier Target.
 

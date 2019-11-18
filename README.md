@@ -27,7 +27,7 @@ Mode 3  : A tour de rôle, l'ordinateur ou le joueur attaquent, et défend sa c
 
 	Le fichier RecherchePlusMoins-0.0.1-SNAPSHOT.jar doit apparaitre dans le sous dossier Target.
 
-2/ Execution du jeu
+3/ Execution du jeu
 
    Options:
    Dans le dossier IO, existe le fichier config.properties.
@@ -35,26 +35,26 @@ Mode 3  : A tour de rôle, l'ordinateur ou le joueur attaquent, et défend sa c
    Il définit le nombre de pions, et le nombre de coups de la partie.
 
 
-   2.1 Mode simple
+   3.1 Mode simple
    tapez dans la console, dans la racine du dossier
 	java -jar RecherchePlusMoins-0.0.1-SNAPSHOT.jar
 
 
-   2.3 Mode triche
+   3.2 Mode triche
    'Admin' autorise un mode 'triche' où est affiché la combinaison de l'ordinateur, pendant le jeu.
    tapez dans la console, dans la racine du dossier
 	java -jar RecherchePlusMoins-0.0.1-SNAPSHOT.jar -admin
 
 
 
-2.3 Mode 'tracé'
+   3.3 Mode 'tracé'
 
    Vous avez la possibilité d'enregistrer le jeu dans logs\myLogs.log 
    Pour ce faire, tapez dans la console, dans la racine du dossier
    java -jar RecherchePlusMoins-0.0.1-SNAPSHOT.jar -trace
    Il est aussi ouvrable via le bloc note de Windows (click droit, 'ouvrir avec', bloc note).
 
-3/ Prérequis
+4/ Prérequis
 
    Vous devez avoir la Java Runtime Environnement installée sur votre ordinateur.
    Pour savoir si c'est le cas, allez dans la console de Windows 10 (tapez 'cmd' dans la recherche de la barre de menu). 

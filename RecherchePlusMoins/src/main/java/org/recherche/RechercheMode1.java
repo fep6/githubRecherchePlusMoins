@@ -1,6 +1,6 @@
-package recherche;
+package org.recherche;
 
-import entrees.EntreesManuellesDuJeu;
+import org.entrees.EntreesManuellesDuJeu;
 
 /**
  * Mode 1 "Challenger" : Le joueur attaque

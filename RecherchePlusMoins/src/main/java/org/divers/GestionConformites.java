@@ -18,14 +18,18 @@ public class GestionConformites {
 	private int nPions;
 	//Lecture sur le fichier de config di l'on est en admin (triche)
 	private boolean confAdmin;
-	// Commande en ligne du traçage log4j
-	private static boolean trace=false; 
 	
 	public GestionConformites(){
 		sc = new Scanner(System.in);
 		entreeJeu="";
 		resultat=0;
 	}
+	/**  Test si les entrees sont chacune un chiffre de 0 a 9
+	 * @param pion Valeur du pion entré par le joueur
+	 * @param entreeStringDuJoueur 
+	 * @return Renvoi un booleen si condition remplie
+	 * @see EntreesManuellesDuJeu : testSiPionsEntiers(String entreeString,int[] entreeIntDuJoueur,int pions)
+	 */
 	public boolean testEntreeSiEntierRegEx(int pion, String[] entreeStringDuJoueur) {
 		String regExp="^[0-9]$";
 		return entreeStringDuJoueur[pion].matches(regExp);
@@ -43,6 +47,7 @@ public class GestionConformites {
 	 * entrée du fichier de configuration
 	 * @param p
 	 * chargement de fis en plusieurs lignes (p)
+	 * @see EntreesConfigJeu : entreesFichierConfigJeu(boolean commAdmin)
 	 */
 	public void gestionExeptionFichierConfig(FileInputStream fis,Properties p) {
 		try {
@@ -55,24 +60,23 @@ public class GestionConformites {
 			nPions=Integer.parseInt(p.getProperty("nPions"));
 			confAdmin =Boolean.parseBoolean(p.getProperty("admin"));
 		} catch (NumberFormatException e){
-			Jeu.getTl4j().setMessageWarning(" La valeur entrée dans le fichier config.properties n'est pas valide.");
+			Jeu.getTl4j().setMessageWarning(" La valeur entrée dans le fichier config.properties n'est pas valide: "+ e);
 		} catch (FileNotFoundException e) {
-			Jeu.getTl4j().setMessageWarning(" Le fichier config.properties n'a pas été trouvé.");
-			e.printStackTrace();
+			Jeu.getTl4j().setMessageWarning(" Le fichier config.properties n'a pas été trouvé : "+ e);
 		} catch (IOException e) {
-			e.printStackTrace();
+			Jeu.getTl4j().setMessageWarning(" Une erreur d'exeception a été générée : "+ e);
 		} finally {
            try {
                if (fis != null) 
                    fis.close();
 			} catch (IOException e) {
-				e.printStackTrace();
+				Jeu.getTl4j().setMessageWarning(" Impossible de fermer le stream : "+ e);
 			}
 		}
 	}
 	/**
-	 * @param org.divers
-	 * @see EntreeConfigJeu
+	 * @param entier
+	 * @see EntreeConfigJeu : setModeJeu()
 	 */
 	public void testEntreeSiEntier (int test) {
 		do {

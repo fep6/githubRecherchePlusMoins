@@ -1,6 +1,5 @@
 package org.principal;
 
-import org.affichage.AffichageConsole;
 import org.divers.TraceLog4j;
 import org.entrees.EntreesConfigJeu;
 import org.entrees.EntreesManuellesDuJeu;
@@ -9,9 +8,10 @@ import org.recherche.RechercheMode2;
 import org.recherche.RechercheMode3;
 
 public class Jeu {
+	//Entrees du jeu
 	private EntreesConfigJeu ecj;
+	// Tracabilite
 	private static TraceLog4j tl4j;
-	private AffichageConsole acJ;
 
 	// Déroulé normal
 	private RechercheMode1 rm1;
@@ -43,7 +43,6 @@ public class Jeu {
 		trace=false;
 		ecj = new EntreesConfigJeu();
 		tl4j = new TraceLog4j();
-		acJ = new AffichageConsole();
 	}
 	void debutJeu(String[] args) {
 		// Nombre d'arguments dans la ligne de commande (sert juste à l'affichage)
@@ -52,11 +51,11 @@ public class Jeu {
 		// Prise en compte de l'argument de commande en ligne en admin (triche) (nbreArg est le nombre d'arguments dans la ligne de commande)
 		for (nbreArg=0; nbreArg<args.length; nbreArg++) {
 			if (args[nbreArg].contentEquals("-admin")) {
-				acJ.argumentLigneAdmin(nbreArg);
+				System.out.println("\n L'argument 'admin' est l'argument "+(int)(nbreArg+1)+" de la commande en ligne!");
 				setAdminCommande();
 			}
 			if (args[nbreArg].contentEquals("-trace")) {
-				acJ.argumentTraceAdmin(nbreArg);
+				System.out.println("\n L'argument 'admin' est l'argument "+(int)(nbreArg+1)+" de la commande en ligne!");
 				trace=true;	
 				tl4j.debutJeu();
 			}
@@ -65,7 +64,8 @@ public class Jeu {
 	
 	 void setJeu() {
 			manche++;
-			acJ.debutManche(manche);
+			System.out.println("_________________________________________________________________________________");
+			System.out.println("Début de la manche: "+ manche);
 			ecj.entreesFichierConfigJeu(extAdmin);
 			ecj.setModeJeu();
 			
@@ -82,9 +82,9 @@ public class Jeu {
 			jeuEnCours=true;
 			emjJeuEnCours = new EntreesManuellesDuJeu();
 	 }
-	void doJeu(int modeJeu, int nCoups, int nPions){
+	void doJeu(){
 		while (jeuEnCours==true) {
-			acJ.affichageRecapitulatifConfigJeu(modeJeu, nCoups, nPions);
+			ecj.affichageRecapitulatifConfigJeu();
 			if (ecj.getModeJeu()==1) {
 				rm1.doRechercheMode(ecj.getModeJeu(),ecj.getNCoups(),ecj.getNPions(),ecj.getAdmin()||extAdmin);
 				if (ecj.getAdmin()==true){
@@ -104,7 +104,9 @@ public class Jeu {
 			if (trace==true) {
 				tl4j.recapTracageFinDeJeu(ecj, rm1, rm2, rm3, coupMaxPartie);
 			}
-			acJ.finManche(manche);
+			
+			System.out.println("Fin de la manche: "+ manche);
+			System.out.println("_________________________________________________________________________________");
 			emjJeuEnCours.demandeRecommenceJeu();
 			
 			if (emjJeuEnCours.getJeuEnCours().equals("non")) {
@@ -114,13 +116,14 @@ public class Jeu {
 				tl4j = new TraceLog4j();
 				Jeu j = new Jeu();
 				j.setJeu();
-				j.doJeu(modeJeu, nCoups, nPions);
+				j.doJeu();
 				jeuEnCours=false;
 			}
 		}
 	}
 	void finJeu() {
-		acJ.finJeu();
+		System.out.println("Fin définitive du jeu!");
+		System.out.println("_________________________");
 		if (trace==true) {
 			getTl4j().finJeu();
 		}
@@ -146,12 +149,6 @@ public class Jeu {
 	 */
 	public static TraceLog4j getTl4j() {
 		return tl4j;
-	}
-	/**
-	 * @see Main
-	 */
-	EntreesConfigJeu getEcj() {
-		return ecj;
 	}
 }
 	

@@ -14,7 +14,7 @@ import org.recherche.RechercheMode1;
  */
 public class EntreesManuellesDuJeu {
 	
-	private AffichageConsole acEmdj;
+	private AffichageConsole acEmdj= new AffichageConsole();;
 	private GestionConformites gcEntreePions;
 	private int[] entreeIntDuJoueur;
 	private String[] entreeStringDuJoueur;

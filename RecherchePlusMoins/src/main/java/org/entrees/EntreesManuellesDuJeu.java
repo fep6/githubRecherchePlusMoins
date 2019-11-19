@@ -13,37 +13,22 @@ import org.recherche.RechercheMode1;
  * @author fep
  */
 public class EntreesManuellesDuJeu {
-
-	private GestionConformites gcEntreePions;
-	private AffichageConsole acEmj = new AffichageConsole();
-	/**
-	 * Entree simple du joueur sous forme entière
-	 */
-	private int[] entreeIntDuJoueur;
-	/**
-	 * Entree simple du joueur sous forme String
-	 */
-	private String[] entreeStringDuJoueur;
 	
+	private AffichageConsole acEmdj;
+	private GestionConformites gcEntreePions;
+	private int[] entreeIntDuJoueur;
+	private String[] entreeStringDuJoueur;
 	private String jeuEnCours;
-	/**
-	 * Pour recommencer le jeu (a la fin)
-	 */
 	private GestionConformites gcRecommenceJeu;
 	private boolean testSiPionEntier;
 	private String entreeString;
-	private Scanner sc = new Scanner(System.in);
+	private Scanner sc;
 	
 	public EntreesManuellesDuJeu(){
+		acEmdj = new AffichageConsole();
 		gcRecommenceJeu = new GestionConformites();
-		acEmj = new AffichageConsole();
+		sc = new Scanner(System.in);
 	}
-	/**
-	 * Constructeur selon entrées des pions du joueur	
-	 * @param pions
-	 * @see CombinaisonSecrete
-	 * @see RechercheMode1
-	 */ 
 	public EntreesManuellesDuJeu(int pions){
 		entreeIntDuJoueur = new int[pions];
 		entreeStringDuJoueur = new String[pions];
@@ -51,14 +36,18 @@ public class EntreesManuellesDuJeu {
 		gcEntreePions = new GestionConformites();
 	}
 	public void demandeRecommenceJeu() {
-		acEmj.questionRecommenceJeu();
+		acEmdj.questionRecommenceJeu();
 		gcRecommenceJeu.gestionEntreeSiRecommence();
 		jeuEnCours=gcRecommenceJeu.getReponseSiRecommence();
 	}
 	public void doEntreesManuellesDesPions(int pions) {
 		
-		acEmj.entreeProposition(pions);
-		// System.out.println("Veuillez entrer votre proposition.  (Attention: " + pions + " pions à entrer)");
+		System.out.println("TEST : pions ="+pions);
+		
+//		acEmdj.entreeProposition(pions);
+
+		System.out.println("TEST : Veuillez entrer votre proposition.  (Attention: " + pions + " pions à entrer)");
+		
 		
 		entreeString = sc.nextLine();
 		testNombreDePions(entreeString,pions);
@@ -66,11 +55,7 @@ public class EntreesManuellesDuJeu {
 	}
 	private void testNombreDePions(String entreeString,int pions) {
 		if (entreeString.length()!=pions) {
-			
-			acEmj.entreesEronneesNombrePions(pions);
-//			System.out.println("Votre entree est erronnée!");
-//			System.out.println("Merci de rentrer le bon nombre de pions. A savoir: " + pions + " chiffres (pions)");
-			
+			acEmdj.entreesEronneesNombrePions(pions);
 			doEntreesManuellesDesPions(pions);
 		}
 	}
@@ -82,10 +67,7 @@ public class EntreesManuellesDuJeu {
 			
 			while (testSiPionEntier==false) {
 				if (gcEntreePions.testEntreeSiEntierRegEx(pion, entreeStringDuJoueur)==false){
-					
-					System.out.println("Svp d'entrer "+ pions + " pions d'une valeur entre 0 et 9!");
-					
-					
+					acEmdj.entreesEronneesValeurPions(pions);
 					doEntreesManuellesDesPions(pions);
 				} else {
 					entreeIntDuJoueur[pion]=Character.getNumericValue(entreeString.charAt(pion));
@@ -94,18 +76,12 @@ public class EntreesManuellesDuJeu {
 			}
 		}
 	}
-	
-/**
- * Retour de la touche du joueur
- * @param p
- * l'entrée du pion
- * @return
- * Retour de l'entrée clavier du joueur
- * @see CombinaisonSecrete.setCombinaisonSecreteJoueur(int pions)
- * Combinaison secrète du joueur (Mode2)
- * @see RechercheMode1.entreesJoueur(int coup, int[][] tableauJeu, int pions)
- * Jeu du joueur (Mode1)
- */
+	/**
+	 * @see RechercheMode1
+	 * @see CombinaisonSecrete
+	 * @param p
+	 * @return
+	 */
 	public int getEntree(int p){
 		return entreeIntDuJoueur[p];
 	}

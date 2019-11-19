@@ -7,14 +7,14 @@ import java.util.Properties;
 
 import org.affichage.AffichageConsole;
 import org.divers.GestionConformites;
-import org.principal.Jeu;
 
 
 
 public class EntreesConfigJeu {
+
 	private AffichageConsole acEcj;
 	private GestionConformites gcEcj ;
-	private  FileInputStream fis = null;
+	private FileInputStream fis = null;
 	// Classe Properties permet de gérer les propriétés du fichier config.properties
 	private Properties p = new Properties();
 	private int modeJeu=0;
@@ -26,12 +26,9 @@ public class EntreesConfigJeu {
 		gcEcj = new GestionConformites();
 		acEcj = new AffichageConsole();
 	}
-	public void affichageRecapitulatifConfigJeu() {
-		acEcj.affichageRecapitulatifConfigJeu(modeJeu, nCoups, nPions);
-	}
-	
+
 	public void entreesFichierConfigJeu(boolean commAdmin) {		
-		gcEcj.gestionExeptionFichierConfig (fis , p);
+		gcEcj.gestionExceptionFichierConfig (fis , p);	
 		nCoups=gcEcj.getNCoups();
 		nPions=gcEcj.getNPions();
 		admin=gcEcj.getConfAdmin()||admin;
@@ -39,7 +36,7 @@ public class EntreesConfigJeu {
 
 	public void setModeJeu(){	
 		do {
-			acEcj.menuMode();
+			acEcj.menuMode();	
 			gcEcj.testEntreeSiEntier(modeJeu);
 			modeJeu = gcEcj.getResultatTestEntreeSiEntier();			
 		} while ( modeJeu < 1 || modeJeu > 3 );
@@ -52,15 +49,9 @@ public class EntreesConfigJeu {
 	public int getModeJeu() {
 		return modeJeu;
 	}
-	/**
-	 * @see Jeu
-	 */
 	public int getNCoups() {
 		return nCoups;
 	}
-	/**
-	 * @see Jeu
-	 */
 	public int getNPions() {
 		return nPions;
 	}

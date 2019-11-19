@@ -169,3 +169,29 @@ Le mode administrateur a été demandé en ligne de commande!
  Nombre de pions maximums: 5
  Le fichier de configuration du jeu indique :normal!
 Le mode administrateur a été demandé en ligne de commande!
+[INFO ] 2019-11-19 12:15:30.051 [main] TraceLog4j - ________________Début du Jeu!
+[INFO ] 2019-11-19 12:15:32.957 [main] TraceLog4j - 
+ Début du jeu -> Récapitulatif des entrées du jeu:
+ Mode de la partie : 1
+ Nombre de coups maximums: 5
+ Nombre de pions maximums: 5
+ Le fichier de configuration du jeu indique :normal!
+Le mode administrateur a été demandé en ligne de commande!
+[INFO ] 2019-11-19 12:15:46.015 [main] TraceLog4j - Fin de la manche. Verdict:LE JOUEUR A GAGNE!
+[INFO ] 2019-11-19 12:15:46.016 [main] TraceLog4j - Selon les combinaisons :
+[TRACE] 2019-11-19 12:15:46.016 [main] TraceLog4j - 00434
+[INFO ] 2019-11-19 12:15:46.016 [main] TraceLog4j - ________________________________________
+[INFO ] 2019-11-19 12:15:49.315 [main] TraceLog4j - ________________Fin du Jeu!
+[INFO ] 2019-11-19 12:27:44.945 [main] TraceLog4j - ________________Début du Jeu!
+[INFO ] 2019-11-19 12:27:48.087 [main] TraceLog4j - 
+ Début du jeu -> Récapitulatif des entrées du jeu:
+ Mode de la partie : 1
+ Nombre de coups maximums: 5
+ Nombre de pions maximums: 5
+ Le fichier de configuration du jeu indique :normal!
+Le mode administrateur a été demandé en ligne de commande!
+[INFO ] 2019-11-19 12:27:58.242 [main] TraceLog4j - Fin de la manche. Verdict:LE JOUEUR A GAGNE!
+[INFO ] 2019-11-19 12:27:58.243 [main] TraceLog4j - Selon les combinaisons :
+[TRACE] 2019-11-19 12:27:58.243 [main] TraceLog4j - 12469
+[TRACE] 2019-11-19 12:27:58.243 [main] TraceLog4j - 23343
+[INFO ] 2019-11-19 12:27:58.243 [main] TraceLog4j - ________________________________________

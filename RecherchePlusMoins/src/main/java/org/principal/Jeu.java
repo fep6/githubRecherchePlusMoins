@@ -1,5 +1,7 @@
 package org.principal;
 
+import org.affichage.AffichageConsole;
+import org.divers.GestionConformites;
 import org.divers.TraceLog4j;
 import org.entrees.EntreesConfigJeu;
 import org.entrees.EntreesManuellesDuJeu;
@@ -8,6 +10,8 @@ import org.recherche.RechercheMode2;
 import org.recherche.RechercheMode3;
 
 public class Jeu {
+	
+	private AffichageConsole acJ;
 	//Entrees du jeu
 	private EntreesConfigJeu ecj;
 	// Tracabilite
@@ -40,6 +44,7 @@ public class Jeu {
 	private static boolean trace;  
 	
 	public Jeu() {
+		acJ = new AffichageConsole();
 		trace=false;
 		ecj = new EntreesConfigJeu();
 		tl4j = new TraceLog4j();
@@ -51,11 +56,14 @@ public class Jeu {
 		// Prise en compte de l'argument de commande en ligne en admin (triche) (nbreArg est le nombre d'arguments dans la ligne de commande)
 		for (nbreArg=0; nbreArg<args.length; nbreArg++) {
 			if (args[nbreArg].contentEquals("-admin")) {
-				System.out.println("\n L'argument 'admin' est l'argument "+(int)(nbreArg+1)+" de la commande en ligne!");
+				acJ.rappelArgumentLigne(nbreArg);
+//				System.out.println("\n L'argument 'admin' est l'argument "+(int)(nbreArg+1)+" de la commande en ligne!");
 				setAdminCommande();
 			}
 			if (args[nbreArg].contentEquals("-trace")) {
-				System.out.println("\n L'argument 'admin' est l'argument "+(int)(nbreArg+1)+" de la commande en ligne!");
+
+				acJ.rappelArgumentTrace(nbreArg);
+//				System.out.println("\n L'argument 'trace' est l'argument "+(int)(nbreArg+1)+" de la commande en ligne!");
 				trace=true;	
 				tl4j.debutJeu();
 			}

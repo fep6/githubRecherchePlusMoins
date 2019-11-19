@@ -4,6 +4,7 @@ package org.entrees;
 
 import java.util.Scanner;
 
+import org.affichage.AffichageConsole;
 import org.divers.GestionConformites;
 import org.recherche.RechercheMode1;
 
@@ -14,6 +15,7 @@ import org.recherche.RechercheMode1;
 public class EntreesManuellesDuJeu {
 
 	private GestionConformites gcEntreePions;
+	private AffichageConsole acEmj = new AffichageConsole();
 	/**
 	 * Entree simple du joueur sous forme entière
 	 */
@@ -34,6 +36,7 @@ public class EntreesManuellesDuJeu {
 	
 	public EntreesManuellesDuJeu(){
 		gcRecommenceJeu = new GestionConformites();
+		acEmj = new AffichageConsole();
 	}
 	/**
 	 * Constructeur selon entrées des pions du joueur	
@@ -48,20 +51,26 @@ public class EntreesManuellesDuJeu {
 		gcEntreePions = new GestionConformites();
 	}
 	public void demandeRecommenceJeu() {
-		System.out.println("Voulez-vous recommencer le jeu (oui/non)?");
+		acEmj.questionRecommenceJeu();
 		gcRecommenceJeu.gestionEntreeSiRecommence();
 		jeuEnCours=gcRecommenceJeu.getReponseSiRecommence();
 	}
 	public void doEntreesManuellesDesPions(int pions) {
-		System.out.println("Veuillez entrer votre proposition.  (Attention: " + pions + " pions à entrer)");
-			entreeString = sc.nextLine();
-			testNombreDePions(entreeString,pions);
-			testSiPionsEntiers(entreeString,entreeIntDuJoueur, pions);
+		
+		acEmj.entreeProposition(pions);
+		// System.out.println("Veuillez entrer votre proposition.  (Attention: " + pions + " pions à entrer)");
+		
+		entreeString = sc.nextLine();
+		testNombreDePions(entreeString,pions);
+		testSiPionsEntiers(entreeString,entreeIntDuJoueur, pions);
 	}
 	private void testNombreDePions(String entreeString,int pions) {
 		if (entreeString.length()!=pions) {
-			System.out.println("Votre entree est erronnée!");
-			System.out.println("Merci de rentrer le bon nombre de pions. A savoir: " + pions + " chiffres (pions)");
+			
+			acEmj.entreesEronneesNombrePions(pions);
+//			System.out.println("Votre entree est erronnée!");
+//			System.out.println("Merci de rentrer le bon nombre de pions. A savoir: " + pions + " chiffres (pions)");
+			
 			doEntreesManuellesDesPions(pions);
 		}
 	}
@@ -73,7 +82,10 @@ public class EntreesManuellesDuJeu {
 			
 			while (testSiPionEntier==false) {
 				if (gcEntreePions.testEntreeSiEntierRegEx(pion, entreeStringDuJoueur)==false){
+					
 					System.out.println("Svp d'entrer "+ pions + " pions d'une valeur entre 0 et 9!");
+					
+					
 					doEntreesManuellesDesPions(pions);
 				} else {
 					entreeIntDuJoueur[pion]=Character.getNumericValue(entreeString.charAt(pion));

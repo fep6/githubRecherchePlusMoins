@@ -1,0 +1,44 @@
+[INFO ] 2019-11-18 17:05:54.557 [main] TraceLog4j - ________________Début du Jeu!
+[INFO ] 2019-11-18 17:06:05.969 [main] TraceLog4j - 
+ Début du jeu -> Récapitulatif des entrées du jeu:
+ Mode de la partie : 1
+ Nombre de coups maximums: 5
+ Nombre de pions maximums: 5
+ Le fichier de configuration du jeu indique :normal!
+Le mode administrateur a été demandé en ligne de commande!
+[INFO ] 2019-11-18 17:06:10.794 [main] TraceLog4j - Fin de la manche. Verdict:LE JOUEUR A GAGNE!
+[INFO ] 2019-11-18 17:06:10.794 [main] TraceLog4j - Selon les combinaisons :
+[TRACE] 2019-11-18 17:06:10.794 [main] TraceLog4j - 97802
+[INFO ] 2019-11-18 17:06:10.795 [main] TraceLog4j - ________________________________________
+[INFO ] 2019-11-19 10:04:20.561 [main] TraceLog4j - ________________Début du Jeu!
+[INFO ] 2019-11-19 10:04:25.749 [main] TraceLog4j - 
+ Début du jeu -> Récapitulatif des entrées du jeu:
+ Mode de la partie : 1
+ Nombre de coups maximums: 5
+ Nombre de pions maximums: 5
+ Le fichier de configuration du jeu indique :normal!
+Le mode administrateur a été demandé en ligne de commande!
+[INFO ] 2019-11-19 10:07:33.238 [main] TraceLog4j - ________________Début du Jeu!
+[INFO ] 2019-11-19 10:07:37.087 [main] TraceLog4j - 
+ Début du jeu -> Récapitulatif des entrées du jeu:
+ Mode de la partie : 1
+ Nombre de coups maximums: 5
+ Nombre de pions maximums: 5
+ Le fichier de configuration du jeu indique :normal!
+Le mode administrateur a été demandé en ligne de commande!
+[INFO ] 2019-11-19 10:21:31.632 [main] TraceLog4j - ________________Début du Jeu!
+[INFO ] 2019-11-19 10:21:34.381 [main] TraceLog4j - 
+ Début du jeu -> Récapitulatif des entrées du jeu:
+ Mode de la partie : 1
+ Nombre de coups maximums: 5
+ Nombre de pions maximums: 5
+ Le fichier de configuration du jeu indique :normal!
+Le mode administrateur a été demandé en ligne de commande!
+[INFO ] 2019-11-19 10:25:32.878 [main] TraceLog4j - ________________Début du Jeu!
+[INFO ] 2019-11-19 10:25:47.379 [main] TraceLog4j - 
+ Début du jeu -> Récapitulatif des entrées du jeu:
+ Mode de la partie : 1
+ Nombre de coups maximums: 5
+ Nombre de pions maximums: 5
+ Le fichier de configuration du jeu indique :normal!
+Le mode administrateur a été demandé en ligne de commande!

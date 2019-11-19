@@ -43,7 +43,7 @@ public class EntreesConfigJeu {
 	}
 	
 	public void entreesFichierConfigJeu(boolean commAdmin) {		
-		gcEcj.gestionExeptionFichierConfig (fis , p);
+		gcEcj.gestionExceptionFichierConfig (fis , p);
 		nCoups=gcEcj.getNCoups();
 		nPions=gcEcj.getNPions();
 		admin=gcEcj.getConfAdmin()||admin;

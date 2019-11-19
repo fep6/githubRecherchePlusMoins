@@ -149,4 +149,7 @@ Le mode administrateur a été demandé en ligne de commande!
  Le fichier de configuration du jeu indique :normal!
 Le mode administrateur a été demandé en ligne de commande!
 [INFO ] 2019-11-19 11:58:20.257 [main] TraceLog4j - Fin de la manche. Verdict:LE JOUEUR A GAGNE!
-[INFO ] 2019-11-19 11:58:20.257 [main] TraceLog4j - Selon les combinaisons 
+[INFO ] 2019-11-19 11:58:20.257 [main] TraceLog4j - Selon les combinaisons :
+[TRACE] 2019-11-19 11:58:20.257 [main] TraceLog4j - 12345
+[TRACE] 2019-11-19 11:58:20.257 [main] TraceLog4j - 85633
+[INFO ] 2019-11-19 11:58:20.257 [main] TraceLog4j - ________________________________________

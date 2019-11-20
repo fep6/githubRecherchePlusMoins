@@ -4,7 +4,6 @@ package org.entrees;
 
 import java.util.Scanner;
 
-import org.affichage.AffichageConsole;
 import org.divers.GestionConformites;
 import org.recherche.RechercheMode1;
 
@@ -13,19 +12,27 @@ import org.recherche.RechercheMode1;
  * @author fep
  */
 public class EntreesManuellesDuJeu {
-	
-	private AffichageConsole acEmdj= new AffichageConsole();
+
 	private GestionConformites gcEntreePions;
+	/**
+	 * Entree simple du joueur sous forme entière
+	 */
 	private int[] entreeIntDuJoueur;
+	/**
+	 * Entree simple du joueur sous forme String
+	 */
 	private String[] entreeStringDuJoueur;
+	
 	private String jeuEnCours;
+	/**
+	 * Pour recommencer le jeu (a la fin)
+	 */
 	private GestionConformites gcRecommenceJeu;
 	private boolean testSiPionEntier;
 	private String entreeString;
 	private Scanner sc = new Scanner(System.in);
 	
 	public EntreesManuellesDuJeu(){
-		// acEmdj = new AffichageConsole();
 		gcRecommenceJeu = new GestionConformites();
 	}
 	/**
@@ -41,23 +48,23 @@ public class EntreesManuellesDuJeu {
 		gcEntreePions = new GestionConformites();
 	}
 	public void demandeRecommenceJeu() {
-		acEmdj.questionRecommenceJeu();
+		System.out.println("Voulez-vous recommencer le jeu (oui/non)?");
 		gcRecommenceJeu.gestionEntreeSiRecommence();
 		jeuEnCours=gcRecommenceJeu.getReponseSiRecommence();
 	}
 	public void doEntreesManuellesDesPions(int pions) {
-		acEmdj.entreeProposition(pions);
-		entreeString = sc.nextLine();
-		testNombreDePions(entreeString,pions);
-		testSiPionsEntiers(entreeString,entreeIntDuJoueur, pions);
+		System.out.println("Veuillez entrer votre proposition.  (Attention: " + pions + " pions à entrer)");
+			entreeString = sc.nextLine();
+			testNombreDePions(entreeString,pions);
+			testSiPionsEntiers(entreeString,entreeIntDuJoueur, pions);
 	}
 	private void testNombreDePions(String entreeString,int pions) {
 		if (entreeString.length()!=pions) {
-			acEmdj.entreesEronneesNombrePions(pions);
+			System.out.println("Votre entree est erronnée!");
+			System.out.println("Merci de rentrer le bon nombre de pions. A savoir: " + pions + " chiffres (pions)");
 			doEntreesManuellesDesPions(pions);
 		}
 	}
-	
 	private void testSiPionsEntiers(String entreeString,int[] entreeIntDuJoueur,int pions) {
 		for (int pion=0;pion<pions;pion++) {
 			
@@ -66,19 +73,26 @@ public class EntreesManuellesDuJeu {
 			
 			while (testSiPionEntier==false) {
 				if (gcEntreePions.testEntreeSiEntierRegEx(pion, entreeStringDuJoueur)==false){
-					acEmdj.entreesEronneesValeurPions(pions);
+					System.out.println("Svp d'entrer "+ pions + " pions d'une valeur entre 0 et 9!");
 					doEntreesManuellesDesPions(pions);
 				} else {
 					entreeIntDuJoueur[pion]=Character.getNumericValue(entreeString.charAt(pion));
-					testSiPionEntier=true;
+					testSiPionEntier=true; 
 				}
 			}
 		}
 	}
 	
 /**
+ * Retour de la touche du joueur
+ * @param p
+ * l'entrée du pion
+ * @return
+ * Retour de l'entrée clavier du joueur
  * @see CombinaisonSecrete.setCombinaisonSecreteJoueur(int pions)
+ * Combinaison secrète du joueur (Mode2)
  * @see RechercheMode1.entreesJoueur(int coup, int[][] tableauJeu, int pions)
+ * Jeu du joueur (Mode1)
  */
 	public int getEntree(int p){
 		return entreeIntDuJoueur[p];

@@ -1,9 +1,6 @@
 package org.recherche;
 
-import org.affichage.AffichageConsole;
-import org.entrees.CombinaisonSecrete;
-import org.principal.ComparatifAffichageTest;
-import org.principal.Jeu;
+import org.divers.ComparatifAffichageTest;
 
 /**
  * Mode 2 "Défenseur": L'ordinateur a le rôle d’attaquant et doit faire une proposition d’une combinaison de X chiffres.
@@ -12,7 +9,7 @@ import org.principal.Jeu;
 public class RechercheMode2 extends RechercheMode{
 
 	private String stringTableauJeuMode2="";
-	private AffichageConsole acRm2 = new AffichageConsole();
+	
 	public RechercheMode2(int coups, int pions){
 		super(coups, pions);		
 		initVariablesDicho(dichoPlus, dichoMoins, dichoMax, pions);
@@ -38,7 +35,7 @@ public class RechercheMode2 extends RechercheMode{
 		while (jeuEnCours) {
 			jeuParTour(coups, pions);
 		} 
-		acRm2.finPartieMode2(cat2) ;
+		System.out.println("...Fin de la partie : "+ cat2.getVerdict());
 	}
 /**
  * A chaque tour, on compare l'entrée de l'attaquant avec l'entrée de la défense
@@ -54,7 +51,7 @@ public class RechercheMode2 extends RechercheMode{
 		cat2.setModeEnCours2();
 			cat2.doComparatifAffichageTest(tableauJeuMode2,combinaisonJoueur,boleenSiGagne,
 					coup,tourRestant,pions );
-			if (!cat2.getVerdict().equals(acRm2.ordiGagne()) && !cat2.getVerdict().equals(acRm2.ordiPerd())) {
+			if (!cat2.getVerdict().equals("L'ORDINATEUR A GAGNE!") && !cat2.getVerdict().equals("L'ORDINATEUR A PERDU!")) {
 				jeuEnCours =true;
 			} else {
 				jeuEnCours =false;
@@ -86,7 +83,8 @@ public class RechercheMode2 extends RechercheMode{
 	 void entreesJeuOrdi(int coup, int[][] tableauJeuMode2,String[][] tableauReponseJoueur, int[] dichoPlus, 
 		int[] dichoMoins, int Max ,ComparatifAffichageTest cat2, int pions){
 		stringTableauJeuMode2="";
-		acRm2.propositionOrdi();
+		System.out.println("----------------------------");
+		System.out.println("PROPOSITION DE L'ORDINATEUR:");
 		if (coup==0) {
 			// Au début, l'ordinateur prend la valeur (couleur) maximum
 			for (int pion=0;pion<pions;pion++) {	

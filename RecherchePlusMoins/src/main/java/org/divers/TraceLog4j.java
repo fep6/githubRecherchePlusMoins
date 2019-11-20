@@ -101,7 +101,7 @@ public class TraceLog4j {
 	}
 	/**
 	 * @see GestionExeptionEntreesGlobales
-	 * @param str 
+	 * @param str
 	 * retour attendu du message
 	 */
 	public void setMessageWarning(String str) {

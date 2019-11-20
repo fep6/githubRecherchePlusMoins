@@ -71,7 +71,8 @@ public class Jeu {
 	
 	 void setJeu() {
 			manche++;
-			acJ.debutManche(manche);
+			System.out.println("_________________________________________________________________________________");
+			System.out.println("Début de la manche: "+ manche);
 			ecj.entreesFichierConfigJeu(extAdmin);
 			ecj.setModeJeu();
 			
@@ -110,7 +111,9 @@ public class Jeu {
 			if (trace==true) {
 				tl4j.recapTracageFinDeJeu(ecj, rm1, rm2, rm3, coupMaxPartie);
 			}
-			acJ.finManche(manche);
+			
+			System.out.println("Fin de la manche: "+ manche);
+			System.out.println("_________________________________________________________________________________");
 			emjJeuEnCours.demandeRecommenceJeu();
 			
 			if (emjJeuEnCours.getJeuEnCours().equals("non")) {
@@ -126,7 +129,8 @@ public class Jeu {
 		}
 	}
 	void finJeu() {
-		acJ.finJeu();
+		System.out.println("Fin définitive du jeu!");
+		System.out.println("_________________________");
 		if (trace==true) {
 			getTl4j().finJeu();
 		}
@@ -146,6 +150,7 @@ public class Jeu {
 		tl4j.setAdminCommande();
 	}
 	/**
+	 * @return l'instance de TraceLog4j
 	 * @see EntreeConfigJeu
 	 * @see GestionConformites
 	 */

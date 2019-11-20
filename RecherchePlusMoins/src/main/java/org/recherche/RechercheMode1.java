@@ -1,8 +1,6 @@
 package org.recherche;
 
-import org.affichage.AffichageConsole;
 import org.entrees.EntreesManuellesDuJeu;
-import org.principal.ComparatifAffichageTest;
 
 /**
  * Mode 1 "Challenger" : Le joueur attaque
@@ -17,8 +15,11 @@ public class RechercheMode1 extends RechercheMode{
  * @param pions	
  */
 	private EntreesManuellesDuJeu emjMode1;
-	private AffichageConsole acRm1 = new AffichageConsole();
-	
+	/**
+	 * info si le jeu est configuré en admin par config.properties 
+	 * @see Jeu.java
+	 */
+	private boolean confAdmin = false;
 	
 	public RechercheMode1(int coups, int pions){
 		super(coups, pions);
@@ -42,7 +43,7 @@ public class RechercheMode1 extends RechercheMode{
 		while (jeuEnCours) {
 			jeuParTour(coups, pions);
 		}
-		acRm1.finPartieMode1(cat1);
+		System.out.println("...Fin de la partie : "+ cat1.getVerdict());
 	}
 /**
  * A chaque tour, on compare l'entrée de l'attaquant avec l'entrée de la défense
@@ -58,12 +59,7 @@ public class RechercheMode1 extends RechercheMode{
 		this.entreesJoueur(coup, tableauJeuMode1, pions);
 		cat1.setModeEnCours1() ;
 		cat1.doComparatifAffichageTest(tableauJeuMode1,combinaisonOrdi,boleenSiGagne, coup, tourRestant, pions);
-//			if (!cat1.getVerdict().equals(acRm1.joueurGagne()) && !cat1.getVerdict().equals(acRm1.joueurPerd())) {
-//				jeuEnCours =true;
-//			} else {
-//				jeuEnCours =false;
-//			}
-			if (!cat1.getVerdict().equals("LE JOUEUR A GAGNE!") && !cat1.getVerdict().equals("L'ORDINATEUR A PERDU!")) {
+			if (!cat1.getVerdict().equals("LE JOUEUR A GAGNE!") && !cat1.getVerdict().equals("LE JOUEUR A PERDU!")) {
 				jeuEnCours =true;
 			} else {
 				jeuEnCours =false;
@@ -84,7 +80,8 @@ public class RechercheMode1 extends RechercheMode{
  * @param pions
  */
 	void entreesJoueur(int coup, int[][] tableauJeuMode1, int pions) {
-		acRm1.propositionJoueur();
+		System.out.println("----------------------------");
+		System.out.println("PROPOSITION DU JOUEUR:");
 		emjMode1.doEntreesManuellesDesPions(pions);
 		for ( int pion=0;pion<pions;pion++) {				
 			tableauJeuMode1[coup][pion]=emjMode1.getEntree(pion);	

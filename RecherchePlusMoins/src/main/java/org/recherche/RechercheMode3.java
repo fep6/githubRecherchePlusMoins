@@ -1,6 +1,5 @@
 package org.recherche;
 
-import org.affichage.AffichageConsole;
 import org.entrees.CombinaisonSecrete;
 import org.principal.Jeu;
 
@@ -13,7 +12,6 @@ public class RechercheMode3 extends RechercheMode {
 
 	private RechercheMode1 rm1;
 	private RechercheMode2 rm2;
-	private AffichageConsole acRm3 = new AffichageConsole();
 
 	public RechercheMode3(int coups, int pions){
 		super(coups, pions);
@@ -42,8 +40,9 @@ public class RechercheMode3 extends RechercheMode {
 		rm2.initVariablesDicho(dichoPlus, dichoMoins, dichoMax, pions);
 		while (jeuEnCours) {
 			jeuParTour(coups, pions); 
-		}
-		acRm3.verdictsMode3(cat1,cat2);
+		}				
+		System.out.println("Verdict du joueur = " + cat1.getVerdict());				
+		System.out.println("Verdict de l'ordinateur = " + cat2.getVerdict());
 	}
 /**
  * A chaque tour, on compare l'entrée de l'attaquant avec l'entrée de la défense
@@ -59,15 +58,15 @@ public class RechercheMode3 extends RechercheMode {
  */
 	private void jeuParTour(int coups, int pions) {
 		boleenSiGagne= true;
-		acRm3.affichageTour(coup);
+		System.out.println("\n Nous sommes au tour N° :" + (int)(coup+1));
 		rm1.entreesJoueur(coup, tableauJeuMode1, pions );
 		rm2.entreesJeuOrdi(coup, tableauJeuMode2,tableauReponseJoueur,dichoPlus, dichoMoins, dichoMax, cat2, pions);
 		cat1.setModeEnCours1();
 		cat1.doComparatifAffichageTest(tableauJeuMode1,combinaisonOrdi,boleenSiGagne, coup, tourRestant, pions );
 		cat2.setModeEnCours2();
 		cat2.doComparatifAffichageTest(tableauJeuMode2,combinaisonJoueur,boleenSiGagne, coup,tourRestant, pions);
-		if (!cat1.getVerdict().equals(acRm3.joueurGagne()) && !cat1.getVerdict().equals(acRm3.joueurGagne()) 
-				&& !cat2.getVerdict().equals(acRm3.ordiGagne()) && !cat2.getVerdict().equals(acRm3.ordiPerd())) {
+		if (!cat1.getVerdict().equals("LE JOUEUR A GAGNE!") && !cat1.getVerdict().equals("LE JOUEUR A PERDU!") 
+				&& !cat2.getVerdict().equals("L'ORDINATEUR A GAGNE!") && !cat2.getVerdict().equals("L'ORDINATEUR A PERDU!")) {
 			jeuEnCours =true;
 		} else {
 			jeuEnCours =false;

@@ -1,5 +1,7 @@
 package org.principal;
 
+import org.affichage.AffichageConsole;
+import org.divers.GestionConformites;
 import org.divers.TraceLog4j;
 import org.entrees.EntreesConfigJeu;
 import org.entrees.EntreesManuellesDuJeu;
@@ -8,6 +10,7 @@ import org.recherche.RechercheMode2;
 import org.recherche.RechercheMode3;
 
 public class Jeu {
+	private AffichageConsole acJ;
 	//Entrees du jeu
 	private EntreesConfigJeu ecj;
 	// Tracabilite
@@ -21,14 +24,8 @@ public class Jeu {
 	 * Nombre de coups dans la partie (/tl4j)
 	 */
 	private int coupMaxPartie;
-	/**
-	 * Gestion en cours de la partie 
-	 */
 	private EntreesManuellesDuJeu emjJeuEnCours;
 	private boolean jeuEnCours;
-	/**
-	 * Manche du jeu
-	 */
 	private static int manche=0;
 	/**
 	 *  prise en compte admin via commande en ligne
@@ -40,6 +37,7 @@ public class Jeu {
 	private static boolean trace;  
 	
 	public Jeu() {
+		acJ=new AffichageConsole();
 		trace=false;
 		ecj = new EntreesConfigJeu();
 		tl4j = new TraceLog4j();
@@ -51,21 +49,20 @@ public class Jeu {
 		// Prise en compte de l'argument de commande en ligne en admin (triche) (nbreArg est le nombre d'arguments dans la ligne de commande)
 		for (nbreArg=0; nbreArg<args.length; nbreArg++) {
 			if (args[nbreArg].contentEquals("-admin")) {
-				System.out.println("\n L'argument 'admin' est l'argument "+(int)(nbreArg+1)+" de la commande en ligne!");
+				acJ.argumentLigneAdmin(nbreArg);
 				setAdminCommande();
 			}
 			if (args[nbreArg].contentEquals("-trace")) {
-				System.out.println("\n L'argument 'admin' est l'argument "+(int)(nbreArg+1)+" de la commande en ligne!");
-				trace=true;	
+				acJ.argumentTraceAdmin(nbreArg);
 				tl4j.debutJeu();
+				trace=true;	
 			}
 		}
 	}
 	
 	 void setJeu() {
 			manche++;
-			System.out.println("_________________________________________________________________________________");
-			System.out.println("Début de la manche: "+ manche);
+			acJ.debutManche(manche);
 			ecj.entreesFichierConfigJeu(extAdmin);
 			ecj.setModeJeu();
 			
@@ -104,9 +101,7 @@ public class Jeu {
 			if (trace==true) {
 				tl4j.recapTracageFinDeJeu(ecj, rm1, rm2, rm3, coupMaxPartie);
 			}
-			
-			System.out.println("Fin de la manche: "+ manche);
-			System.out.println("_________________________________________________________________________________");
+			acJ.finManche(manche);
 			emjJeuEnCours.demandeRecommenceJeu();
 			
 			if (emjJeuEnCours.getJeuEnCours().equals("non")) {
@@ -122,8 +117,7 @@ public class Jeu {
 		}
 	}
 	void finJeu() {
-		System.out.println("Fin définitive du jeu!");
-		System.out.println("_________________________");
+		acJ.finJeu();
 		if (trace==true) {
 			getTl4j().finJeu();
 		}

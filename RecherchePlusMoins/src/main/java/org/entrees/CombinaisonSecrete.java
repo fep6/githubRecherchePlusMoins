@@ -13,28 +13,13 @@ import org.recherche.RechercheMode3;
  *
  */
 public class CombinaisonSecrete {
-	/**
-	 * Entree manuelle pour combinaison secrete du joueur (Mode2)
-	 * @see RechercheMode2
-	 * @see RechercheMode3
-	 */
+	private AffichageConsole acCs;
 	private EntreesManuellesDuJeu emjMode2;
-	/**
-	 * On génère la combinaison secrète de l'ordinateur (Mode 1)
-	 * @see RechercheMode1
-	 * @see RechercheMode3
-	 */
 	private int[] combinaisonSecreteOrdi;
-	/**
-	 * Entrée de la combinaison secrète du joueur (Mode 2)
-	 * @see RechercheMode2
-	 * @see RechercheMode3
-	 */	
 	private int[] combinaisonSecreteJoueur;
 	
-	private AffichageConsole acCs = new AffichageConsole();
-	
 	public CombinaisonSecrete(int pions){
+		acCs = new AffichageConsole();
 		emjMode2 = new EntreesManuellesDuJeu (pions);
 		combinaisonSecreteOrdi  = new int[pions];
 		combinaisonSecreteJoueur  = new int[pions];
@@ -64,11 +49,6 @@ public class CombinaisonSecrete {
 			Jeu.getTl4j().setMessageWarning("/// WARNING!!! ///"+"N° de mode de jeu (?) = "+ modeJeu + "/// WARNING!!! ///");
 		}
 	}
-		/**
-		 * on créé la combinaison secrète de l'ordinateur (Mode 1)
-		 * @param admin
-		 * Selon si mode admin ou non (code triche)
-		 */
 		void setCombinaisonSecreteOrdi(boolean admin) {
 			acCs.infoOrdi();
 			for (int i=0 ; i<combinaisonSecreteOrdi.length; i++) {
@@ -83,11 +63,6 @@ public class CombinaisonSecrete {
 				System.out.println("");
 			}		
 		}
-	 	/**
-	  	 * Entrées de la combinaison secrète du joueur
-		 * @param pions
-		 * Nombre de pions maximum
-		 */
 		void setCombinaisonSecreteJoueur(int pions){
 		acCs.entreeJoueurCs();
 		emjMode2.doEntreesManuellesDesPions(pions);
@@ -100,18 +75,9 @@ public class CombinaisonSecrete {
 		}
 		acCs.separateur();
 	}
-	/**
-	 * @return la combinaison secrete de l'ordi
-	 * @see RechercheMode1.doRechercheMode(int modeJeu, int coups, int pions, boolean admin)
-	 */
 	public int[] getCombinaisonSecreteOrdi() {
 		return combinaisonSecreteOrdi;
 	}
-	/**
-	 * @return la combinaison secrete du joueur
-	 * @see RechercheMode1.doRechercheMode(int modeJeu, int coups, int pions, boolean admin)
-	 */
-
 	public int[] getCombinaisonSecreteJoueur() {
 		return combinaisonSecreteJoueur;
 	}

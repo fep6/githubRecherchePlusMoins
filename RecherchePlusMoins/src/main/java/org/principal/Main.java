@@ -1,9 +1,7 @@
 package org.principal;
 
 /**
- * 
  * @author fep
- *
  */
 
 public class Main {

@@ -192,4 +192,13 @@ public class AffichageConsole {
 	public void recapPropEntreeJoueur() {
 		System.out.print("La proposition est donc: ");
 	}
+	public void entreeJoueurCs() {
+		System.out.println("Veuillez entrer votre combinaison secrète");
+	}
+	/** Divers
+	 * 
+	 */
+	public void separateur() {
+		System.out.println("\n ---------------------------");
+	}
 }

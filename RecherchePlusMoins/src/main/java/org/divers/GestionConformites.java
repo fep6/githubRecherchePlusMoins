@@ -7,6 +7,7 @@ import java.util.Properties;
 import java.util.Scanner;
 
 import org.affichage.AffichageConsole;
+import org.entrees.EntreesManuellesDuJeu;
 import org.principal.Jeu;
 
 public class GestionConformites {

@@ -202,3 +202,4 @@ public class AffichageConsole {
 		System.out.println("\n ---------------------------");
 	}
 }
+

@@ -43,7 +43,7 @@ public class ComparatifAffichageTest {
 	 * Nombre de pions maximum
 	 */
 	public void miseEnFormeTracage(int pions) {
-		for (int coup=0;coup<=pCoupMax;coup++) {
+		for (int coup=0;coup<pCoupMax;coup++) {
 			for (int pion=0;pion<pions;pion++) {
 				if (pion==0) {
 					stringTableauJeu[coup]=Integer.toString(pTableauJeu[coup][pion]);
@@ -80,7 +80,7 @@ public class ComparatifAffichageTest {
 			System.out.print(pTableauReponse[coup][pion]);
 		}
 		System.out.println("");
-		if (tourRestant == 0 && !pBooleenSiGagne && pModeEnCours==1) {
+		if (tourRestant == 1 && !pBooleenSiGagne && pModeEnCours==1) {
 			pVerdict = "LE JOUEUR A PERDU!";
 			pCoupMax=coup;
 		}
@@ -88,7 +88,7 @@ public class ComparatifAffichageTest {
 			pVerdict = "LE JOUEUR A GAGNE!";
 			pCoupMax=coup;
 		}
-		else if (tourRestant == 0 && !pBooleenSiGagne && pModeEnCours==2) {
+		else if (tourRestant == 1 && !pBooleenSiGagne && pModeEnCours==2) {
 			pVerdict = "L'ORDINATEUR A PERDU!";
 			pCoupMax=coup;
 		

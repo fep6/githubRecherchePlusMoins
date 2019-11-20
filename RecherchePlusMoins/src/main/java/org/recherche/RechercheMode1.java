@@ -15,12 +15,6 @@ public class RechercheMode1 extends RechercheMode{
  * @param pions	
  */
 	private EntreesManuellesDuJeu emjMode1;
-	/**
-	 * info si le jeu est configuré en admin par config.properties 
-	 * @see Jeu.java
-	 */
-	private boolean confAdmin = false;
-	
 	public RechercheMode1(int coups, int pions){
 		super(coups, pions);
 		emjMode1 = new EntreesManuellesDuJeu (pions);
@@ -40,7 +34,7 @@ public class RechercheMode1 extends RechercheMode{
 
 		cs.doCombinaisonSecrete(modeJeu, pions, admin);
 		combinaisonOrdi= cs.getCombinaisonSecreteOrdi();
-		while (jeuEnCours) {
+		while (jeuEnCours==true) {
 			jeuParTour(coups, pions);
 		}
 		System.out.println("...Fin de la partie : "+ cat1.getVerdict());
@@ -66,6 +60,7 @@ public class RechercheMode1 extends RechercheMode{
 			}
 			cat1.affichageRecapitulatif(tourRestant, coup, coups);
 			coup++;
+			tourRestant--;
 	}
 /**
  * Entrées du joueur

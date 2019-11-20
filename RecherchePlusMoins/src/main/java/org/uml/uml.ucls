@@ -22,7 +22,7 @@
   <class id="3" language="java" name="org.entrees.EntreesManuellesDuJeu" project="projet3RecherchePlusMoins" 
     file="/projet3RecherchePlusMoins/src/main/java/org/entrees/EntreesManuellesDuJeu.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="500" y="1138"/>    
+    <position height="-1" width="-1" x="345" y="754"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -32,7 +32,7 @@
   <class id="4" language="java" name="org.entrees.CombinaisonSecrete" project="projet3RecherchePlusMoins" 
     file="/projet3RecherchePlusMoins/src/main/java/org/entrees/CombinaisonSecrete.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="163" y="726"/>    
+    <position height="-1" width="-1" x="192" y="403"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -42,7 +42,7 @@
   <class id="5" language="java" name="org.recherche.RechercheMode" project="projet3RecherchePlusMoins" 
     file="/projet3RecherchePlusMoins/src/main/java/org/recherche/RechercheMode.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="818" y="1080"/>    
+    <position height="-1" width="-1" x="825" y="748"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -52,7 +52,7 @@
   <class id="6" language="java" name="org.recherche.RechercheMode3" project="projet3RecherchePlusMoins" 
     file="/projet3RecherchePlusMoins/src/main/java/org/recherche/RechercheMode3.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="915" y="680"/>    
+    <position height="-1" width="-1" x="887" y="392"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -62,7 +62,7 @@
   <class id="7" language="java" name="org.recherche.RechercheMode2" project="projet3RecherchePlusMoins" 
     file="/projet3RecherchePlusMoins/src/main/java/org/recherche/RechercheMode2.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="178" width="311" x="1246" y="640"/>    
+    <position height="178" width="311" x="1084" y="308"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -72,24 +72,14 @@
   <class id="8" language="java" name="org.divers.GestionConformites" project="projet3RecherchePlusMoins" 
     file="/projet3RecherchePlusMoins/src/main/java/org/divers/GestionConformites.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1623" y="1103"/>    
+    <position height="-1" width="-1" x="1586" y="828"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="org.divers.ComparatifAffichageTest" project="projet3RecherchePlusMoins" 
-    file="/projet3RecherchePlusMoins/src/main/java/org/divers/ComparatifAffichageTest.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1185" y="1075"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="10" language="java" name="org.divers.TraceLog4j" project="projet3RecherchePlusMoins" 
+  <class id="9" language="java" name="org.divers.TraceLog4j" project="projet3RecherchePlusMoins" 
     file="/projet3RecherchePlusMoins/src/main/java/org/divers/TraceLog4j.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="448" width="424" x="56" y="-189"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -98,20 +88,30 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="org.entrees.EntreesConfigJeu" project="projet3RecherchePlusMoins" 
+  <class id="10" language="java" name="org.entrees.EntreesConfigJeu" project="projet3RecherchePlusMoins" 
     file="/projet3RecherchePlusMoins/src/main/java/org/entrees/EntreesConfigJeu.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1684" y="340"/>    
+    <position height="-1" width="-1" x="1568" y="356"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="12" language="java" name="org.recherche.RechercheMode1" project="projet3RecherchePlusMoins" 
+  <class id="11" language="java" name="org.recherche.RechercheMode1" project="projet3RecherchePlusMoins" 
     file="/projet3RecherchePlusMoins/src/main/java/org/recherche/RechercheMode1.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="457" y="691"/>    
+    <position height="-1" width="-1" x="506" y="387"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="org.principal.ComparatifAffichageTest" project="projet3RecherchePlusMoins" 
+    file="/projet3RecherchePlusMoins/src/main/java/org/principal/ComparatifAffichageTest.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1183" y="788"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -119,197 +119,187 @@
     </display>  
   </class>  
   <association id="13">    
-    <bendpoint x="619" y="1331"/>    
-    <bendpoint x="1402" y="1333"/>    
+    <bendpoint x="581" y="1169"/>    
+    <bendpoint x="1517" y="1170"/>    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="14" name="gcRecommenceJeu">        
-        <position height="0" width="0" x="65" y="143"/>      
+      <attribute id="14" name="gcEntreePions">        
+        <position height="0" width="0" x="28" y="-132"/>      
       </attribute>      
       <multiplicity id="15" minimum="0" maximum="1">        
-        <position height="0" width="0" x="65" y="143"/>      
+        <position height="0" width="0" x="28" y="-132"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="16">    
-    <bendpoint x="989" y="413"/>    
-    <bendpoint x="1418" y="393"/>    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="17" name="ecj">        
-        <position height="0" width="0" x="9" y="157"/>      
+      <attribute id="17" name="tl4j">        
+        <position height="0" width="0" x="35" y="-134"/>      
       </attribute>      
       <multiplicity id="18" minimum="0" maximum="1">        
-        <position height="0" width="0" x="9" y="157"/>      
+        <position height="0" width="0" x="35" y="-134"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
+    <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="19">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="20" name="rm2">        
-        <position height="0" width="0" x="201" y="278"/>      
-      </attribute>      
-      <multiplicity id="21" minimum="0" maximum="1">        
-        <position height="0" width="0" x="201" y="278"/>      
-      </multiplicity>    
+    <bendpoint x="970" y="836"/>    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="20" name="cat2"/>      
+      <multiplicity id="21" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
+    <end type="TARGET" refId="12" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="22">    
     <end type="SOURCE" refId="6" navigable="false">      
       <attribute id="23" name="rm1">        
-        <position height="0" width="0" x="0" y="0"/>      
+        <position height="0" width="0" x="49" y="-304"/>      
       </attribute>      
       <multiplicity id="24" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+        <position height="0" width="0" x="49" y="-304"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
+    <end type="TARGET" refId="11" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="25">    
     <bendpoint x="624" y="683"/>    
     <end type="SOURCE" refId="2" navigable="false">      
       <attribute id="26" name="emjJeuEnCours">        
-        <position height="0" width="0" x="128" y="56"/>      
+        <position height="0" width="0" x="-27" y="-328"/>      
       </attribute>      
       <multiplicity id="27" minimum="0" maximum="1">        
-        <position height="0" width="0" x="128" y="56"/>      
+        <position height="0" width="0" x="-27" y="-328"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="28">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="29" name="rm1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="30" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="31">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="32" name="cat2">        
-        <position height="0" width="0" x="57" y="220"/>      
-      </attribute>      
-      <multiplicity id="33" minimum="0" maximum="1">        
-        <position height="0" width="0" x="57" y="220"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="34">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="5"/>  
-  </generalization>  
-  <association id="35">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="36" name="rm2">        
-        <position height="0" width="0" x="201" y="278"/>      
-      </attribute>      
-      <multiplicity id="37" minimum="0" maximum="1">        
-        <position height="0" width="0" x="201" y="278"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="38">    
-    <bendpoint x="177" y="931"/>    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="39" name="emjMode2">        
-        <position height="0" width="0" x="128" y="56"/>      
-      </attribute>      
-      <multiplicity id="40" minimum="0" maximum="1">        
-        <position height="0" width="0" x="128" y="56"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="41">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="42" name="tl4j">        
-        <position height="0" width="0" x="35" y="-134"/>      
-      </attribute>      
-      <multiplicity id="43" minimum="0" maximum="1">        
-        <position height="0" width="0" x="35" y="-134"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="44">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="5"/>  
-  </generalization>  
-  <generalization id="45">    
-    <bendpoint x="957" y="805"/>    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="5"/>  
-  </generalization>  
-  <dependency id="46">    
+  <dependency id="28">    
     <end type="SOURCE" refId="1"/>    
     <end type="TARGET" refId="2"/>  
   </dependency>  
-  <association id="47">    
-    <bendpoint x="593" y="1352"/>    
-    <bendpoint x="1626" y="1357"/>    
+  <generalization id="29">    
+    <bendpoint x="990" y="526"/>    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <association id="30">    
+    <bendpoint x="630" y="1108"/>    
+    <bendpoint x="1346" y="1142"/>    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="48" name="gcEntreePions">        
-        <position height="0" width="0" x="65" y="143"/>      
+      <attribute id="31" name="gcRecommenceJeu">        
+        <position height="0" width="0" x="28" y="-132"/>      
       </attribute>      
-      <multiplicity id="49" minimum="0" maximum="1">        
-        <position height="0" width="0" x="65" y="143"/>      
+      <multiplicity id="32" minimum="0" maximum="1">        
+        <position height="0" width="0" x="28" y="-132"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="50">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="51" name="rm3">        
-        <position height="0" width="0" x="58" y="198"/>      
+  <association id="33">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="34" name="rm2">        
+        <position height="0" width="0" x="39" y="-54"/>      
       </attribute>      
-      <multiplicity id="52" minimum="0" maximum="1">        
-        <position height="0" width="0" x="58" y="198"/>      
+      <multiplicity id="35" minimum="0" maximum="1">        
+        <position height="0" width="0" x="39" y="-54"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="36">    
+    <bendpoint x="964" y="735"/>    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="37" name="cat1"/>      
+      <multiplicity id="38" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="39">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <association id="40">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="41" name="rm2">        
+        <position height="0" width="0" x="39" y="-54"/>      
+      </attribute>      
+      <multiplicity id="42" minimum="0" maximum="1">        
+        <position height="0" width="0" x="39" y="-54"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="43">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="44" name="emjMode2">        
+        <position height="0" width="0" x="-27" y="-328"/>      
+      </attribute>      
+      <multiplicity id="45" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-27" y="-328"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="46">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="47" name="rm1">        
+        <position height="0" width="0" x="49" y="-304"/>      
+      </attribute>      
+      <multiplicity id="48" minimum="0" maximum="1">        
+        <position height="0" width="0" x="49" y="-304"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="49">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="50" name="ecj">        
+        <position height="0" width="0" x="-107" y="173"/>      
+      </attribute>      
+      <multiplicity id="51" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-107" y="173"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="52">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <association id="53">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="54" name="rm3">        
+        <position height="0" width="0" x="30" y="-90"/>      
+      </attribute>      
+      <multiplicity id="55" minimum="0" maximum="1">        
+        <position height="0" width="0" x="30" y="-90"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="53">    
+  <association id="56">    
     <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="54" name="cs">        
-        <position height="0" width="0" x="-27" y="146"/>      
+      <attribute id="57" name="cs">        
+        <position height="0" width="0" x="2" y="-177"/>      
       </attribute>      
-      <multiplicity id="55" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-27" y="146"/>      
+      <multiplicity id="58" minimum="0" maximum="1">        
+        <position height="0" width="0" x="2" y="-177"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="56">    
-    <bendpoint x="1004" y="1035"/>    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="57" name="cat1">        
-        <position height="0" width="0" x="57" y="220"/>      
-      </attribute>      
-      <multiplicity id="58" minimum="0" maximum="1">        
-        <position height="0" width="0" x="57" y="220"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

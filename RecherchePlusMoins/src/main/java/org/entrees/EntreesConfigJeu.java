@@ -29,22 +29,6 @@ public class EntreesConfigJeu {
 	}
 	public void affichageRecapitulatifConfigJeu() {
 		acEcj.affichageRecapitulatifConfigJeu(modeJeu, nCoups, nPions);
-//		System.out.println("\n _____________________________________________ \n ");	
-//		System.out.println("\n RECAPTULATIF: \n Vous avez choisi le jeu:");
-//		System.out.println("Avec " + nPions + " pions, à retrouver en " 
-//		+ nCoups +" coups maximum.");
-//		System.out.println("Enfin, vous avez choisi le mode:");
-//		if (modeJeu == 1) {
-//			System.out.println(" \' Challenger \' où vous devez trouver la combinaison secrète de l'ordinateur");
-//		}
-//		else if (modeJeu == 2) {
-//			System.out.println("  \' Défenseur \' où c'est à l'ordinateur de trouver votre combinaison secrète");
-//		}
-//		else if (modeJeu == 3) {
-//			System.out.println("  \' Duel \' où l'ordinateur et vous jouez tour à tour,\n" + 
-//					"le premier à trouver la combinaison secrète de l'autre a gagné");
-//		}
-//		System.out.println("\n _____________________________________________ \n ");	
 	}
 	
 	public void entreesFichierConfigJeu(boolean commAdmin) {		
@@ -56,12 +40,7 @@ public class EntreesConfigJeu {
 
 	public void setModeJeu(){	
 		do {
-			System.out.println("veuillez entrer le mode à choisir:\n"
-			+ "1-> Mode challenger où vous devez trouver la combinaison secrète de l'ordinateur \n"
-			+ "2-> Mode défenseur où c'est à l'ordinateur de trouver votre combinaison secrète \n" 
-			+ "3-> Mode duel où l'ordinateur et vous jouez tour à tour, \n"
-			+ "le premier à trouver la combinaison secréte de l'autre a gagné");
-						
+			acEcj.menuMode();		
 			gcEcj.testEntreeSiEntier(modeJeu);
 			modeJeu = gcEcj.getResultatTestEntreeSiEntier();			
 		} while ( modeJeu < 1 || modeJeu > 3 );

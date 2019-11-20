@@ -1,4 +1,6 @@
-package org.divers;
+package org.principal;
+
+import org.affichage.AffichageConsole;
 
 public class ComparatifAffichageTest {
 	
@@ -15,7 +17,7 @@ public class ComparatifAffichageTest {
 	 *  Définit le nombre de coup la partie
 	 */
 	private int pCoupMax;
-
+	private AffichageConsole acCat = new AffichageConsole();
 	private String[] stringTableauJeu;
 	
 	
@@ -70,43 +72,41 @@ public class ComparatifAffichageTest {
 	}
 	private void affichageEtTest(int tourRestant, int coup, int pions) {
 		if (pModeEnCours==1) {
-			System.out.print("Reponse à la proposition du joueur (mode1)");
+			acCat.reponseMode1();
 		} else if (pModeEnCours==2) {
-			System.out.print("Reponse à la combinaison de l'ordinateur (Mode2): ");
+			acCat.reponseMode2();
 		} else {
-			System.out.print("Erreur dans la donnée de ComparatifAffichageTest.pModeEnCours!!! ");
+			acCat.erreurModeEnCours();
 		}
 		for (int pion=0; pion<pions; pion++) {
 			System.out.print(pTableauReponse[coup][pion]);
 		}
 		System.out.println("");
 		if (tourRestant == 0 && !pBooleenSiGagne && pModeEnCours==1) {
-			pVerdict = "LE JOUEUR A PERDU!";
+			pVerdict = acCat.joueurPerd();
 			pCoupMax=coup;
 		}
 		else if (pBooleenSiGagne==true && pModeEnCours==1) {
-			pVerdict = "LE JOUEUR A GAGNE!";
+			pVerdict = acCat.joueurGagne();
 			pCoupMax=coup;
 		}
 		else if (tourRestant == 0 && !pBooleenSiGagne && pModeEnCours==2) {
-			pVerdict = "L'ORDINATEUR A PERDU!";
+			pVerdict = acCat.ordiPerd();
 			pCoupMax=coup;
 		
 		}
 		else if (pBooleenSiGagne==true && pModeEnCours==2) {
-			pVerdict = "L'ORDINATEUR A GAGNE!";
+			pVerdict = acCat.ordiGagne();
 			pCoupMax=coup;
 		
 		} else { 
-			pVerdict = "LE JEU EST EN COURS";
+			pVerdict = acCat.jeuEnCours();
 			pCoupMax=coup;
 		}
 	}
 	public void affichageRecapitulatif(int tourRestant, int coup, int coups){
 			tourRestant = coups - (int)(coup);
-			System.out.println(" ______________________________________");
-			System.out.println(" -> Il reste: "+ (int)(tourRestant-1) + " coups!");
-			System.out.println(" ______________________________________");
+			acCat.coupsRestants(tourRestant);
 	}
 	/**
 	 * @see traceLog4.java 

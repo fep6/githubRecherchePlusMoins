@@ -1,8 +1,8 @@
 package org.affichage;
 
-import org.divers.ComparatifAffichageTest;
 import org.entrees.CombinaisonSecrete;
 import org.entrees.EntreesManuellesDuJeu;
+import org.principal.ComparatifAffichageTest;
 import org.principal.Jeu;
 import org.recherche.RechercheMode1;
 import org.recherche.RechercheMode2;
@@ -18,31 +18,17 @@ public class AffichageConsole {
 	public void argumentTraceAdmin(int nbreArg) {
 		System.out.println("\n L'argument 'trace' est l'argument "+(int)(nbreArg+1)+" de la commande en ligne!");
 	}
-	
-	
-	
-	
-	
-
 	 public void debutManche(int manche) {
 			System.out.println("_________________________________________________________________________________");
 			System.out.println("Début de la manche: "+ manche);
 	 }
-	
 	 public void finManche(int manche) {
 			System.out.println("_________________________________________________________________________________");
-			System.out.println("Début de la manche: "+ manche);
+			System.out.println("Fin de la manche: "+ manche);
 	 }
 	 public void finJeu() {
 			System.out.println("Fin définitive du jeu!");
 			System.out.println("_________________________");
-	 }
-	 public void menuMode() {
-			System.out.println("veuillez entrer le mode à choisir:\n"
-			+ "1-> Mode challenger où vous devez trouver la combinaison secrète de l'ordinateur \n"
-			+ "2-> Mode défenseur où c'est à l'ordinateur de trouver votre combinaison secrète \n" 
-			+ "3-> Mode duel où l'ordinateur et vous jouez tour à tour, \n"
-			+ "le premier à trouver la combinaison secréte de l'autre a gagné");
 	 }
 	 public void rappelEntreeConforme() {
 			System.out.println("Svp de bien entrer 'oui' ou 'non'...");
@@ -74,6 +60,13 @@ public class AffichageConsole {
 						"le premier à trouver la combinaison secrète de l'autre a gagné");
 			}
 			System.out.println("\n _____________________________________________ \n ");	
+	 }
+	 public void menuMode() {
+			System.out.println("veuillez entrer le mode à choisir:\n"
+			+ "1-> Mode challenger où vous devez trouver la combinaison secrète de l'ordinateur \n"
+			+ "2-> Mode défenseur où c'est à l'ordinateur de trouver votre combinaison secrète \n" 
+			+ "3-> Mode duel où l'ordinateur et vous jouez tour à tour, \n"
+			+ "le premier à trouver la combinaison secréte de l'autre a gagné");
 	 }	
 	 
 	 
@@ -87,6 +80,7 @@ public class AffichageConsole {
 	 public void entreeProposition(int pions) {
 			System.out.println("Veuillez entrer votre proposition.  (Attention: " + pions + " pions à entrer)");
 	 }
+	 
 	 public void entreesEronneesNombrePions(int pions) {
 			System.out.println("Votre entree est erronnée!");
 			System.out.println("Merci de rentrer le bon nombre de pions. A savoir: " + pions + " chiffres (pions)");
@@ -110,11 +104,7 @@ public class AffichageConsole {
 	public void erreurModeEnCours() {
 		System.out.print("Erreur dans la donnée de ComparatifAffichageTest.pModeEnCours!!! ");
 	}
-	
-	
-	/**
-	 * @see ComparatifAffichageTest
-	 */
+
 	public String joueurPerd() {
 		return "LE JOUEUR A PERDU!";
 	}
@@ -186,10 +176,18 @@ public class AffichageConsole {
 		System.out.println("\n \n-------------------------------------");
 		System.out.println("MODE ADMINISTRATEUR : combinaisonSecreteOrdi= ");
 	}
-	public void propEntreeJoueur() {
+	public void entreeJoueurCs() {
 		System.out.println("Veuillez entrer votre combinaison secrète: ");
 	}
 	public void recapPropEntreeJoueur() {
 		System.out.print("La proposition est donc: ");
 	}
+	
+	
+	/**
+	 * Divers
+	 */
+	public void separateur() {
+		System.out.print("\n ---------------------");
+			}
 }

@@ -1,5 +1,11 @@
 package org.entrees;
 
+import org.affichage.AffichageConsole;
+import org.principal.Jeu;
+import org.recherche.RechercheMode1;
+import org.recherche.RechercheMode2;
+import org.recherche.RechercheMode3;
+
 /**
 
  * Création de combinaison secrète de la défense (joueur ou ordi (mode 1 2 et 3))
@@ -25,6 +31,8 @@ public class CombinaisonSecrete {
 	 * @see RechercheMode3
 	 */	
 	private int[] combinaisonSecreteJoueur;
+	
+	private AffichageConsole acCs = new AffichageConsole();
 	
 	public CombinaisonSecrete(int pions){
 		emjMode2 = new EntreesManuellesDuJeu (pions);
@@ -52,9 +60,8 @@ public class CombinaisonSecrete {
 			setCombinaisonSecreteJoueur(pions);
 		}
 		else {
-			System.out.println("/// WARNING!!! ///");
-			System.out.println("N° de mode de jeu (?) = " + modeJeu);
-			System.out.println("/// WARNING!!! ///");
+			acCs.warningModeJeu(modeJeu);
+			Jeu.getTl4j().setMessageWarning("/// WARNING!!! ///"+"N° de mode de jeu (?) = "+ modeJeu + "/// WARNING!!! ///");
 		}
 	}
 		/**
@@ -63,17 +70,16 @@ public class CombinaisonSecrete {
 		 * Selon si mode admin ou non (code triche)
 		 */
 		void setCombinaisonSecreteOrdi(boolean admin) {
-			System.out.println("L'ordinateur entre sa combinaison secrète...");
+			acCs.infoOrdi();
 			for (int i=0 ; i<combinaisonSecreteOrdi.length; i++) {
 				combinaisonSecreteOrdi[i]=(int) (Math.random()*10);
 			}
 			if (admin == true) {
-				System.out.println("\n \n-------------------------------------");
-				System.out.println("MODE ADMINISTRATEUR : combinaisonSecreteOrdi= ");
+				acCs.modeAdmin();
 				for (int i=0 ; i<combinaisonSecreteOrdi.length; i++) {
 					System.out.print((int)combinaisonSecreteOrdi[i]);
 				}
-				System.out.println("\n-------------------------------------");
+				acCs.separateur();
 				System.out.println("");
 			}		
 		}
@@ -83,16 +89,16 @@ public class CombinaisonSecrete {
 		 * Nombre de pions maximum
 		 */
 		void setCombinaisonSecreteJoueur(int pions){
-		System.out.println("Veuillez entrer votre combinaison secrète: ");
+		acCs.entreeJoueurCs();
 		emjMode2.doEntreesManuellesDesPions(pions);
 		for (int pion = 0 ; pion < pions; pion++) {
 			combinaisonSecreteJoueur [pion]= emjMode2.getEntree(pion);
 		}
-		System.out.print("La proposition est donc: ");
+		acCs.recapPropEntreeJoueur();
 		for (int i = 0 ; i < pions; i++) {
 			System.out.print(combinaisonSecreteJoueur [i]);
 		}
-		System.out.print("\n ---------------------");
+		acCs.separateur();
 	}
 	/**
 	 * @return la combinaison secrete de l'ordi

@@ -193,12 +193,9 @@ public class AffichageConsole {
 		System.out.print("La proposition est donc: ");
 	}
 	public void entreeJoueurCs() {
-		System.out.println("Veuillez entrer votre combinaison secrète");
+		System.out.println("Veuillez entrer votre combinaison: ");
 	}
-	/** Divers
-	 * 
-	 */
 	public void separateur() {
-		System.out.println("\n ---------------------------");
+		System.out.println("\n---------------------------");
 	}
 }

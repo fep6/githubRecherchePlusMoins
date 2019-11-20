@@ -6,3 +6,11 @@
  Nombre de pions maximums: 5
  Le fichier de configuration du jeu indique :normal!
 Le mode administrateur a été demandé en ligne de commande!
+[INFO ] 2019-11-20 13:44:55.580 [main] TraceLog4j - ________________Début du Jeu!
+[INFO ] 2019-11-20 13:44:58.447 [main] TraceLog4j - 
+ Début du jeu -> Récapitulatif des entrées du jeu:
+ Mode de la partie : 1
+ Nombre de coups maximums: 5
+ Nombre de pions maximums: 5
+ Le fichier de configuration du jeu indique :normal!
+Le mode administrateur a été demandé en ligne de commande!

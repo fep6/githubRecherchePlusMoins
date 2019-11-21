@@ -1,6 +1,6 @@
 package org.entrees;
 
-import org.affichage.AffichageConsole;
+import org.sorties.AffichageConsole;
 import org.principal.Jeu;
 import org.recherche.RechercheMode1;
 import org.recherche.RechercheMode2;

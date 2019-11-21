@@ -6,7 +6,6 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 import org.affichage.AffichageConsole;
-import org.divers.GestionConformites;
 import org.principal.Jeu;
 
 

@@ -1,4 +1,4 @@
-package org.divers;
+package org.entrees;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -7,7 +7,6 @@ import java.util.Properties;
 import java.util.Scanner;
 
 import org.affichage.AffichageConsole;
-import org.entrees.EntreesManuellesDuJeu;
 import org.principal.Jeu;
 
 public class GestionConformites {

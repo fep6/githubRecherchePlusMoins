@@ -69,7 +69,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="org.divers.GestionConformites" project="projet3RecherchePlusMoins" 
+  <class id="8" language="java" name="org.entrees.GestionConformites" project="projet3RecherchePlusMoins" 
     file="/projet3RecherchePlusMoins/src/main/java/org/divers/GestionConformites.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1586" y="828"/>    

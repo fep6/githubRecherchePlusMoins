@@ -1,7 +1,7 @@
 package org.recherche;
 
 import org.affichage.AffichageConsole;
-import org.divers.ComparatifAffichageTest;
+import org.principal.ComparatifAffichageTest;
 
 /**
  * Mode 2 "Défenseur": L'ordinateur a le rôle d’attaquant et doit faire une proposition d’une combinaison de X chiffres.

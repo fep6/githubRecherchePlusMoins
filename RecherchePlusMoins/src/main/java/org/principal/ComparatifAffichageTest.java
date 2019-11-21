@@ -1,4 +1,4 @@
-package org.divers;
+package org.principal;
 
 import org.affichage.AffichageConsole;
 
@@ -91,12 +91,10 @@ public class ComparatifAffichageTest {
 		else if (tourRestant == 1 && !pBooleenSiGagne && pModeEnCours==2) {
 			pVerdict = acCat.ordiPerd();
 			pCoupMax=coup;
-		
 		}
 		else if (pBooleenSiGagne==true && pModeEnCours==2) {
 			pVerdict = acCat.ordiGagne();
 			pCoupMax=coup;
-		
 		} else { 
 			pVerdict = acCat.jeuEnCours();
 			pCoupMax=coup;;

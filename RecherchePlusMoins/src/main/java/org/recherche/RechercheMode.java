@@ -2,36 +2,18 @@ package org.recherche;
 
 import org.divers.ComparatifAffichageTest;
 import org.entrees.CombinaisonSecrete;
+import org.entrees.EntreesManuellesDuJeu;
 import org.principal.Jeu;
 
 public abstract class RechercheMode {
-	
+	protected EntreesManuellesDuJeu emjMode1;
 	protected int[][] tableauJeuMode1;
-	/**
-	 * tableau défense pour mode 1 (joueur)
-	 */
 	protected int[] combinaisonOrdi;
-	/**
-	 * Tableau de l'attaquant Mode2
-	 * @see RechercheMode2
-	 * @see RechercheMode3
-	 */
-	protected int[][] tableauJeuMode2;
-	/**
-	 * tableau défense pour mode 2 (ordinateur)
-	 */
+	protected int[][] tableauJeuMode2;	
+	protected String stringTableauJeuMode2="";
 	protected int[] combinaisonJoueur;
-/** Entrée de la combinaison secrète du joueur ou de l'ordinateur selon le mode du jeu
- * @see CombinaisonSecrete.doCombinaisonSecrete(modeJeu,pions,admin)
- */
 	protected CombinaisonSecrete cs;
-/** Comparatif entre int[][] tableauJeu et int[] combinaison
- * @see ComparatifAffichageTest
- */
 	protected ComparatifAffichageTest cat1;
-/** Comparatif entre int[][] tableauJeu et int[] combinaison
- * @see ComparatifAffichageTest
- */
 	protected ComparatifAffichageTest cat2;
 /**
  * Indique la réponse du joueur (en défense)
@@ -41,29 +23,17 @@ public abstract class RechercheMode {
  * Sortie du while de chaque doRechercheMode()
  */
 	protected boolean boleenSiGagne;
-/**
- * Indique le N° de coup en cours
- */
 	protected int coup;
-/**
- * Indique le nombre de tour qu'il reste
- */
 	protected int tourRestant;
 /**
  * Indique si le jeu n'est pas terminé
  */
 	protected boolean jeuEnCours;
 /**
- * Sert à la org.recherche dichotomique
+ * Sert à la org.recherche dichotomique (mode2)
  */
 	protected int[] dichoPlus;
-/**
- * Sert à la org.recherche dichotomique
- */ 
 	protected int[] dichoMoins;
-/**
- * Sert à la org.recherche dichotomique
- */ 
 	protected int dichoMax;
 /**
  * Remonté coup max partie pour log4j
@@ -96,10 +66,8 @@ protected int CoupMaxPartie;
 	
 	/**
 	 * Pour tracage Log4j fin de partie du modes 1 & 3
-	 * @return
-	 * verdict
-	 * @see
-	 * rm1&rm3.recapTracageFinDeJeu()
+	 * @return verdict
+	 * @see rm1&rm3.recapTracageFinDeJeu()
 	 */
 	public String getCAT1Verdict(){
 		return cat1.getVerdict();
@@ -117,20 +85,16 @@ protected int CoupMaxPartie;
 	}
 	/**
 	 * Pour tracage Log4j fin de partie du modes 2 & 3
-	 * @return
-	 * verdict 
-	 * @see
-	 * rm2&rm3.recapTracageFinDeJeu()
+	 * @return verdict 
+	 * @see rm2&rm3.recapTracageFinDeJeu()
 	 */
 	public String getCAT2Verdict(){
 		return cat2.getVerdict();
 	}
 	/**
 	 * Pour tracage Log4j fin de partie du mode 2
-	 * @return
-	 * tableau de jeu 
-	 * @see
-	 * Jeu.recapTracageFinDeJeu()
+	 * @return tableau de jeu 
+	 * @see Jeu.recapTracageFinDeJeu()
 	 */
 	public String getCAT2StringTableauJeu(int coup) {
 		return cat2.getStringTableauJeu(coup);

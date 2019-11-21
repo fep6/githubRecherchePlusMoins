@@ -1,12 +1,9 @@
 package org.affichage;
 
 import org.divers.ComparatifAffichageTest;
-import org.entrees.CombinaisonSecrete;
 import org.entrees.EntreesManuellesDuJeu;
 import org.principal.Jeu;
 import org.recherche.RechercheMode1;
-import org.recherche.RechercheMode2;
-import org.recherche.RechercheMode3;
 
 public class AffichageConsole {
 	/**
@@ -18,12 +15,24 @@ public class AffichageConsole {
 	public void argumentTraceAdmin(int nbreArg) {
 		System.out.println("\n L'argument 'trace' est l'argument "+(int)(nbreArg+1)+" de la commande en ligne!");
 	}
-	
-	
-	
-	
-	
-
+	 public void affichageRecapitulatifConfigJeu(int modeJeu, int nCoups, int nPions){
+			System.out.println("\n _____________________________________________ \n ");	
+			System.out.println("\n RECAPTULATIF: \n Vous avez choisi le jeu:");
+			System.out.println("Avec " + nPions + " pions, à retrouver en " 
+			+ nCoups +" coups maximum.");
+			System.out.println("Enfin, vous avez choisi le mode:");
+			if (modeJeu == 1) {
+				System.out.println(" \' Challenger \' où vous devez trouver la combinaison secrète de l'ordinateur");
+			}
+			else if (modeJeu == 2) {
+				System.out.println("  \' Défenseur \' où c'est à l'ordinateur de trouver votre combinaison secrète");
+			}
+			else if (modeJeu == 3) {
+				System.out.println("  \' Duel \' où l'ordinateur et vous jouez tour à tour,\n" + 
+						"le premier à trouver la combinaison secrète de l'autre a gagné");
+			}
+			System.out.println("\n _____________________________________________ \n ");	
+	 }
 	 public void debutManche(int manche) {
 			System.out.println("_________________________________________________________________________________");
 			System.out.println("Début de la manche: "+ manche);
@@ -53,31 +62,8 @@ public class AffichageConsole {
 	 public void entreeNonEntier() {
 			System.out.println(" : Cette valeur n'est pas un entier!");
 	}
-	
-	 
-	 /**
-	  * @see EntreesConfigJeu
-	  */
-	 public void affichageRecapitulatifConfigJeu(int modeJeu, int nCoups, int nPions){
-			System.out.println("\n RECAPTULATIF: \n Vous avez choisi le jeu:");
-			System.out.println("Avec " + nPions + " pions, à retrouver en " 
-			+ nCoups +" coups maximum.");
-			System.out.println("Enfin, vous avez choisi le mode:");
-			if (modeJeu == 1) {
-				System.out.println(" \' Challenger \' où vous devez trouver la combinaison secrète de l'ordinateur");
-			}
-			else if (modeJeu == 2) {
-				System.out.println("  \' Défenseur \' où c'est à l'ordinateur de trouver votre combinaison secrète");
-			}
-			else if (modeJeu == 3) {
-				System.out.println("  \' Duel \' où l'ordinateur et vous jouez tour à tour,\n" + 
-						"le premier à trouver la combinaison secrète de l'autre a gagné");
-			}
-			System.out.println("\n _____________________________________________ \n ");	
-	 }	
-	 
-	 
-	 
+		 
+		 
 	 /**
 	  * @see EntreesManuellesDuJeu
 	  */
@@ -192,4 +178,5 @@ public class AffichageConsole {
 	public void recapPropEntreeJoueur() {
 		System.out.print("La proposition est donc: ");
 	}
+	
 }

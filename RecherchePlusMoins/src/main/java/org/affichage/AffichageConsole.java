@@ -18,12 +18,6 @@ public class AffichageConsole {
 	public void argumentTraceAdmin(int nbreArg) {
 		System.out.println("\n L'argument 'trace' est l'argument "+(int)(nbreArg+1)+" de la commande en ligne!");
 	}
-	
-	
-	
-	
-	
-
 	 public void debutManche(int manche) {
 			System.out.println("_________________________________________________________________________________");
 			System.out.println("Début de la manche: "+ manche);
@@ -191,5 +185,14 @@ public class AffichageConsole {
 	}
 	public void recapPropEntreeJoueur() {
 		System.out.print("La proposition est donc: ");
+	}
+	public void entreeJoueurCs() {
+		System.out.println("Veuillez entrer votre combinaison secrète");
+	}
+	/** Divers
+	 * 
+	 */
+	public void separateur() {
+		System.out.println("\n ---------------------------");
 	}
 }

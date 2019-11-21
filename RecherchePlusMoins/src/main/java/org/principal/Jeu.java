@@ -108,7 +108,7 @@ public class Jeu {
 				jeuEnCours=false;
 			}
 			else {
-				tl4j = new TraceLog4j();
+//				tl4j = new TraceLog4j();
 				Jeu j = new Jeu();
 				j.setJeu();
 				j.doJeu();

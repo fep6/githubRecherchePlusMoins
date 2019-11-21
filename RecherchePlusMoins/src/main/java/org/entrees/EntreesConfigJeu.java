@@ -5,8 +5,8 @@ package org.entrees;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-import org.affichage.AffichageConsole;
 import org.principal.Jeu;
+import org.sorties.AffichageConsole;
 
 
 

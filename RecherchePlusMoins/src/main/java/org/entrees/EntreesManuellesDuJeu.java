@@ -1,7 +1,8 @@
 package org.entrees;
 
 import java.util.Scanner;
-import org.affichage.AffichageConsole;
+
+import org.sorties.AffichageConsole;
 
 /**
  * Entrées (int) du joueur, soit de la combinaison secrète (Mode1) ou de l'attaque (Mode2)

@@ -1,13 +1,13 @@
 package org.principal;
 
-import org.affichage.AffichageConsole;
-import org.divers.TraceLog4j;
 import org.entrees.EntreesConfigJeu;
 import org.entrees.EntreesManuellesDuJeu;
 import org.entrees.GestionConformites;
 import org.recherche.RechercheMode1;
 import org.recherche.RechercheMode2;
 import org.recherche.RechercheMode3;
+import org.sorties.AffichageConsole;
+import org.sorties.TraceLog4j;
 
 public class Jeu {
 	private AffichageConsole acJ;
@@ -21,7 +21,7 @@ public class Jeu {
 	private RechercheMode2 rm2;
 	private RechercheMode3 rm3;
 	/** 
-	 * Nombre de coups dans la partie (/tl4j)
+	 * Nombre de coups dans la partie (/TraceLog4j)
 	 */
 	private int coupMaxPartie;
 	private EntreesManuellesDuJeu emjJeuEnCours;

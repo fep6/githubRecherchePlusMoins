@@ -1,7 +1,7 @@
 package org.recherche;
 
-import org.affichage.AffichageConsole;
 import org.entrees.EntreesManuellesDuJeu;
+import org.sorties.AffichageConsole;
 
 /**
  * Mode 1 "Challenger" : Le joueur attaque

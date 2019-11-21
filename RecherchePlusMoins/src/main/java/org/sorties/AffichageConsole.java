@@ -1,4 +1,4 @@
-package org.affichage;
+package org.sorties;
 
 import org.entrees.CombinaisonSecrete;
 import org.entrees.EntreesManuellesDuJeu;

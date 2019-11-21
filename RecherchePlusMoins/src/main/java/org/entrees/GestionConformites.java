@@ -6,8 +6,8 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.Scanner;
 
-import org.affichage.AffichageConsole;
 import org.principal.Jeu;
+import org.sorties.AffichageConsole;
 
 public class GestionConformites {
 	

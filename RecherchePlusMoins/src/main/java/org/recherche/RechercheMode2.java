@@ -58,6 +58,7 @@ public class RechercheMode2 extends RechercheMode{
 			}
 			cat2.affichageRecapitulatif(tourRestant, coup, coups);
 		coup++;
+		tourRestant--;
 	}
 /**
  * Attaque de l'ordinateur et réponse de en fonction de la combinaison du joueur

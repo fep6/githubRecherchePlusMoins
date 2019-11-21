@@ -66,6 +66,7 @@ public class RechercheMode1 extends RechercheMode{
 			}
 			cat1.affichageRecapitulatif(tourRestant, coup, coups);
 			coup++;
+			tourRestant--;
 	}
 /**
  * Entrées du joueur
@@ -83,7 +84,19 @@ public class RechercheMode1 extends RechercheMode{
 		System.out.println("----------------------------");
 		System.out.println("PROPOSITION DU JOUEUR:");
 		emjMode1.doEntreesManuellesDesPions(pions);
-		for ( int pion=0;pion<pions;pion++) {				
+		
+
+		System.out.println("TEST : N° coups max="+coups);
+		System.out.println("TEST : N° pions max="+pions);
+		
+		for ( int pion=0;pion<pions;pion++) {	
+
+			System.out.println("TEST : N° coup="+coup);
+			System.out.println("TEST : N° pion="+pion);
+			
+			
+			
+			
 			tableauJeuMode1[coup][pion]=emjMode1.getEntree(pion);	
 		}
 	}

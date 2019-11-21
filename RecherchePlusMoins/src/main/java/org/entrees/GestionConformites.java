@@ -77,7 +77,7 @@ public class GestionConformites {
 		}
 	}
 	/**
-	 * @param org.divers
+	 * @param org.affichage
 	 * @see EntreeConfigJeu
 	 */
 	public void testEntreeSiEntier (int test) {

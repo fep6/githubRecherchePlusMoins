@@ -134,10 +134,6 @@ public class ComparatifAffichageTest {
 	public void setVerdict(String verdict) {
 		pVerdict = verdict;
 	}
-	/**
-	 * Retourne le verdict en cours
-	 * @return
-	 */
 	public String getVerdict(){
 		return pVerdict;
 	}

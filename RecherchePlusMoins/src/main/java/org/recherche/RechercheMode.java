@@ -89,10 +89,8 @@ protected int CoupMaxPartie;
 	}
 	/**
 	 * Pour tracage Log4j fin de partie du mode 2
-	 * @return
-	 * tableau de jeu 
-	 * @see
-	 * Jeu.recapTracageFinDeJeu()
+	 * @return tableau de jeu 
+	 * @see Jeu.recapTracageFinDeJeu()
 	 */
 	public String getCAT2StringTableauJeu(int coup) {
 		return cat2.getStringTableauJeu(coup);

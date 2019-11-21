@@ -43,7 +43,7 @@ public class ComparatifAffichageTest {
 	 * Nombre de pions maximum
 	 */
 	public void miseEnFormeTracage(int pions) {
-		for (int coup=0;coup<pCoupMax;coup++) {
+		for (int coup=0;coup<=pCoupMax;coup++) {
 			for (int pion=0;pion<pions;pion++) {
 				if (pion==0) {
 					stringTableauJeu[coup]=Integer.toString(pTableauJeu[coup][pion]);
@@ -122,7 +122,8 @@ public class ComparatifAffichageTest {
 		return pTableauReponse [coup][pion];
 	}
 	/**
-	 * @return le tableau de l'attaque sous forme de String (log4j)
+	 * @return le tableau de l'attaque sous forme de String 
+	 * @see log4j
 	 */
 	public String getStringTableauJeu(int coup) {
 		return stringTableauJeu[coup];

@@ -63,6 +63,9 @@ public class TraceLog4j {
 
 		logger.info("________________________________________");
 	}
+	/**
+	 * a preciser
+	 */
 	private void gestionEntreesAdmin() {
 		if (adminConfig==true) {
 			stringAdminConfig= "ADMIN";
@@ -144,3 +147,4 @@ public class TraceLog4j {
 //
 //	logger.info("Appending string: {}.", "Hello, World");
 }
+

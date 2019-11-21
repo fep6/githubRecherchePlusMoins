@@ -19,7 +19,6 @@ public class RechercheMode1 extends RechercheMode{
 		emjMode1 = new EntreesManuellesDuJeu (pions);
 	}
 	public void doRechercheMode(int modeJeu, int coups, int pions, boolean admin) {
-
 		cs.doCombinaisonSecrete(modeJeu, pions, admin);
 		combinaisonOrdi= cs.getCombinaisonSecreteOrdi();
 		while (jeuEnCours==true) {

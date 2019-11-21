@@ -1,4 +1,4 @@
-package org.divers;
+package org.entrees;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -7,25 +7,32 @@ import java.util.Properties;
 import java.util.Scanner;
 
 import org.principal.Jeu;
+import org.sorties.AffichageConsole;
 
 public class GestionConformites {
 	
 	private Scanner sc;
+	private AffichageConsole acGc;
 	private String entreeJeu;
 	private String jeuEnCours;
 	private int resultat;
 	private int nCoups;
 	private int nPions;
-	//Lecture sur le fichier de config di l'on est en admin (triche)
+	//Lecture sur le fichier de config si l'on est en admin (triche)
 	private boolean confAdmin;
-//	// Commande en ligne du traçage log4j
-//	private static boolean trace=false; 
 	
 	public GestionConformites(){
 		sc = new Scanner(System.in);
+		acGc = new AffichageConsole();
 		entreeJeu="";
 		resultat=0;
 	}
+	/**
+	 * @see EntreesManuellesDuJeu -> testSiPionsEntiers(String entreeString,int[] entreeIntDuJoueur,int pions)
+	 * @param pion : pion en cours
+	 * @param entreeStringDuJoueur : combinaison attaque du joueur
+	 * @return retourne booleen si ok
+	 */
 	public boolean testEntreeSiEntierRegEx(int pion, String[] entreeStringDuJoueur) {
 		String regExp="^[0-9]$";
 		return entreeStringDuJoueur[pion].matches(regExp);
@@ -34,17 +41,17 @@ public class GestionConformites {
 		do {
 			jeuEnCours = sc.nextLine();
 			if (!jeuEnCours.equals("oui")&&!jeuEnCours.equals("non")) {
-				System.out.println("Svp de bien entrer 'oui' ou 'non'...");
+				acGc.rappelEntreeConforme();
 			}
 		} while(!jeuEnCours.equals("oui")&&!jeuEnCours.equals("non"));
 	}
 	/** Recherche des erreurs entrées clavier sur l'entrée de la configuration du jeu
 	 * @param fis
 	 * entrée du fichier de configuration
-	 * @param p
+	 * @param p 
 	 * chargement de fis en plusieurs lignes (p)
 	 */
-	public void gestionExeptionFichierConfig(FileInputStream fis,Properties p) {
+	public void gestionExceptionFichierConfig(FileInputStream fis,Properties p) {
 		try {
 			 // Chargement du fichier config.properties à travers instanciation de File, puis de FileInputStream
 			fis = new FileInputStream(new File("./IO/config.properties"));
@@ -59,13 +66,13 @@ public class GestionConformites {
 		} catch (FileNotFoundException e) {
 			Jeu.getTl4j().setMessageWarning(" Le fichier config.properties n'a pas été trouvé: "+e);
 		} catch (IOException e) {
-			Jeu.getTl4j().setMessageWarning(" Une erreur d'eception a été générée: "+e);
+			Jeu.getTl4j().setMessageWarning(" Une erreur d'exception a été générée: "+e);
 		} finally {
            try {
                if (fis != null) 
                    fis.close();
 			} catch (IOException e) {
-				Jeu.getTl4j().setMessageWarning(" Impossible de fermer le fichier du Stream "+e);
+				Jeu.getTl4j().setMessageWarning(" Impossible de fermer le fichier du Stream! "+e);
 			}
 		}
 	}
@@ -78,10 +85,10 @@ public class GestionConformites {
 			entreeJeu = sc.nextLine();
 			try {
 				test = Integer.parseInt(entreeJeu);
-				System.out.println("Vous avez entré :" + test);
+				acGc.rappelEntree(test);
 				resultat = test;
 			} catch (NumberFormatException e){
-				System.out.println(" : Cette valeur n'est pas un entier!");
+				acGc.entreeNonEntier();
 			}
 		} while(entreeJeu.equals(""));
 	}

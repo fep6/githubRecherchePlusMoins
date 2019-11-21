@@ -1,25 +1,25 @@
-package org.divers;
+package org.principal;
+
+import org.sorties.AffichageConsole;
 
 public class ComparatifAffichageTest {
 	
+	private AffichageConsole acCat;
 	private String pVerdict;
 	private int[][] pTableauJeu;
 	private String[][] pTableauReponse;
+	private String[] stringTableauJeu;
 	private int[] pCombinaison;
 	private boolean pBooleenSiGagne;
-	/**
-	 *  Définit quel mode a la main 
-	 */
 	private int pModeEnCours;
 	/**
 	 *  Définit le nombre de coup la partie
 	 */
 	private int pCoupMax;
-
-	private String[] stringTableauJeu;
 	
 	
 	public ComparatifAffichageTest (int coups, int pions){
+		acCat = new AffichageConsole();
 		pVerdict = new String();
 		pTableauJeu= new int [coups][pions];
 		pTableauReponse= new String[coups][pions];
@@ -70,43 +70,40 @@ public class ComparatifAffichageTest {
 	}
 	private void affichageEtTest(int tourRestant, int coup, int pions) {
 		if (pModeEnCours==1) {
-			System.out.print("Reponse à la proposition du joueur (mode1)");
+			acCat.reponseMode1();
 		} else if (pModeEnCours==2) {
-			System.out.print("Reponse à la combinaison de l'ordinateur (Mode2): ");
+			acCat.reponseMode2();
 		} else {
-			System.out.print("Erreur dans la donnée de ComparatifAffichageTest.pModeEnCours!!! ");
+			acCat.erreurModeEnCours();
 		}
 		for (int pion=0; pion<pions; pion++) {
 			System.out.print(pTableauReponse[coup][pion]);
 		}
 		System.out.println("");
-		if (tourRestant == 0 && !pBooleenSiGagne && pModeEnCours==1) {
-			pVerdict = "LE JOUEUR A PERDU!";
+		if (tourRestant == 1 && !pBooleenSiGagne && pModeEnCours==1) {
+			pVerdict = acCat.joueurPerd();
 			pCoupMax=coup;
 		}
 		else if (pBooleenSiGagne==true && pModeEnCours==1) {
-			pVerdict = "LE JOUEUR A GAGNE!";
+			pVerdict = acCat.joueurGagne();;
 			pCoupMax=coup;
 		}
-		else if (tourRestant == 0 && !pBooleenSiGagne && pModeEnCours==2) {
-			pVerdict = "L'ORDINATEUR A PERDU!";
+		else if (tourRestant == 1 && !pBooleenSiGagne && pModeEnCours==2) {
+			pVerdict = acCat.ordiPerd();
 			pCoupMax=coup;
-		
 		}
 		else if (pBooleenSiGagne==true && pModeEnCours==2) {
-			pVerdict = "L'ORDINATEUR A GAGNE!";
+			pVerdict = acCat.ordiGagne();
 			pCoupMax=coup;
-		
 		} else { 
-			pVerdict = "LE JEU EST EN COURS";
+			pVerdict = acCat.jeuEnCours();
+			pCoupMax=coup;;
 			pCoupMax=coup;
 		}
 	}
 	public void affichageRecapitulatif(int tourRestant, int coup, int coups){
-			tourRestant = coups - (int)(coup);
-			System.out.println(" ______________________________________");
-			System.out.println(" -> Il reste: "+ (int)(tourRestant-1) + " coups!");
-			System.out.println(" ______________________________________");
+			tourRestant = coups-coup;
+			acCat.coupsRestants(tourRestant);
 	}
 	/**
 	 * @see traceLog4.java 
@@ -119,35 +116,25 @@ public class ComparatifAffichageTest {
 	}
 	/**
 	 * pour log4j
-	 * @param coup
-	 * @param pion
-	 * @return
-	 * le tableau de la defense (char + - = )
+	 * @return le tableau de la defense (char + - = )
 	 */
 	public String getTableauReponse(int coup,int pion) {
 		return pTableauReponse [coup][pion];
 	}
 	/**
-	 * @param coup
-	 * @param pion
-	 * @return
-	 * Retourne le tableau de l'attaque sous forme de String (log4j)
+	 * @return le tableau de l'attaque sous forme de String 
+	 * @see log4j
 	 */
 	public String getStringTableauJeu(int coup) {
 		return stringTableauJeu[coup];
 	}
-/**
- * initialise le verdict quand le jeu recommence
- * @see
- * RechercheMode(int coups, int pions)
- */
+	/**
+	 * initialise le verdict quand le jeu recommence
+	 * @see RechercheMode(int coups, int pions)
+	 */
 	public void setVerdict(String verdict) {
 		pVerdict = verdict;
 	}
-	/**
-	 * Retourne le verdict en cours
-	 * @return
-	 */
 	public String getVerdict(){
 		return pVerdict;
 	}

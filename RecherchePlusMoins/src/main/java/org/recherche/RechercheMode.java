@@ -1,69 +1,31 @@
 package org.recherche;
 
-import org.divers.ComparatifAffichageTest;
 import org.entrees.CombinaisonSecrete;
+import org.principal.ComparatifAffichageTest;
 import org.principal.Jeu;
 
 public abstract class RechercheMode {
 	
 	protected int[][] tableauJeuMode1;
-	/**
-	 * tableau défense pour mode 1 (joueur)
-	 */
 	protected int[] combinaisonOrdi;
-	/**
-	 * Tableau de l'attaquant Mode2
-	 * @see RechercheMode2
-	 * @see RechercheMode3
-	 */
 	protected int[][] tableauJeuMode2;
-	/**
-	 * tableau défense pour mode 2 (ordinateur)
-	 */
 	protected int[] combinaisonJoueur;
-/** Entrée de la combinaison secrète du joueur ou de l'ordinateur selon le mode du jeu
- * @see CombinaisonSecrete.doCombinaisonSecrete(modeJeu,pions,admin)
- */
 	protected CombinaisonSecrete cs;
 /** Comparatif entre int[][] tableauJeu et int[] combinaison
  * @see ComparatifAffichageTest
  */
 	protected ComparatifAffichageTest cat1;
-/** Comparatif entre int[][] tableauJeu et int[] combinaison
- * @see ComparatifAffichageTest
- */
 	protected ComparatifAffichageTest cat2;
-/**
- * Indique la réponse du joueur (en défense)
- */
 	protected String[][] tableauReponseJoueur;
 /**
  * Sortie du while de chaque doRechercheMode()
  */
 	protected boolean boleenSiGagne;
-/**
- * Indique le N° de coup en cours
- */
 	protected int coup;
-/**
- * Indique le nombre de tour qu'il reste
- */
 	protected int tourRestant;
-/**
- * Indique si le jeu n'est pas terminé
- */
 	protected boolean jeuEnCours;
-/**
- * Sert à la org.recherche dichotomique
- */
 	protected int[] dichoPlus;
-/**
- * Sert à la org.recherche dichotomique
- */ 
 	protected int[] dichoMoins;
-/**
- * Sert à la org.recherche dichotomique
- */ 
 	protected int dichoMax;
 /**
  * Remonté coup max partie pour log4j
@@ -127,10 +89,8 @@ protected int CoupMaxPartie;
 	}
 	/**
 	 * Pour tracage Log4j fin de partie du mode 2
-	 * @return
-	 * tableau de jeu 
-	 * @see
-	 * Jeu.recapTracageFinDeJeu()
+	 * @return tableau de jeu 
+	 * @see Jeu.recapTracageFinDeJeu()
 	 */
 	public String getCAT2StringTableauJeu(int coup) {
 		return cat2.getStringTableauJeu(coup);

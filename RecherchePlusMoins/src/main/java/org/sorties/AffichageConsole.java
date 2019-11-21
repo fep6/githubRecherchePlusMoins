@@ -1,8 +1,8 @@
-package org.affichage;
+package org.sorties;
 
-import org.divers.ComparatifAffichageTest;
 import org.entrees.CombinaisonSecrete;
 import org.entrees.EntreesManuellesDuJeu;
+import org.principal.ComparatifAffichageTest;
 import org.principal.Jeu;
 import org.recherche.RechercheMode1;
 import org.recherche.RechercheMode2;

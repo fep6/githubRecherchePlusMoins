@@ -1,6 +1,6 @@
-package org.divers;
+package org.principal;
 
-import org.affichage.AffichageConsole;
+import org.sorties.AffichageConsole;
 
 public class ComparatifAffichageTest {
 	

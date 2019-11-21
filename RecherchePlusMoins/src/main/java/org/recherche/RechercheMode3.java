@@ -1,6 +1,6 @@
 package org.recherche;
 
-import org.affichage.AffichageConsole;
+import org.sorties.AffichageConsole;
 
 /**
  * Le joueur et l’ordinateur jouent tour à tour. 

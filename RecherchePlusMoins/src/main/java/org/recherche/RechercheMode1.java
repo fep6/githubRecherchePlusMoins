@@ -31,13 +31,13 @@ public class RechercheMode1 extends RechercheMode{
 		boleenSiGagne= true;
 		this.entreesJoueur(coup, tableauJeuMode1, pions);
 		cat1.setModeEnCours1() ;
-		cat1.affichageRecapitulatif(tourRestant, coup, coups);
 		cat1.doComparatifAffichageTest(tableauJeuMode1,combinaisonOrdi,boleenSiGagne, coup, tourRestant, pions);
 			if (!cat1.getVerdict().equals(acRm1.joueurGagne()) && !cat1.getVerdict().equals(acRm1.joueurPerd())) {
 				jeuEnCours =true;
 			} else {
 				jeuEnCours =false;
 			}
+			cat1.affichageRecapitulatif(tourRestant, coup, coups);
 			coup++;
 			tourRestant--;
 	}

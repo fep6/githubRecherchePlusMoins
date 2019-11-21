@@ -43,7 +43,7 @@ public class ComparatifAffichageTest {
 	 * Nombre de pions maximum
 	 */
 	public void miseEnFormeTracage(int pions) {
-		for (int coup=0;coup<=pCoupMax;coup++) {
+		for (int coup=0;coup<pCoupMax;coup++) {
 			for (int pion=0;pion<pions;pion++) {
 				if (pion==0) {
 					stringTableauJeu[coup]=Integer.toString(pTableauJeu[coup][pion]);
@@ -91,10 +91,12 @@ public class ComparatifAffichageTest {
 		else if (tourRestant == 1 && !pBooleenSiGagne && pModeEnCours==2) {
 			pVerdict = acCat.ordiPerd();
 			pCoupMax=coup;
+		
 		}
 		else if (pBooleenSiGagne==true && pModeEnCours==2) {
 			pVerdict = acCat.ordiGagne();
 			pCoupMax=coup;
+		
 		} else { 
 			pVerdict = acCat.jeuEnCours();
 			pCoupMax=coup;;
@@ -122,8 +124,7 @@ public class ComparatifAffichageTest {
 		return pTableauReponse [coup][pion];
 	}
 	/**
-	 * @return le tableau de l'attaque sous forme de String 
-	 * @see log4j
+	 * @return le tableau de l'attaque sous forme de String (log4j)
 	 */
 	public String getStringTableauJeu(int coup) {
 		return stringTableauJeu[coup];
@@ -135,6 +136,10 @@ public class ComparatifAffichageTest {
 	public void setVerdict(String verdict) {
 		pVerdict = verdict;
 	}
+	/**
+	 * Retourne le verdict en cours
+	 * @return
+	 */
 	public String getVerdict(){
 		return pVerdict;
 	}

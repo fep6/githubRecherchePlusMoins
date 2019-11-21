@@ -21,7 +21,7 @@ public class Jeu {
 	private RechercheMode2 rm2;
 	private RechercheMode3 rm3;
 	/** 
-	 * Nombre de coups dans la partie (/TraceLog4j)
+	 * Nombre de coups dans la partie (/tl4j)
 	 */
 	private int coupMaxPartie;
 	private EntreesManuellesDuJeu emjJeuEnCours;
@@ -108,7 +108,7 @@ public class Jeu {
 				jeuEnCours=false;
 			}
 			else {
-//				tl4j = new TraceLog4j();
+				tl4j = new TraceLog4j();
 				Jeu j = new Jeu();
 				j.setJeu();
 				j.doJeu();

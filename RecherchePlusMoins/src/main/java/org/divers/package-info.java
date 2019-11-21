@@ -5,4 +5,4 @@
  * @author fep
  *
  */
-package org.uml;
+package org.divers;

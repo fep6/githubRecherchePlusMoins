@@ -1,7 +1,6 @@
 package org.entrees;
 
 import java.util.Scanner;
-
 import org.sorties.AffichageConsole;
 
 /**

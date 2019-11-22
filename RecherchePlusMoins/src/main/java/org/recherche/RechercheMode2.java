@@ -25,14 +25,6 @@ public class RechercheMode2 extends RechercheMode{
 		}
 		acRm2.finPartieMode2(cat2);
 	}
-/**
- * A chaque tour, on compare l'entrée de l'attaquant avec l'entrée de la défense
- * et on affiche le résultat
- * @see doRechercheMode(int modeJeu, int coups, int pions, boolean admin)
- * @see ComparatifAffichageTest
- * @param coups
- * @param pions	
- */
 	private void jeuParTour(int coups, int pions) {
 		boleenSiGagne= true;
 		entreesJeuOrdi(coup,tableauJeuMode2,tableauReponseJoueur,dichoPlus,dichoMoins,dichoMax,cat2,pions);

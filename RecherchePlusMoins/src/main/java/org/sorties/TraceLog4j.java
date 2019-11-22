@@ -22,29 +22,16 @@ public class TraceLog4j {
 	 */
 	private static boolean adminCommande =false;
 	private String stringAdminCommande="";
-	/**
-	 * Traçage TraceLog4j
-	 * @param ecj
-	 * parametres des org.entrees du jeu
-	 */
 	public void recapTracageDebutDeJeu(EntreesConfigJeu ecj) {
 
 		gestionEntreesAdmin();
-		logger.info("\n Début du jeu -> Récapitulatif des entrées du jeu:" + "\n Mode de la partie : " + ecj.getModeJeu() +
+		logger.info("Récapitulatif des entrées du jeu:" + "\n Mode de la partie : " + ecj.getModeJeu() +
 				"\n Nombre de coups maximums: "+ ecj.getNCoups() +
 			"\n Nombre de pions maximums: " + ecj.getNPions() + 
 			"\n Le fichier de configuration du jeu indique :" + stringAdminConfig + "!"+
 			"\n" + stringAdminCommande);
 
 	}
-	/**
-	 * @param ecj
-	 * instanciation faite en Jeu.java 
-	 * @param rm1
-	 * instanciation faite en Jeu.java 
-	 * @param rm2
-	 * instanciation faite en Jeu.java 
-	 */
 	public void recapTracageFinDeJeu(EntreesConfigJeu ecj, RechercheMode1 rm1, RechercheMode2 rm2, 
 			RechercheMode3 rm3, int coupMaxPartie ) {
 		if (ecj.getModeJeu()==1) {
@@ -64,7 +51,7 @@ public class TraceLog4j {
 		logger.info("________________________________________");
 	}
 	/**
-	 * a preciser
+	 * Precision sur les entrees des commande admin (config.properties ou ligne de commande)
 	 */
 	private void gestionEntreesAdmin() {
 		if (adminConfig==true) {

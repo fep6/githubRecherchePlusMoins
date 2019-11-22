@@ -2,7 +2,6 @@ package org.recherche;
 
 import org.entrees.CombinaisonSecrete;
 import org.principal.ComparatifAffichageTest;
-import org.principal.Jeu;
 
 public abstract class RechercheMode {
 	

@@ -38,7 +38,7 @@ public class Jeu {
 	/**
 	 * Variable des arguments passés en ligne de commande pour recommencer le jeu (/trace de log4j)
 	 */
-	private String[] argsLigneCommande;
+	private String[] argsLigneCommande=null;
 	
 	public Jeu() {
 		acJ=new AffichageConsole();

@@ -34,7 +34,11 @@ public class Jeu {
 	/**
 	 *  Commande en ligne du traçage log4j
 	 */
-	private static boolean trace;  
+	private static boolean trace; 
+	/**
+	 * Variable des arguments passés en ligne de commande pour recommencer le jeu (/trace de log4j)
+	 */
+	private String[] argsLigneCommande;
 	
 	public Jeu() {
 		acJ=new AffichageConsole();
@@ -43,16 +47,17 @@ public class Jeu {
 		tl4j = new TraceLog4j();
 	}
 	void debutJeu(String[] args) {
+	
 		// Nombre d'arguments dans la ligne de commande (sert juste à l'affichage)
-		int nbreArg = args.length;
+		int nbreArg = argsLigneCommande.length;
 		
 		// Prise en compte de l'argument de commande en ligne en admin (triche) (nbreArg est le nombre d'arguments dans la ligne de commande)
-		for (nbreArg=0; nbreArg<args.length; nbreArg++) {
-			if (args[nbreArg].contentEquals("-admin")) {
+		for (nbreArg=0; nbreArg<argsLigneCommande.length; nbreArg++) {
+			if (argsLigneCommande[nbreArg].contentEquals("-admin")) {
 				acJ.argumentLigneAdmin(nbreArg);
 				setAdminCommande();
 			}
-			if (args[nbreArg].contentEquals("-trace")) {
+			if (argsLigneCommande[nbreArg].contentEquals("-trace")) {
 				acJ.argumentTraceAdmin(nbreArg);
 				tl4j.debutJeu();
 				trace=true;	
@@ -108,8 +113,11 @@ public class Jeu {
 				jeuEnCours=false;
 			}
 			else {
-//				tl4j = new TraceLog4j();
+				tl4j = new TraceLog4j();
 				Jeu j = new Jeu();
+				
+				System.out.println("TEST : Jeu recommence : Trace ="+trace);
+				j.debutJeu(argsLigneCommande);
 				j.setJeu();
 				j.doJeu();
 				jeuEnCours=false;
@@ -121,6 +129,13 @@ public class Jeu {
 		if (trace==true) {
 			getTl4j().finJeu();
 		}
+	}
+	/**
+	 * pour log4j quand le jeu recommence
+	 * @see Main
+	 */
+	void setArgsCommandeJeu(String[] args){
+		argsLigneCommande=args;
 	}
 	/**
 	 * Validation de l'entree d'admin du fichier de configuration

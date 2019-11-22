@@ -1,16 +1,11 @@
 package org.entrees;
 
-import org.sorties.AffichageConsole;
 import org.principal.Jeu;
-import org.recherche.RechercheMode1;
-import org.recherche.RechercheMode2;
-import org.recherche.RechercheMode3;
+import org.sorties.AffichageConsole;
 
 /**
-
  * Création de combinaison secrète de la défense (joueur ou ordi (mode 1 2 et 3))
  * @author fep
- *
  */
 public class CombinaisonSecrete {
 	private EntreesManuellesDuJeu emjMode2;

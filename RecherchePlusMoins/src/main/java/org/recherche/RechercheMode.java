@@ -58,46 +58,30 @@ protected int CoupMaxPartie;
 	
 	/**
 	 * Pour tracage Log4j fin de partie du modes 1 & 3
-	 * @return
-	 * verdict
-	 * @see
-	 * rm1&rm3.recapTracageFinDeJeu()
 	 */
 	public String getCAT1Verdict(){
 		return cat1.getVerdict();
 	}
 	/**
 	 * Pour tracage Log4j fin de partie du modes 1 & 3
-	 * @return
-	 * tableau de jeu 
-	 * @see
-	 * rm1&rm3 .recapTracageFinDeJeu()
-	 * 
 	 */
 	public String getCAT1StringTableauJeu(int coup) {
 		return cat1.getStringTableauJeu(coup);
 	}
 	/**
 	 * Pour tracage Log4j fin de partie du modes 2 & 3
-	 * @return
-	 * verdict 
-	 * @see
-	 * rm2&rm3.recapTracageFinDeJeu()
 	 */
 	public String getCAT2Verdict(){
 		return cat2.getVerdict();
 	}
 	/**
 	 * Pour tracage Log4j fin de partie du mode 2
-	 * @return tableau de jeu 
-	 * @see Jeu.recapTracageFinDeJeu()
 	 */
 	public String getCAT2StringTableauJeu(int coup) {
 		return cat2.getStringTableauJeu(coup);
 	}
 	/**
 	 * retourne le nombre de coups max de la partie pour Log4j
-	 * @see Jeu
 	 */
 	public int getCoupMaxPartie() {
 		CoupMaxPartie = Math.max(cat1.getCoupMaxPartie(),cat2.getCoupMaxPartie() );

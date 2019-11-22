@@ -132,7 +132,7 @@ public class Manche {
 	}
 	/**
 	 * pour log4j quand le jeu recommence
-	 * @see Jeu
+	 * @see Main
 	 */
 	void setArgsCommandeJeu(String[] args){
 		tl4j.debutJeu();

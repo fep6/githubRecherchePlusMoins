@@ -4,7 +4,7 @@ package org.entrees;
 
 import java.io.FileInputStream;
 import java.util.Properties;
-import org.principal.Jeu;
+import org.principal.Manche;
 import org.sorties.AffichageConsole;
 
 
@@ -46,26 +46,26 @@ public class EntreesConfigJeu {
 	
 	//Getters
 	/**
-	 * @see Jeu
+	 * @see Manche
 	 */
 	public int getModeJeu() {
 		return modeJeu;
 	}
 	/**
-	 * @see Jeu
+	 * @see Manche
 	 */
 	public int getNCoups() {
 		return nCoups;
 	}
 	/**
-	 * @see Jeu
+	 * @see Manche
 	 */
 	public int getNPions() {
 		return nPions;
 	}
 	/**
 	 * Renvoi booleen du niveau admin dans le fichier config.properties
-	 * @see Jeu
+	 * @see Manche
 	 */
 	public boolean getAdmin () {
 		return admin;

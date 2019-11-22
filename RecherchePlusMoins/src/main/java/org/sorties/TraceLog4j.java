@@ -109,13 +109,13 @@ public class TraceLog4j {
 		logger.fatal("Erreur Fatale: "+ str);
 	}
 	public void debutJeu(){
-		logger.info("________________Début du Jeu!");
+		logger.info("________________Début du Manche!");
 	}
 	public void setDebutManche(int manche) {
 		logger.info("Début de la manche "+manche+ " !");
 	}
 	public void finJeu() {
-		logger.info("________________Fin du Jeu!");
+		logger.info("________________Fin du Manche!");
 	}
 	/**
 	 * 

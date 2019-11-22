@@ -1,6 +1,6 @@
 package org.entrees;
 
-import org.principal.Jeu;
+import org.principal.Manche;
 import org.sorties.AffichageConsole;
 
 /**
@@ -31,7 +31,7 @@ public class CombinaisonSecrete {
 		}
 		else {
 			acCs.warningModeJeu(modeJeu);
-			Jeu.getTl4j().setMessageWarning("/// WARNING!!! ///"+"N° de mode de jeu (?) = "+ modeJeu + "/// WARNING!!! ///");
+			Manche.getTl4j().setMessageWarning("/// WARNING!!! ///"+"N° de mode de jeu (?) = "+ modeJeu + "/// WARNING!!! ///");
 		}
 	}
 		void setCombinaisonSecreteOrdi(boolean admin) {

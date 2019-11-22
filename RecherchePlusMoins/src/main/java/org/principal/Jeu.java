@@ -46,7 +46,7 @@ public class Jeu {
 		ecj = new EntreesConfigJeu();
 		tl4j = new TraceLog4j();
 	}
-	void debutJeu(String[] args) {
+	void debutJeu(String[] argsLigneCommande) {
 	
 		// Nombre d'arguments dans la ligne de commande (sert juste à l'affichage)
 		int nbreArg = argsLigneCommande.length;
@@ -59,7 +59,7 @@ public class Jeu {
 			}
 			if (argsLigneCommande[nbreArg].contentEquals("-trace")) {
 				acJ.argumentTraceAdmin(nbreArg);
-				tl4j.debutJeu();
+				tl4j.setDebutManche(manche);
 				trace=true;	
 			}
 		}
@@ -106,7 +106,7 @@ public class Jeu {
 			if (trace==true) {
 				tl4j.recapTracageFinDeJeu(ecj, rm1, rm2, rm3, coupMaxPartie);
 			}
-			acJ.finManche(manche);
+			acJ.finManche((int)(manche+1));
 			emjJeuEnCours.demandeRecommenceJeu();
 			
 			if (emjJeuEnCours.getJeuEnCours().equals("non")) {
@@ -135,6 +135,7 @@ public class Jeu {
 	 * @see Main
 	 */
 	void setArgsCommandeJeu(String[] args){
+		tl4j.debutJeu();
 		argsLigneCommande=args;
 	}
 	/**

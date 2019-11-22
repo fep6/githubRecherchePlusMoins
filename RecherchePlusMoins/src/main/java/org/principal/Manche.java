@@ -117,6 +117,8 @@ public class Manche {
 				Manche j = new Manche();
 				
 				System.out.println("TEST : Manche recommence : Trace ="+trace);
+				
+				
 				j.debutJeu(argsLigneCommande);
 				j.setJeu();
 				j.doJeu();

@@ -12,25 +12,19 @@ import org.recherche.RechercheMode3;
 public class TraceLog4j {
 	
 	private final Logger logger = LogManager.getLogger();
-	/**
-	 * variables admin du fichier config.properties
-	 */
-	private static boolean adminConfig =false;
 	private String stringAdminConfig="";
-	/**
-	 * variables admin de la commande 
-	 */
 	private static boolean adminCommande =false;
 	private String stringAdminCommande="";
+	
+	
 	public void recapTracageDebutDeJeu(EntreesConfigJeu ecj) {
 
-		gestionEntreesAdmin();
-		logger.info("Récapitulatif des entrées du jeu:" + "\n Mode de la partie : " + ecj.getModeJeu() +
-				"\n Nombre de coups maximums: "+ ecj.getNCoups() +
-			"\n Nombre de pions maximums: " + ecj.getNPions() + 
-			"\n Le fichier de configuration du jeu indique :" + stringAdminConfig + "!"+
-			"\n" + stringAdminCommande);
-
+	gestionEntreesAdmin();
+	logger.info("Récapitulatif des entrées du jeu:" + "\n Mode de la partie : " + ecj.getModeJeu() +
+			"\n Nombre de coups maximums: "+ ecj.getNCoups() +
+		"\n Nombre de pions maximums: " + ecj.getNPions() + 
+		"\n Le fichier de configuration du jeu indique :" + stringAdminConfig + "!"+
+		"\n" + stringAdminCommande);
 	}
 	public void recapTracageFinDeJeu(EntreesConfigJeu ecj, RechercheMode1 rm1, RechercheMode2 rm2, 
 			RechercheMode3 rm3, int coupMaxPartie ) {
@@ -47,18 +41,12 @@ public class TraceLog4j {
 			logger.info("Verdict du mode 2:" + rm3.getCAT2Verdict());
 			impressionTableauDuJeu(ecj, rm3, coupMaxPartie);
 		}
-
 		logger.info("________________________________________");
 	}
 	/**
 	 * Precision sur les entrees des commande admin (config.properties ou ligne de commande)
 	 */
 	private void gestionEntreesAdmin() {
-		if (adminConfig==true) {
-			stringAdminConfig= "ADMIN";
-		} else {
-			stringAdminConfig= "normal";
-		}
 		if (adminCommande==true) {
 			stringAdminCommande="Le mode administrateur a été demandé en ligne de commande!";
 		} 
@@ -109,13 +97,13 @@ public class TraceLog4j {
 		logger.fatal("Erreur Fatale: "+ str);
 	}
 	public void debutJeu(){
-		logger.info("________________Début du Jeu!");
+		logger.info("________________Début du Manche!");
 	}
 	public void setDebutManche(int manche) {
 		logger.info("Début de la manche "+manche+ " !");
 	}
 	public void finJeu() {
-		logger.info("________________Fin du Jeu!");
+		logger.info("________________Fin du Manche!");
 	}
 	/**
 	 * 

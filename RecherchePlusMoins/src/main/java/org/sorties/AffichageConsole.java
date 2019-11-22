@@ -3,14 +3,14 @@ package org.sorties;
 import org.entrees.CombinaisonSecrete;
 import org.entrees.EntreesManuellesDuJeu;
 import org.principal.ComparatifAffichageTest;
-import org.principal.Jeu;
+import org.principal.Manche;
 import org.recherche.RechercheMode1;
 import org.recherche.RechercheMode2;
 import org.recherche.RechercheMode3;
 
 public class AffichageConsole {
 	/**
-	 * @see Jeu
+	 * @see Manche
 	 */
 	public void argumentLigneAdmin(int nbreArg) {
 		System.out.println("L'argument 'admin' est l'argument "+(int)(nbreArg+1)+" de la commande en ligne!");

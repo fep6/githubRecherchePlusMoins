@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.Scanner;
 
-import org.principal.Jeu;
+import org.principal.Manche;
 import org.sorties.AffichageConsole;
 
 public class GestionConformites {
@@ -63,17 +63,17 @@ public class GestionConformites {
 			nPions=Integer.parseInt(p.getProperty("nPions"));
 			confAdmin =Boolean.parseBoolean(p.getProperty("admin"));
 		} catch (NumberFormatException e){
-			Jeu.getTl4j().setMessageWarning(" La valeur entrée dans le fichier config.properties n'est pas valide: "+e);
+			Manche.getTl4j().setMessageWarning(" La valeur entrée dans le fichier config.properties n'est pas valide: "+e);
 		} catch (FileNotFoundException e) {
-			Jeu.getTl4j().setMessageWarning(" Le fichier config.properties n'a pas été trouvé: "+e);
+			Manche.getTl4j().setMessageWarning(" Le fichier config.properties n'a pas été trouvé: "+e);
 		} catch (IOException e) {
-			Jeu.getTl4j().setMessageWarning(" Une erreur d'exception a été générée: "+e);
+			Manche.getTl4j().setMessageWarning(" Une erreur d'exception a été générée: "+e);
 		} finally {
            try {
                if (fis != null) 
                    fis.close();
 			} catch (IOException e) {
-				Jeu.getTl4j().setMessageWarning(" Impossible de fermer le fichier du Stream! "+e);
+				Manche.getTl4j().setMessageWarning(" Impossible de fermer le fichier du Stream! "+e);
 			}
 		}
 	}

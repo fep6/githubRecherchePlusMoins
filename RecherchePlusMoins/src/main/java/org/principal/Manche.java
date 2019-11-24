@@ -106,7 +106,7 @@ public class Manche {
 			if (trace==true) {
 				tl4j.recapTracageFinDeJeu(ecj, rm1, rm2, rm3, coupMaxPartie);
 			}
-			acJ.finManche((int)(manche+1));
+			acJ.finManche((int)(manche));
 			emjJeuEnCours.demandeRecommenceJeu();
 			
 			if (emjJeuEnCours.getJeuEnCours().equals("non")) {

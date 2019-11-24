@@ -26,6 +26,7 @@ public abstract class RechercheMode {
 	protected int[] dichoPlus;
 	protected int[] dichoMoins;
 	protected int dichoMax;
+	protected int pManche;
 /**
  * Remonté coup max partie pour log4j
  */
@@ -53,6 +54,13 @@ protected int CoupMaxPartie;
 		// Reinitialisation des verdicts quand le jeu recommence
 		cat1.setVerdict("");
 		cat2.setVerdict("");
+	}
+	
+	/**
+	 * pour console
+	 */
+	public void setManche(int manche) {
+		pManche=manche;
 	}
 	
 	/**

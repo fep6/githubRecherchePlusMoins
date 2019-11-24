@@ -110,13 +110,14 @@ public class TraceLog4j {
 	}
 	public void debutJeu(){
 		logger.info("________________Début du Jeu!");
+	}	
+	public void finJeu() {
+		logger.info("________________Fin du Jeu!");
 	}
 	public void setDebutManche(int manche) {
 		logger.info("Début de la manche "+(int)(manche+1)+ " !");
 	}
-	public void finJeu() {
-		logger.info("________________Fin du Jeu!");
-	}
+
 	/**
 	 * 
 	 */

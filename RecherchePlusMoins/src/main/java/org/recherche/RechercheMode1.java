@@ -25,7 +25,7 @@ public class RechercheMode1 extends RechercheMode{
 		while (jeuEnCours==true) {
 			jeuParTour(coups, pions);
 		}
-		acRm1.finPartieMode1(cat1);
+		acRm1.finMancheMode1(pManche,cat1);
 	}
 	private void jeuParTour(int coups, int pions) {
 		boleenSiGagne= true;

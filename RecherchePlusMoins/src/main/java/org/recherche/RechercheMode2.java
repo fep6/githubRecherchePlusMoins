@@ -23,7 +23,7 @@ public class RechercheMode2 extends RechercheMode{
 		while (jeuEnCours) {
 			jeuParTour(coups, pions);
 		}
-		acRm2.finPartieMode2(cat2);
+		acRm2.finMancheMode2(pManche, cat2);
 	}
 	private void jeuParTour(int coups, int pions) {
 		boleenSiGagne= true;

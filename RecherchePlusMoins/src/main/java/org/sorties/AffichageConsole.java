@@ -141,8 +141,8 @@ public class AffichageConsole {
 	/**
 	 * @see RechercheMode1
 	 */
-	public void finPartieMode1(ComparatifAffichageTest cat1) {
-		System.out.println("...Fin de la partie : "+ cat1.getVerdict());
+	public void finMancheMode1(int manche , ComparatifAffichageTest cat1) {
+		System.out.println("...Fin de la manche "+manche+" : "+ cat1.getVerdict());
 	}
 	public void propositionJoueur() {
 		System.out.println("----------------------------");
@@ -153,8 +153,8 @@ public class AffichageConsole {
 	/**
 	 * @see RechercheMode2
 	 */
-	public void finPartieMode2(ComparatifAffichageTest cat2) {
-		System.out.println("...Fin de la partie : "+ cat2.getVerdict());
+	public void finMancheMode2(int manche , ComparatifAffichageTest cat2) {
+		System.out.println("...Fin de la manche "+manche+" : "+ cat2.getVerdict());
 	}
 	public void propositionOrdi() {
 		System.out.println("----------------------------");
@@ -164,7 +164,8 @@ public class AffichageConsole {
 	/**
 	 * @see RechercheMode3
 	 */
-	public void verdictsMode3(ComparatifAffichageTest cat1, ComparatifAffichageTest cat2) {				
+	public void verdictsMode3(int manche ,ComparatifAffichageTest cat1, ComparatifAffichageTest cat2) {				
+		System.out.println("...Fin de la manche "+manche);
 		System.out.println("Verdict du joueur = " + cat1.getVerdict());				
 		System.out.println("Verdict de l'ordinateur = " + cat2.getVerdict());
 	}

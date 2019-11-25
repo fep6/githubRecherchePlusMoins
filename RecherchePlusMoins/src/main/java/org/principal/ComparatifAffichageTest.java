@@ -1,4 +1,4 @@
-package org.traitement;
+package org.principal;
 
 import org.sorties.AffichageConsole;
 

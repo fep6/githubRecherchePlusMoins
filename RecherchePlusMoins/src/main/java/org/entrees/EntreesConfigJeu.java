@@ -5,8 +5,8 @@ package org.entrees;
 import java.io.FileInputStream;
 import java.util.Properties;
 
+import org.principal.Manche;
 import org.sorties.AffichageConsole;
-import org.traitement.Manche;
 
 
 

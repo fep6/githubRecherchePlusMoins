@@ -5,8 +5,8 @@ import org.entrees.EntreesManuellesDuJeu;
 import org.modeJeu.RechercheMode1;
 import org.modeJeu.RechercheMode2;
 import org.modeJeu.RechercheMode3;
-import org.traitement.ComparatifAffichageTest;
-import org.traitement.Manche;
+import org.principal.ComparatifAffichageTest;
+import org.principal.Manche;
 
 public class AffichageConsole {
 	/**

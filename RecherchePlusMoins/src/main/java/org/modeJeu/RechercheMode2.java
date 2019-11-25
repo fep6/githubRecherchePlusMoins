@@ -1,7 +1,7 @@
 package org.modeJeu;
 
+import org.principal.ComparatifAffichageTest;
 import org.sorties.AffichageConsole;
-import org.traitement.ComparatifAffichageTest;
 
 /**
  * Mode 2 "Défenseur": L'ordinateur a le rôle d’attaquant et doit faire une proposition d’une combinaison de X chiffres.

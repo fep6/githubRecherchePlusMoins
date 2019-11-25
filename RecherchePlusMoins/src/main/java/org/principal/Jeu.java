@@ -1,4 +1,4 @@
-package org.traitement;
+package org.principal;
 
 public class Jeu {
 	

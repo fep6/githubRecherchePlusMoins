@@ -62,7 +62,7 @@ protected int CoupMaxPartie;
 		return cat1.getVerdict();
 	}
 	/**
-	 * Pour tracage Log4j fin de partie du modes 1 & 3
+	 * Pour tracage Log4j fin de partie du modes 1 & 3 
 	 */
 	public String getCAT1StringTableauJeu(int coup) {
 		return cat1.getStringTableauJeu(coup);

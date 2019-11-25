@@ -53,12 +53,12 @@ public class Manche {
 		
 		// Prise en compte de l'argument de commande en ligne en admin (triche) (nbreArg est le nombre d'arguments dans la ligne de commande)
 		for (nbreArg=0; nbreArg<argsLigneCommande.length; nbreArg++) {
-			if (argsLigneCommande[nbreArg].contentEquals("-trace")) {
+			if (argsLigneCommande[nbreArg].contentEquals("trace")) {
 				trace=true;
 				acJ.argumentTraceAdmin(nbreArg);
 				tl4j.setDebutManche(manche);
 			}
-			if (argsLigneCommande[nbreArg].contentEquals("-admin")) {
+			if (argsLigneCommande[nbreArg].contentEquals("admin")) {
 				if (trace==true) {
 					tl4j.setAdminCommande();
 					tl4j.traceAdminLigneCommande();

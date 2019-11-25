@@ -5,7 +5,7 @@ import org.sorties.AffichageConsole;
 
 /**
  * Création de combinaison secrète de la défense (joueur ou ordi (mode 1 2 et 3))
- * @author fep
+ * @author fep 
  */
 public class CombinaisonSecrete {
 	private EntreesManuellesDuJeu emjMode2;

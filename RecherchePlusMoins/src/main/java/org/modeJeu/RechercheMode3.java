@@ -1,4 +1,4 @@
-package org.recherche;
+package org.modeJeu;
 
 import org.sorties.AffichageConsole;
 

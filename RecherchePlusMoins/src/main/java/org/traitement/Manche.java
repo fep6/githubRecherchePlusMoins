@@ -1,11 +1,11 @@
-package org.principal;
+package org.traitement;
 
 import org.entrees.EntreesConfigJeu;
 import org.entrees.EntreesManuellesDuJeu;
 import org.entrees.GestionConformites;
-import org.recherche.RechercheMode1;
-import org.recherche.RechercheMode2;
-import org.recherche.RechercheMode3;
+import org.modeJeu.RechercheMode1;
+import org.modeJeu.RechercheMode2;
+import org.modeJeu.RechercheMode3;
 import org.sorties.AffichageConsole;
 import org.sorties.TraceLog4j;
 
@@ -30,7 +30,7 @@ public class Manche {
 	/**
 	 *  prise en compte admin via commande en ligne
 	 */
-	private static boolean extAdmin;
+	private static boolean comAdmin;
 	/**
 	 *  Commande en ligne du traçage log4j
 	 */
@@ -53,14 +53,18 @@ public class Manche {
 		
 		// Prise en compte de l'argument de commande en ligne en admin (triche) (nbreArg est le nombre d'arguments dans la ligne de commande)
 		for (nbreArg=0; nbreArg<argsLigneCommande.length; nbreArg++) {
-			if (argsLigneCommande[nbreArg].contentEquals("-admin")) {
-				acJ.argumentLigneAdmin(nbreArg);
-				setAdminCommande();
-			}
 			if (argsLigneCommande[nbreArg].contentEquals("-trace")) {
+				trace=true;
 				acJ.argumentTraceAdmin(nbreArg);
 				tl4j.setDebutManche(manche);
-				trace=true;	
+			}
+			if (argsLigneCommande[nbreArg].contentEquals("-admin")) {
+				if (trace==true) {
+					tl4j.setAdminCommande();
+					tl4j.traceAdminLigneCommande();
+				}
+				acJ.argumentLigneAdmin(nbreArg);
+				setAdminCommande();
 			}
 		}
 	}
@@ -68,7 +72,7 @@ public class Manche {
 	 void setJeu() {
 			manche++;
 			acJ.debutManche(manche);
-			ecj.entreesFichierConfigJeu(extAdmin);
+			ecj.entreesFichierConfigJeu(comAdmin);
 			ecj.setModeJeu();
 			
 			// gestion tracabilite par log4j
@@ -88,18 +92,18 @@ public class Manche {
 		while (jeuEnCours==true) {
 			ecj.affichageRecapitulatifConfigJeu();
 			if (ecj.getModeJeu()==1) {
-				rm1.doRechercheMode(ecj.getModeJeu(),ecj.getNCoups(),ecj.getNPions(),ecj.getAdmin()||extAdmin);
+				rm1.doRechercheMode(ecj.getModeJeu(),ecj.getNCoups(),ecj.getNPions(),ecj.getAdmin()||comAdmin);
 				if (ecj.getAdmin()==true){
 					setAdminConfig();
 				}
 				coupMaxPartie=rm1.getCoupMaxPartie();
 			}
 			else if ( ecj.getModeJeu()==2) {
-				rm2.doRechercheMode(ecj.getModeJeu(),ecj.getNCoups(),ecj.getNPions(),ecj.getAdmin()||extAdmin);
+				rm2.doRechercheMode(ecj.getModeJeu(),ecj.getNCoups(),ecj.getNPions(),ecj.getAdmin()||comAdmin);
 				coupMaxPartie=rm2.getCoupMaxPartie();
 			}
 			else {
-				rm3.doRechercheMode(ecj.getModeJeu(),ecj.getNCoups(),ecj.getNPions(),ecj.getAdmin()||extAdmin);
+				rm3.doRechercheMode(ecj.getModeJeu(),ecj.getNCoups(),ecj.getNPions(),ecj.getAdmin()||comAdmin);
 				coupMaxPartie=rm3.getCoupMaxPartie();
 			}
 			//Traitement traçabilité
@@ -145,13 +149,14 @@ public class Manche {
 	 * @see config.properties
 	 */
 	void setAdminConfig(){
-		extAdmin=true;
+//		comAdmin=true;
 		tl4j.setAdminConfig();
 	}
 	/**
 	 * Validation de l'entree d'admin par ligne de commande
 	 */
 	void setAdminCommande() {
+//		comAdmin=true;
 		tl4j.setAdminCommande();
 	}
 	/**

@@ -1,7 +1,7 @@
 package org.entrees;
 
-import org.principal.Manche;
 import org.sorties.AffichageConsole;
+import org.traitement.Manche;
 
 /**
  * Création de combinaison secrète de la défense (joueur ou ordi (mode 1 2 et 3))

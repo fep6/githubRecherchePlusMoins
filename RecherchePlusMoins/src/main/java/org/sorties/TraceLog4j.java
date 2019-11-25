@@ -3,9 +3,9 @@ package org.sorties;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.entrees.EntreesConfigJeu;
-import org.recherche.RechercheMode1;
-import org.recherche.RechercheMode2;
-import org.recherche.RechercheMode3;
+import org.modeJeu.RechercheMode1;
+import org.modeJeu.RechercheMode2;
+import org.modeJeu.RechercheMode3;
 
 
 
@@ -30,7 +30,6 @@ public class TraceLog4j {
 			"\n Nombre de pions maximums: " + ecj.getNPions() + 
 			"\n Le fichier de configuration du jeu indique :" + stringAdminConfig + "!"+
 			"\n" + stringAdminCommande);
-
 	}
 	public void recapTracageFinDeJeu(EntreesConfigJeu ecj, RechercheMode1 rm1, RechercheMode2 rm2, 
 			RechercheMode3 rm3, int coupMaxPartie ) {
@@ -49,6 +48,9 @@ public class TraceLog4j {
 		}
 
 		logger.info("________________________________________");
+	}
+	public void traceAdminLigneCommande() {
+		logger.info("Argument 'trace' a été passé en ligne de commande!");
 	}
 	/**
 	 * Precision sur les entrees des commande admin (config.properties ou ligne de commande)

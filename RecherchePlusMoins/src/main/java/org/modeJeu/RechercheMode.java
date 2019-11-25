@@ -1,7 +1,7 @@
-package org.recherche;
+package org.modeJeu;
 
 import org.entrees.CombinaisonSecrete;
-import org.principal.ComparatifAffichageTest;
+import org.traitement.ComparatifAffichageTest;
 
 public abstract class RechercheMode {
 	

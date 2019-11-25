@@ -7,8 +7,8 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.Scanner;
 
-import org.principal.Manche;
 import org.sorties.AffichageConsole;
+import org.traitement.Manche;
 
 public class GestionConformites {
 	

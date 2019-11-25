@@ -2,11 +2,11 @@ package org.sorties;
 
 import org.entrees.CombinaisonSecrete;
 import org.entrees.EntreesManuellesDuJeu;
-import org.principal.ComparatifAffichageTest;
-import org.principal.Manche;
-import org.recherche.RechercheMode1;
-import org.recherche.RechercheMode2;
-import org.recherche.RechercheMode3;
+import org.modeJeu.RechercheMode1;
+import org.modeJeu.RechercheMode2;
+import org.modeJeu.RechercheMode3;
+import org.traitement.ComparatifAffichageTest;
+import org.traitement.Manche;
 
 public class AffichageConsole {
 	/**

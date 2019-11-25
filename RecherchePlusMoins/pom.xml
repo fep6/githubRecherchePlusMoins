@@ -27,7 +27,7 @@
 	            <manifest>
 	
 	            give full qualified name of your main class
-	              <mainClass>org.principal.Main</mainClass>
+	              <mainClass>org.traitement.Main</mainClass>
 	
 	            </manifest>
 	          </archive>

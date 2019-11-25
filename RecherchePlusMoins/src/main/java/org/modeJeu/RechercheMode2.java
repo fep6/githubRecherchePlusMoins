@@ -1,7 +1,7 @@
-package org.recherche;
+package org.modeJeu;
 
-import org.principal.ComparatifAffichageTest;
 import org.sorties.AffichageConsole;
+import org.traitement.ComparatifAffichageTest;
 
 /**
  * Mode 2 "Défenseur": L'ordinateur a le rôle d’attaquant et doit faire une proposition d’une combinaison de X chiffres.
@@ -51,7 +51,7 @@ public class RechercheMode2 extends RechercheMode{
 				stringTableauJeuMode2 = stringTableauJeuMode2 + Integer.toString(tableauJeuMode2[0][pion]);
 			}
 		} else {
-			//Ensuite, l'ordinateur fait une org.recherche dichotomique selon la comparaison de la valeur d'avant
+			//Ensuite, l'ordinateur fait une org.modeJeu dichotomique selon la comparaison de la valeur d'avant
 			for (int pion=0;pion<pions;pion++) {
 				tableauReponseJoueur[coup-1][pion]= cat2.getTableauReponse(coup-1,pion);
 				if (tableauReponseJoueur[coup-1][pion].equals("=")) {

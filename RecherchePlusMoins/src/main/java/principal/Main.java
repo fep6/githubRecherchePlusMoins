@@ -18,6 +18,7 @@ public class Main {
 		for (nbreArg=0; nbreArg<args.length; nbreArg++) {
 			System.out.print("argument :"+nbreArg);
 			System.out.println("args= "+ args[nbreArg] );
+			// Entrée en mode admin selon l'argument tapé lors de la commande du lancement du programme
 			if (args[nbreArg].contentEquals("admin")) {
 				j.setExtAdmin();
 			}
